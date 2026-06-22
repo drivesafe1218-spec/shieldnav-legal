@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShieldNav – Terms of Use</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand:       #0B75C2;
+      --brand-light: #E8F3FB;
+      --text:        #1A1A1A;
+      --muted:       #555555;
+      --border:      #D8E2EC;
+      --warn-bg:     #FFF8E1;
+      --warn-border: #F9A825;
+      --danger-bg:   #FFF0F0;
+      --danger-border: #D32F2F;
+      --link:        #0B75C2;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: #FFFFFF;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--brand);
+      color: #fff;
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+    header .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+    header .logo span { opacity: 0.75; font-weight: 400; }
+    header h1 {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    header .meta {
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    /* ── Table of Contents ── */
+    .toc {
+      background: var(--brand-light);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin: 36px 0 40px;
+    }
+    .toc h2 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--brand);
+      margin-bottom: 16px;
+    }
+    .toc ol {
+      padding-left: 22px;
+    }
+    .toc li {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    .toc a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .toc a:hover { text-decoration: underline; }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 48px;
+    }
+    h2.section-heading {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--brand);
+      border-bottom: 2px solid var(--brand-light);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 24px 0 10px;
+    }
+    p { margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 14px;
+    }
+    li { margin-bottom: 6px; }
+    strong { font-weight: 600; }
+
+    /* ── Callout boxes ── */
+    .callout {
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+    .callout.warn {
+      background: var(--warn-bg);
+      border-left: 4px solid var(--warn-border);
+    }
+    .callout.danger {
+      background: var(--danger-bg);
+      border-left: 4px solid var(--danger-border);
+    }
+    .callout.info {
+      background: var(--brand-light);
+      border-left: 4px solid var(--brand);
+    }
+    .callout p { margin-bottom: 8px; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout strong { display: block; margin-bottom: 6px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+    /* ── Sub-list ── */
+    .feature-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .feature-list li::before {
+      content: "✓  ";
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: #F4F7FA;
+      border-top: 1px solid var(--border);
+      padding: 28px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    footer a { color: var(--link); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      header .logo { font-size: 22px; }
+      header h1 { font-size: 17px; }
+      h2.section-heading { font-size: 17px; }
+      .toc { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════  HEADER  ═══════════════════════ -->
+<header>
+  <div class="logo">ShieldNav <span>by ShieldNav, LLC</span></div>
+  <h1>Terms of Use</h1>
+  <p class="meta">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Revised: June 21, 2026</p>
+</header>
+
+<!-- ═══════════════════════  BODY  ═══════════════════════ -->
+<div class="container">
+
+  <div class="callout danger">
+    <strong>Safety Notice — Read Before Use</strong>
+    <p>ShieldNav is a navigation aid only. <strong>Never operate your phone while driving.</strong> Use audio guidance exclusively when the vehicle is in motion. In any emergency, call <strong>911</strong> immediately. Crime data displayed in the app may be incomplete or out of date and does not guarantee your safety or the absence of danger in any area.</p>
+  </div>
+
+  <!-- ═══ TABLE OF CONTENTS ═══ -->
+  <nav class="toc" aria-label="Table of Contents">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s1">Agreement to Terms</a></li>
+      <li><a href="#s2">Eligibility and Account Registration</a></li>
+      <li><a href="#s3">Description of the Service</a></li>
+      <li><a href="#s4">Subscriptions and Billing</a></li>
+      <li><a href="#s5">Acceptable Use and Prohibited Conduct</a></li>
+      <li><a href="#s6">Intellectual Property</a></li>
+      <li><a href="#s7">Third-Party Services and Data</a></li>
+      <li><a href="#s8">Privacy and Location Data</a></li>
+      <li><a href="#s9">Safety Disclaimer and Crime Data Limitations</a></li>
+      <li><a href="#s10">Disclaimer of Warranties</a></li>
+      <li><a href="#s11">Limitation of Liability</a></li>
+      <li><a href="#s12">Indemnification</a></li>
+      <li><a href="#s13">Termination</a></li>
+      <li><a href="#s14">Governing Law and Dispute Resolution</a></li>
+      <li><a href="#s15">Changes to These Terms</a></li>
+      <li><a href="#s16">Apple App Store — Additional EULA Terms</a></li>
+      <li><a href="#s17">Miscellaneous</a></li>
+      <li><a href="#s18">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <!-- ═══ 1 ═══ -->
+  <section id="s1">
+    <h2 class="section-heading">1. Agreement to Terms</h2>
+    <p>These Terms of Use ("Terms") constitute a legally binding agreement between you ("you" or "User") and ShieldNav, LLC ("ShieldNav," "we," "our," or "us") governing your access to and use of the ShieldNav mobile application and any related services, features, or content (collectively, the "Service").</p>
+    <p><strong>By downloading, installing, or using ShieldNav you confirm that you have read, understood, and agree to be bound by these Terms and our Privacy Policy, which is incorporated herein by reference.</strong> If you do not agree, do not use the Service.</p>
+    <p>These Terms apply to all versions of the ShieldNav app, including iOS and Android versions, and any web-based properties operated by ShieldNav.</p>
+  </section>
+
+  <!-- ═══ 2 ═══ -->
+  <section id="s2">
+    <h2 class="section-heading">2. Eligibility and Account Registration</h2>
+
+    <h3>2.1 Age Requirement</h3>
+    <p>ShieldNav is intended for users who are at least <strong>13 years of age</strong>. If you are between 13 and 17, you represent that your parent or legal guardian has reviewed and agreed to these Terms on your behalf. We do not knowingly collect personal information from children under 13. If we learn that a child under 13 has created an account, we will delete it promptly.</p>
+
+    <h3>2.2 Account Creation</h3>
+    <p>You may sign in to ShieldNav using email and password, Google Sign-In, or Apple Sign-In (collectively, "Authentication Services"). By creating an account you represent that:</p>
+    <ul>
+      <li>All information you provide is accurate and up to date;</li>
+      <li>You will maintain the security of your credentials and not share them with third parties;</li>
+      <li>You will promptly notify us at <a href="mailto:support@shieldnav.com">support@shieldnav.com</a> if you suspect unauthorized access to your account; and</li>
+      <li>You accept responsibility for all activity occurring under your account.</li>
+    </ul>
+
+    <h3>2.3 One Account Per User</h3>
+    <p>You may maintain only one ShieldNav account at a time. Creating multiple accounts to circumvent restrictions, trials, or subscription requirements is prohibited and may result in termination of all associated accounts.</p>
+
+    <h3>2.4 Account Security</h3>
+    <p>ShieldNav uses Firebase Authentication to manage sign-in. We do not store your raw passwords. You are solely responsible for all actions taken through your account. ShieldNav will not be liable for any loss arising from unauthorized use of your account that results from your failure to safeguard your credentials.</p>
+  </section>
+
+  <!-- ═══ 3 ═══ -->
+  <section id="s3">
+    <h2 class="section-heading">3. Description of the Service</h2>
+
+    <h3>3.1 Core Features (Free Tier)</h3>
+    <p>ShieldNav provides GPS-assisted, crime-aware navigation. Core capabilities available to all registered users include:</p>
+    <ul>
+      <li>Turn-by-turn voice navigation powered by the HERE Maps SDK;</li>
+      <li>Basic map display with route planning;</li>
+      <li>Limited crime heatmap overlay sourced from public municipal records;</li>
+      <li>Basic point-of-interest search.</li>
+    </ul>
+
+    <h3>3.2 ShieldNav Premium Features</h3>
+    <p>A paid subscription ("ShieldNav Premium") unlocks the following additional features:</p>
+    <ul class="feature-list">
+      <li>Live autosuggest search powered by real-time HERE Places data</li>
+      <li>Real-time speed limit display along your route</li>
+      <li>Toll information and cost estimates</li>
+      <li>Full crime radar with detailed incident data (type, date, block-level location)</li>
+      <li>Unlimited searches and route calculations</li>
+      <li>Priority safety scoring updates</li>
+    </ul>
+    <p>Premium features are described in more detail within the app. We may add, modify, or remove Premium features over time with or without notice; however, we will not materially reduce the core value of the Premium subscription without reasonable advance notice.</p>
+
+    <h3>3.3 Service Availability</h3>
+    <p>We strive for high availability but do not guarantee that the Service will be uninterrupted, error-free, or available in all geographic areas. We may suspend or modify the Service at any time for maintenance, legal compliance, or other business reasons. We are not liable for any loss resulting from service interruptions.</p>
+  </section>
+
+  <!-- ═══ 4 ═══ -->
+  <section id="s4">
+    <h2 class="section-heading">4. Subscriptions and Billing</h2>
+
+    <div class="callout info">
+      <strong>Apple App Store — Subscription Disclosure</strong>
+      <p>If you purchase ShieldNav Premium through the Apple App Store, the following terms apply in addition to (and, where they conflict, supersede) the general billing terms below. This disclosure is required by Apple.</p>
+    </div>
+
+    <h3>4.1 Subscription Plans</h3>
+    <p>ShieldNav Premium is available as:</p>
+    <ul>
+      <li><strong>Monthly Plan:</strong> Billed monthly at the price displayed at the time of purchase in the App Store;</li>
+      <li><strong>Annual Plan:</strong> Billed once per year at the price displayed at the time of purchase in the App Store.</li>
+    </ul>
+    <p>Current prices are always displayed at the point of purchase within the App Store listing. Prices are denominated in your local currency and may vary by region. ShieldNav reserves the right to change subscription prices; you will be notified of any price change in advance and your continued use after the effective date constitutes acceptance.</p>
+
+    <h3>4.2 Auto-Renewal</h3>
+    <p><strong>Subscriptions automatically renew</strong> at the end of each billing period (monthly or annual, as applicable) unless you cancel at least <strong>24 hours before the end of the current period.</strong> Your Apple ID account will be charged for renewal within 24 hours prior to the end of the current period at the then-current renewal price.</p>
+
+    <h3>4.3 Payment</h3>
+    <p>Payment is charged to your Apple ID account at the time of purchase confirmation. Subscriptions are managed and billed entirely by Apple through In-App Purchases. ShieldNav does not directly collect or store your payment information. RevenueCat is used solely to verify and manage entitlement status; your payment details are never accessible to ShieldNav.</p>
+
+    <h3>4.4 Free Trials</h3>
+    <p>ShieldNav may offer free trial periods for ShieldNav Premium from time to time. If a free trial is offered:</p>
+    <ul>
+      <li>The trial duration and terms will be disclosed at the point of sign-up;</li>
+      <li>If you do not cancel before the trial period ends, the subscription will automatically convert to a paid subscription and your Apple ID account will be charged the applicable subscription fee;</li>
+      <li>Unused portions of a free trial are forfeited upon upgrading to a paid plan.</li>
+    </ul>
+
+    <h3>4.5 Cancellation</h3>
+    <p>You may cancel your ShieldNav Premium subscription at any time. To cancel:</p>
+    <ol>
+      <li>Open the <strong>Settings</strong> app on your iPhone or iPad;</li>
+      <li>Tap your name at the top to open your Apple ID settings;</li>
+      <li>Tap <strong>Subscriptions</strong>;</li>
+      <li>Select <strong>ShieldNav</strong> and tap <strong>Cancel Subscription</strong>.</li>
+    </ol>
+    <p>Cancellation takes effect at the end of the current billing period. You will continue to have access to Premium features until then. Cancellation does not entitle you to a refund of any already-charged fees.</p>
+
+    <h3>4.6 Refunds</h3>
+    <p>ShieldNav does not issue refunds for partial subscription periods. All subscription purchases are final once charged. If you believe you are entitled to a refund, you must request it directly from Apple through the App Store. Apple's refund policies govern all purchases made through the App Store. To request a refund from Apple, visit <strong>reportaproblem.apple.com</strong>.</p>
+
+    <h3>4.7 Subscription Management Across Platforms</h3>
+    <p>If you subscribed on iOS via Apple In-App Purchase, your subscription is linked to your Apple ID and must be managed through Apple. Deleting the ShieldNav app does not cancel your subscription. You must cancel through the Settings app as described in Section 4.5.</p>
+
+    <h3>4.8 Family Sharing</h3>
+    <p>If Family Sharing is enabled for your Apple ID and ShieldNav participates in Family Sharing, the purchasing account holder's subscription may be shared with qualifying family members. We are not responsible for any unintended sharing of subscription access resulting from Family Sharing settings you configure.</p>
+  </section>
+
+  <!-- ═══ 5 ═══ -->
+  <section id="s5">
+    <h2 class="section-heading">5. Acceptable Use and Prohibited Conduct</h2>
+
+    <h3>5.1 Permitted Use</h3>
+    <p>You may use ShieldNav solely for lawful, personal, non-commercial navigation and safety-awareness purposes consistent with these Terms. Any other use requires our prior written consent.</p>
+
+    <h3>5.2 Prohibited Conduct</h3>
+    <p>You agree not to:</p>
+    <ul>
+      <li><strong>Use the app while driving.</strong> You must not look at or interact with the ShieldNav screen while operating a moving vehicle. Use audio guidance only while driving;</li>
+      <li>Use the Service for any unlawful purpose or in violation of any applicable federal, state, or local law;</li>
+      <li>Reverse engineer, decompile, disassemble, or attempt to derive source code from the app or any component thereof;</li>
+      <li>Scrape, crawl, index, or otherwise extract data from the Service by automated means without our express written permission;</li>
+      <li>Use crime data displayed in the app to harass, profile, discriminate against, or target individuals or groups based on location, race, ethnicity, religion, national origin, or any other characteristic;</li>
+      <li>Use the Service to stalk, surveil, or monitor any individual without their knowledge and consent;</li>
+      <li>Attempt to gain unauthorized access to our servers, systems, or databases;</li>
+      <li>Distribute malware, viruses, or harmful code through or in connection with the Service;</li>
+      <li>Impersonate ShieldNav, its employees, or any other person or entity;</li>
+      <li>Create multiple accounts to circumvent usage limits, free trials, or bans;</li>
+      <li>Modify, adapt, translate, or create derivative works based on the Service without our express consent;</li>
+      <li>Remove, obscure, or alter any copyright, trademark, or other proprietary notices within the app;</li>
+      <li>Use the Service in any way that could damage, disable, overburden, or impair our infrastructure;</li>
+      <li>Sublicense, resell, rent, or otherwise commercialize the Service or crime data obtained through it;</li>
+      <li>Use the Service to make decisions about employment, housing, credit, insurance, or other applications that are regulated by anti-discrimination law.</li>
+    </ul>
+
+    <h3>5.3 Reporting Violations</h3>
+    <p>If you become aware of any violation of these Terms or any misuse of the Service, please contact us at <a href="mailto:support@shieldnav.com">support@shieldnav.com</a>.</p>
+  </section>
+
+  <!-- ═══ 6 ═══ -->
+  <section id="s6">
+    <h2 class="section-heading">6. Intellectual Property</h2>
+
+    <h3>6.1 ShieldNav Ownership</h3>
+    <p>The ShieldNav app, including its source code, design, user interface, graphics, text, logos, branding, and all related intellectual property, is owned by ShieldNav, LLC or its licensors and is protected by United States and international intellectual property laws. All rights not expressly granted herein are reserved.</p>
+
+    <h3>6.2 Limited License to You</h3>
+    <p>Subject to your compliance with these Terms, ShieldNav grants you a limited, non-exclusive, non-transferable, revocable license to download and use the ShieldNav app on devices you personally own or control, solely for your personal, non-commercial use. This license does not include the right to sublicense, modify, sell, or distribute the app or any content derived from it.</p>
+
+    <h3>6.3 HERE Maps and Third-Party Content</h3>
+    <p>Map data, routing, and certain location features are provided through the HERE Maps SDK under license from HERE Technologies. Crime data is sourced from public municipal databases. All third-party content remains the property of its respective owners and is subject to the applicable third-party terms. ShieldNav's license to you does not extend any rights in third-party content beyond what is strictly necessary to use the Service.</p>
+
+    <h3>6.4 Feedback</h3>
+    <p>If you submit ideas, suggestions, bug reports, or feedback about the Service ("Feedback"), you grant ShieldNav a perpetual, irrevocable, royalty-free, worldwide license to use, copy, modify, and incorporate such Feedback into the Service or any other product without restriction or compensation to you.</p>
+
+    <h3>6.5 Trademarks</h3>
+    <p>"ShieldNav" and the ShieldNav shield logo are trademarks of ShieldNav, LLC. You may not use our trademarks without prior written permission. Other trademarks referenced in the app belong to their respective owners.</p>
+  </section>
+
+  <!-- ═══ 7 ═══ -->
+  <section id="s7">
+    <h2 class="section-heading">7. Third-Party Services and Data</h2>
+
+    <h3>7.1 Overview</h3>
+    <p>ShieldNav integrates the following third-party services to deliver its functionality:</p>
+    <ul>
+      <li><strong>HERE Technologies</strong> — maps, routing, geocoding, speed limits, toll data, and search;</li>
+      <li><strong>Google Firebase</strong> — authentication, Firestore database, Cloud Messaging (push notifications), and cloud functions;</li>
+      <li><strong>RevenueCat</strong> — in-app subscription management and entitlement verification;</li>
+      <li><strong>Apple In-App Purchase</strong> — payment processing for iOS subscriptions;</li>
+      <li><strong>Public Municipal Crime Databases</strong> — crime incident data sourced from city open-data portals (see Section 9 for important limitations).</li>
+    </ul>
+
+    <h3>7.2 Third-Party Terms</h3>
+    <p>Your use of third-party services embedded in or linked from ShieldNav is subject to the respective terms and privacy policies of those providers. ShieldNav is not responsible for the accuracy, availability, or practices of any third-party service. Links to third-party terms of relevance:</p>
+    <ul>
+      <li>HERE Technologies Terms of Service: <a href="https://www.here.com/terms" target="_blank" rel="noopener noreferrer">here.com/terms</a></li>
+      <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></li>
+      <li>RevenueCat Terms: <a href="https://www.revenuecat.com/terms" target="_blank" rel="noopener noreferrer">revenuecat.com/terms</a></li>
+      <li>Apple Media Services Terms: <a href="https://www.apple.com/legal/internet-services/itunes/" target="_blank" rel="noopener noreferrer">apple.com/legal/internet-services/itunes</a></li>
+    </ul>
+
+    <h3>7.3 No Endorsement</h3>
+    <p>Reference to any third-party service within ShieldNav does not constitute an endorsement by ShieldNav of that service or its operators. We have no control over third-party content and make no representations or warranties regarding it.</p>
+
+    <h3>7.4 Service Disruptions from Third Parties</h3>
+    <p>The availability of certain ShieldNav features depends on the continued availability of third-party APIs and services. If a third-party service experiences an outage or terminates our access, features dependent on that service may be temporarily or permanently unavailable. ShieldNav is not liable for disruptions caused by third-party service failures.</p>
+  </section>
+
+  <!-- ═══ 8 ═══ -->
+  <section id="s8">
+    <h2 class="section-heading">8. Privacy and Location Data</h2>
+
+    <h3>8.1 Privacy Policy</h3>
+    <p>Our collection, use, and disclosure of personal information, including location data, is governed by our <strong>Privacy Policy</strong>, available at <a href="https://shieldnav.app/privacy">shieldnav.app/privacy</a>. By using ShieldNav you agree to our Privacy Policy, which is incorporated into these Terms by reference.</p>
+
+    <h3>8.2 Location Data</h3>
+    <p>ShieldNav requires access to your device's GPS and location services to provide navigation. <strong>Your real-time location is used only during an active navigation session and is not stored persistently on our servers.</strong> Location data processed in-session may be used to calculate routes, display your position on the map, and determine relevant crime data for your area. We do not sell or share your location data with advertisers.</p>
+
+    <h3>8.3 Push Notifications</h3>
+    <p>ShieldNav may send push notifications via Firebase Cloud Messaging, such as safety alerts, feature announcements, or account notifications. You may opt out of push notifications at any time through your device's notification settings. Opting out of non-essential notifications will not affect core navigation functionality.</p>
+
+    <h3>8.4 User Profile Data</h3>
+    <p>User profile information (such as your display name, email, and preference settings) is stored in Firebase Firestore. This data is used to personalize your experience and to manage your subscription status. You may request deletion of your account and associated data by contacting us at <a href="mailto:support@shieldnav.com">support@shieldnav.com</a>.</p>
+
+    <h3>8.5 Children's Privacy</h3>
+    <p>We do not knowingly collect personal information from children under 13. Users between 13 and 17 should use ShieldNav only with parental or guardian consent. If you believe a child under 13 has provided us with personal information, please contact us immediately and we will take steps to delete such information.</p>
+  </section>
+
+  <!-- ═══ 9 ═══ -->
+  <section id="s9">
+    <h2 class="section-heading">9. Safety Disclaimer and Crime Data Limitations</h2>
+
+    <div class="callout danger">
+      <strong>Critical Safety Information — Please Read Carefully</strong>
+      <p>This section contains critical limitations on the nature and reliability of information provided by ShieldNav. Failure to understand these limitations could affect your safety.</p>
+    </div>
+
+    <h3>9.1 ShieldNav Is a Navigation Aid Only</h3>
+    <p>ShieldNav is designed to assist with route planning and to provide general awareness of publicly reported crime patterns. It is <strong>not a real-time emergency alert system</strong> and is <strong>not a substitute for emergency services.</strong></p>
+    <p><strong>If you are in an emergency, call 911 immediately.</strong> Do not rely on ShieldNav to alert you to imminent danger. ShieldNav cannot detect or warn you of crimes as they are happening.</p>
+
+    <h3>9.2 Crime Data Limitations</h3>
+    <p>Crime data displayed in ShieldNav is sourced from publicly available municipal open-data portals and may be subject to significant limitations, including but not limited to:</p>
+    <ul>
+      <li><strong>Reporting lag:</strong> Data may be days, weeks, or months behind actual crime occurrence dates;</li>
+      <li><strong>Incomplete records:</strong> Many crimes go unreported; publicly available data reflects only reported incidents;</li>
+      <li><strong>Aggregation and generalization:</strong> For privacy reasons, incident locations are typically reported at the block level or census tract level, not precise addresses;</li>
+      <li><strong>Data errors:</strong> Municipal datasets may contain errors, duplicates, or misclassifications;</li>
+      <li><strong>Geographic gaps:</strong> Not all cities or jurisdictions publish crime data, and coverage varies significantly by region;</li>
+      <li><strong>Changing conditions:</strong> Neighborhood safety conditions can change rapidly and the app cannot reflect real-time conditions.</li>
+    </ul>
+    <p><strong>Crime data in ShieldNav should be used as one of many inputs to inform general caution — it is not a guarantee of safety in any area and is not a guarantee of danger in any area.</strong></p>
+
+    <h3>9.3 No Guarantees Regarding Safety</h3>
+    <p>ShieldNav does not guarantee, represent, or warrant that any route, area, or location is safe, unsafe, crime-free, or free from any particular risk. The absence of crime data for an area does not mean the area is safe. The presence of crime data for an area does not mean the area is currently dangerous.</p>
+
+    <h3>9.4 Do Not Use While Driving</h3>
+    <p><strong>You must not look at or interact with your phone screen while operating a moving vehicle.</strong> Mount your device securely and configure audio guidance before you begin driving. Keep your eyes on the road at all times. Distracted driving is illegal in most jurisdictions and can cause serious injury or death. ShieldNav is not responsible for any accident, injury, or legal consequence arising from distracted driving.</p>
+
+    <h3>9.5 Navigation Data Limitations</h3>
+    <p>Turn-by-turn navigation instructions, speed limit data, and toll information are provided for reference only. They may not reflect current road conditions, temporary closures, construction, or recent changes to traffic laws. <strong>You must always obey all applicable traffic laws, signals, and posted signs regardless of what the app displays.</strong> ShieldNav is not liable for traffic violations, accidents, or loss arising from reliance on navigation data.</p>
+
+    <h3>9.6 No Discrimination</h3>
+    <p>Crime data reflects reported incidents in specific geographic areas. It does not and must not be used to make assumptions about the character, safety, or criminality of any individual or group. Using ShieldNav's crime data to discriminate against individuals based on race, ethnicity, national origin, religion, gender, disability, or any other protected characteristic is strictly prohibited and a violation of these Terms.</p>
+  </section>
+
+  <!-- ═══ 10 ═══ -->
+  <section id="s10">
+    <h2 class="section-heading">10. Disclaimer of Warranties</h2>
+
+    <div class="callout warn">
+      <strong>No Warranties</strong>
+      <p>This section limits ShieldNav's legal liability. Please read it carefully.</p>
+    </div>
+
+    <p><strong>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.</strong> TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, SHIELDNAV, LLC AND ITS OFFICERS, DIRECTORS, EMPLOYEES, CONTRACTORS, LICENSORS, AND AGENTS (COLLECTIVELY, "SHIELDNAV PARTIES") DISCLAIM ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO:</p>
+    <ul>
+      <li>IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT;</li>
+      <li>WARRANTIES THAT THE SERVICE WILL MEET YOUR REQUIREMENTS OR BE CONTINUOUSLY AVAILABLE, UNINTERRUPTED, SECURE, TIMELY, OR ERROR-FREE;</li>
+      <li>WARRANTIES REGARDING THE ACCURACY, COMPLETENESS, RELIABILITY, OR TIMELINESS OF ANY CRIME DATA, NAVIGATION DATA, SPEED LIMIT DATA, TOLL DATA, OR OTHER CONTENT DISPLAYED WITHIN THE APP;</li>
+      <li>WARRANTIES THAT ANY DEFECTS IN THE SERVICE WILL BE CORRECTED;</li>
+      <li>WARRANTIES THAT THE SERVICE IS FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.</li>
+    </ul>
+    <p>NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY SHIELDNAV OR ITS REPRESENTATIVES CREATES A WARRANTY NOT EXPRESSLY STATED IN THESE TERMS.</p>
+    <p>Some jurisdictions do not allow the exclusion of certain warranties. In such jurisdictions, the above disclaimers apply to the maximum extent permitted by law.</p>
+  </section>
+
+  <!-- ═══ 11 ═══ -->
+  <section id="s11">
+    <h2 class="section-heading">11. Limitation of Liability</h2>
+
+    <p><strong>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, THE SHIELDNAV PARTIES SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO:</strong></p>
+    <ul>
+      <li>PERSONAL INJURY OR PROPERTY DAMAGE OF ANY NATURE ARISING FROM OR RELATED TO YOUR USE OF THE SERVICE;</li>
+      <li>ANY ACCIDENT, TRAFFIC VIOLATION, OR HARM RESULTING FROM DISTRACTED DRIVING OR RELIANCE ON NAVIGATION DATA;</li>
+      <li>ANY HARM OR LOSS ARISING FROM YOUR RELIANCE ON CRIME DATA DISPLAYED IN THE APP;</li>
+      <li>LOSS OF PROFITS, REVENUE, DATA, GOODWILL, OR BUSINESS OPPORTUNITIES;</li>
+      <li>UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR TRANSMISSIONS OR DATA;</li>
+      <li>FAILURE OF THIRD-PARTY SERVICES (INCLUDING HERE MAPS, FIREBASE, OR APPLE IN-APP PURCHASE) TO FUNCTION AS EXPECTED;</li>
+      <li>ANY OTHER MATTER RELATING TO THE SERVICE, EVEN IF SHIELDNAV HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</li>
+    </ul>
+    <p><strong>IN NO EVENT SHALL THE AGGREGATE LIABILITY OF THE SHIELDNAV PARTIES TO YOU FOR ALL CLAIMS ARISING OUT OF OR RELATING TO THESE TERMS OR THE SERVICE EXCEED THE GREATER OF: (A) THE TOTAL FEES YOU PAID TO SHIELDNAV IN THE TWELVE (12) MONTHS IMMEDIATELY PRECEDING THE CLAIM; OR (B) ONE HUNDRED U.S. DOLLARS ($100.00).</strong></p>
+    <p>Some jurisdictions do not allow limitations on implied warranties or exclusion of certain categories of damages. In such jurisdictions, the limitations above apply to the maximum extent permitted by law, and nothing in this section shall limit or exclude our liability for fraud, gross negligence, or willful misconduct.</p>
+    <p>The limitations in this section reflect the allocation of risk between the parties and are a fundamental element of the basis of the bargain between ShieldNav and you. ShieldNav would not provide the Service without these limitations.</p>
+  </section>
+
+  <!-- ═══ 12 ═══ -->
+  <section id="s12">
+    <h2 class="section-heading">12. Indemnification</h2>
+    <p>You agree to defend, indemnify, and hold harmless the ShieldNav Parties from and against any claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or in any way related to:</p>
+    <ul>
+      <li>Your use of or inability to use the Service;</li>
+      <li>Your violation of these Terms or any applicable law or regulation;</li>
+      <li>Your violation of any third party's rights, including intellectual property rights or privacy rights;</li>
+      <li>Any content or data you submit to or transmit through the Service;</li>
+      <li>Your use of the Service while operating a vehicle or in any other manner that endangers yourself or others;</li>
+      <li>Your misuse of crime data, including using it to discriminate against or harm any individual or group.</li>
+    </ul>
+    <p>ShieldNav reserves the right to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, in which case you agree to cooperate fully with us in asserting any available defenses.</p>
+  </section>
+
+  <!-- ═══ 13 ═══ -->
+  <section id="s13">
+    <h2 class="section-heading">13. Termination</h2>
+
+    <h3>13.1 Termination by You</h3>
+    <p>You may stop using ShieldNav at any time by deleting the app from your device and, if you have an account, by requesting account deletion at <a href="mailto:support@shieldnav.com">support@shieldnav.com</a>. If you have an active paid subscription, account deletion does not cancel your subscription — you must cancel separately through the App Store as described in Section 4.5.</p>
+
+    <h3>13.2 Termination by ShieldNav</h3>
+    <p>We may suspend or terminate your access to the Service at any time, with or without notice, if:</p>
+    <ul>
+      <li>You violate these Terms or any applicable law;</li>
+      <li>We determine, in our sole discretion, that your use poses a safety or legal risk;</li>
+      <li>We cease to operate the Service;</li>
+      <li>Required to do so by law or a regulatory authority.</li>
+    </ul>
+
+    <h3>13.3 Effect of Termination</h3>
+    <p>Upon termination, your license to use the Service immediately ceases. Sections of these Terms that by their nature should survive termination — including Sections 6, 9, 10, 11, 12, 14, and 17 — will survive. If your account is terminated due to a violation of these Terms, you are not entitled to a refund of any unused subscription period.</p>
+
+    <h3>13.4 Discontinuation of Service</h3>
+    <p>ShieldNav reserves the right to discontinue the Service, or any feature of the Service, at any time. If we discontinue a paid feature of ShieldNav Premium, we will provide reasonable advance notice and, where technically feasible, a pro-rated credit or refund for any prepaid subscription period affected.</p>
+  </section>
+
+  <!-- ═══ 14 ═══ -->
+  <section id="s14">
+    <h2 class="section-heading">14. Governing Law and Dispute Resolution</h2>
+
+    <h3>14.1 Governing Law</h3>
+    <p>These Terms and any dispute arising out of or related to them or the Service are governed by the laws of the <strong>State of Illinois</strong>, United States, without regard to conflict-of-law principles. The United Nations Convention on Contracts for the International Sale of Goods does not apply.</p>
+
+    <h3>14.2 Informal Resolution</h3>
+    <p>Before initiating any formal dispute proceeding, you agree to attempt to resolve any dispute informally by contacting us at <a href="mailto:support@shieldnav.com">support@shieldnav.com</a>. We will attempt to resolve the dispute within thirty (30) days of receiving your notice. If we cannot resolve the dispute informally within that period, either party may initiate formal proceedings as described below.</p>
+
+    <h3>14.3 Binding Arbitration</h3>
+    <p>Except for claims that qualify for small claims court and except as otherwise provided below, <strong>you and ShieldNav agree to resolve all disputes through binding individual arbitration</strong> rather than in court. The arbitration shall be administered by the American Arbitration Association ("AAA") under its Consumer Arbitration Rules, which are available at <a href="https://www.adr.org" target="_blank" rel="noopener noreferrer">adr.org</a>. The arbitration will be conducted in English. The arbitrator's decision will be final and binding and may be entered as a judgment in any court of competent jurisdiction.</p>
+
+    <h3>14.4 Class Action Waiver</h3>
+    <p><strong>YOU AND SHIELDNAV EACH WAIVE THE RIGHT TO A JURY TRIAL AND THE RIGHT TO PARTICIPATE IN ANY CLASS ACTION, CLASS ARBITRATION, OR REPRESENTATIVE PROCEEDING.</strong> All claims must be brought in your individual capacity. If a court finds this class action waiver unenforceable, the arbitration agreement in Section 14.3 shall be void as to that claim only, and that claim shall proceed in court.</p>
+
+    <h3>14.5 Small Claims Exception</h3>
+    <p>Either party may bring an individual claim in small claims court if the claim qualifies and remains in small claims court. Such claims must be filed in a court of competent jurisdiction in the State of Illinois.</p>
+
+    <h3>14.6 Opt-Out</h3>
+    <p>You may opt out of the arbitration agreement by sending written notice to <a href="mailto:support@shieldnav.com">support@shieldnav.com</a> with the subject line "Arbitration Opt-Out" within <strong>thirty (30) days</strong> of first accepting these Terms. Your notice must include your name, address, and a clear statement that you wish to opt out of arbitration. If you opt out, disputes will be resolved in the courts of the State of Illinois.</p>
+
+    <h3>14.7 Venue</h3>
+    <p>For any claim not subject to arbitration, you and ShieldNav consent to the exclusive jurisdiction of the state and federal courts located in the State of Illinois, and you waive any objection to the exercise of personal jurisdiction by such courts.</p>
+  </section>
+
+  <!-- ═══ 15 ═══ -->
+  <section id="s15">
+    <h2 class="section-heading">15. Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. When we do, we will revise the "Last Revised" date at the top of this page. For material changes, we will provide you with at least thirty (30) days' advance notice through one or more of the following means:</p>
+    <ul>
+      <li>An in-app notification or banner;</li>
+      <li>A push notification to your device;</li>
+      <li>An email to the address associated with your account.</li>
+    </ul>
+    <p>Your continued use of ShieldNav after the effective date of the revised Terms constitutes your acceptance of the changes. If you do not agree to the updated Terms, you must stop using the Service and, if applicable, cancel your subscription before the changes take effect.</p>
+    <p>We encourage you to review these Terms periodically. The current version is always available at <a href="https://shieldnav.app/terms">shieldnav.app/terms</a>.</p>
+  </section>
+
+  <!-- ═══ 16 ═══ -->
+  <section id="s16">
+    <h2 class="section-heading">16. Apple App Store — Additional EULA Terms</h2>
+
+    <div class="callout info">
+      <strong>Required Apple Developer Program Disclosure</strong>
+      <p>The following terms apply when you download ShieldNav from the Apple App Store. These terms supplement and, where applicable, supersede the general Terms above.</p>
+    </div>
+
+    <h3>16.1 Acknowledgement</h3>
+    <p>You and ShieldNav acknowledge that these Terms are concluded between you and ShieldNav, LLC only, and not with Apple, Inc. ("Apple"). Apple is not a party to these Terms and is not responsible for ShieldNav or its content.</p>
+
+    <h3>16.2 Scope of License</h3>
+    <p>The license granted to you for ShieldNav is limited to a non-transferable license to use ShieldNav on any Apple-branded products that you own or control, subject to the Usage Rules set forth in the Apple Media Services Terms and Conditions. These Terms may not provide for usage rules for ShieldNav that are in conflict with the Apple Media Services Terms and Conditions as of the date you download ShieldNav. You acknowledge that you had the opportunity to review the Apple Media Services Terms and Conditions.</p>
+
+    <h3>16.3 Maintenance and Support</h3>
+    <p>ShieldNav, LLC is solely responsible for providing maintenance and support services with respect to ShieldNav, as specified in these Terms, or as required under applicable law. You acknowledge that Apple has no obligation whatsoever to furnish any maintenance and support services with respect to ShieldNav.</p>
+
+    <h3>16.4 Warranty</h3>
+    <p>ShieldNav, LLC is solely responsible for any product warranties, whether express or implied by law, to the extent not effectively disclaimed in these Terms. In the event of any failure of ShieldNav to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price for ShieldNav (if any) to you. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to ShieldNav, and any other claims, losses, liabilities, damages, costs, or expenses attributable to any failure to conform to any warranty will be ShieldNav, LLC's sole responsibility.</p>
+
+    <h3>16.5 Product Claims</h3>
+    <p>ShieldNav, LLC, not Apple, is responsible for addressing any claims by you or any third party relating to ShieldNav or your possession and/or use of ShieldNav, including: (a) product liability claims; (b) any claim that ShieldNav fails to conform to any applicable legal or regulatory requirement; and (c) claims arising under consumer protection, privacy, or similar legislation.</p>
+
+    <h3>16.6 Intellectual Property Rights</h3>
+    <p>In the event of any third-party claim that ShieldNav or your possession and use of ShieldNav infringes that third party's intellectual property rights, ShieldNav, LLC, not Apple, will be solely responsible for the investigation, defense, settlement, and discharge of any such intellectual property infringement claim.</p>
+
+    <h3>16.7 Legal Compliance</h3>
+    <p>You represent and warrant that: (a) you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a "terrorist supporting" country; and (b) you are not listed on any U.S. Government list of prohibited or restricted parties.</p>
+
+    <h3>16.8 Developer Contact</h3>
+    <p>You may direct any questions, complaints, or claims with respect to ShieldNav to ShieldNav, LLC at: <a href="mailto:support@shieldnav.com">support@shieldnav.com</a>.</p>
+
+    <h3>16.9 Third-Party Beneficiary</h3>
+    <p>ShieldNav, LLC and you acknowledge and agree that Apple, and Apple's subsidiaries, are third-party beneficiaries of these Terms, and that, upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary thereof.</p>
+  </section>
+
+  <!-- ═══ 17 ═══ -->
+  <section id="s17">
+    <h2 class="section-heading">17. Miscellaneous</h2>
+
+    <h3>17.1 Entire Agreement</h3>
+    <p>These Terms, together with the Privacy Policy and any additional terms disclosed to you in connection with specific features or promotions, constitute the entire agreement between you and ShieldNav with respect to the Service and supersede all prior agreements, understandings, and representations.</p>
+
+    <h3>17.2 Severability</h3>
+    <p>If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, that provision shall be enforced to the maximum extent permissible, and the remaining provisions shall remain in full force and effect.</p>
+
+    <h3>17.3 Waiver</h3>
+    <p>ShieldNav's failure to enforce any right or provision of these Terms shall not constitute a waiver of that right or provision. Any waiver of these Terms must be in writing and signed by an authorized representative of ShieldNav to be effective.</p>
+
+    <h3>17.4 Assignment</h3>
+    <p>You may not assign or transfer any of your rights or obligations under these Terms without ShieldNav's prior written consent. ShieldNav may assign these Terms or any rights hereunder without restriction and without notice to you. These Terms are binding upon and inure to the benefit of the parties and their respective permitted successors and assigns.</p>
+
+    <h3>17.5 Force Majeure</h3>
+    <p>ShieldNav shall not be liable for any failure or delay in performance resulting from causes beyond its reasonable control, including natural disasters, acts of war or terrorism, labor disputes, power outages, internet disruptions, actions of governmental authorities, or the unavailability of third-party services.</p>
+
+    <h3>17.6 Export Controls</h3>
+    <p>You agree to comply with all applicable export control laws and regulations. You represent that you are not located in a jurisdiction subject to U.S. trade sanctions and that you are not a prohibited party under applicable U.S. export control laws.</p>
+
+    <h3>17.7 No Partnership or Agency</h3>
+    <p>Nothing in these Terms creates, or shall be construed to create, a partnership, joint venture, employment, franchise, or agency relationship between you and ShieldNav. You do not have any authority to bind ShieldNav in any respect.</p>
+
+    <h3>17.8 Headings</h3>
+    <p>Section headings in these Terms are for convenience only and shall not affect the interpretation of any provision.</p>
+
+    <h3>17.9 Electronic Agreement</h3>
+    <p>You agree that these Terms and any notices provided under them may be delivered electronically, including in-app notifications and emails. Electronic delivery satisfies any requirement that such documents be "in writing."</p>
+
+    <h3>17.10 Language</h3>
+    <p>These Terms are written in English. Any translation provided is for convenience only. In the event of any inconsistency between the English version and any translation, the English version governs.</p>
+  </section>
+
+  <!-- ═══ 18 ═══ -->
+  <section id="s18">
+    <h2 class="section-heading">18. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests relating to these Terms or ShieldNav's practices, please contact us:</p>
+    <div class="callout info">
+      <p><strong>ShieldNav, LLC</strong></p>
+      <p>Email: <a href="mailto:support@shieldnav.com">support@shieldnav.com</a></p>
+      <p>Website: <a href="https://shieldnav.app" target="_blank" rel="noopener noreferrer">shieldnav.app</a></p>
+    </div>
+    <p>For subscription-related issues or billing disputes, you should also contact Apple Support through <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer">reportaproblem.apple.com</a>, as Apple is the merchant of record for all App Store purchases.</p>
+    <p>We aim to respond to all inquiries within five (5) business days.</p>
+  </section>
+
+</div><!-- /container -->
+
+<!-- ═══════════════════════  FOOTER  ═══════════════════════ -->
+<footer>
+  <p><strong>ShieldNav Terms of Use</strong> &mdash; Effective June 21, 2026</p>
+  <p style="margin-top:8px;">
+    <a href="https://shieldnav.app/privacy">Privacy Policy</a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://shieldnav.app/terms">Terms of Use</a>
+    &nbsp;&middot;&nbsp;
+    <a href="mailto:support@shieldnav.com">support@shieldnav.com</a>
+  </p>
+  <p style="margin-top:10px; font-size:12px; color:#888;">
+    &copy; 2026 ShieldNav, LLC. All rights reserved.
+  </p>
+</footer>
+
+</body>
+</html>

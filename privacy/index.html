@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShieldNav – Privacy Policy</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:       #0B75C2;
+      --blue-light: #e8f2fb;
+      --text:       #1a1a1a;
+      --muted:      #5a5a5a;
+      --border:     #d0d7de;
+      --bg:         #ffffff;
+      --section-bg: #f8fafc;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--blue);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    header .logo {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    header .logo span { opacity: 0.75; font-weight: 400; }
+    header h1 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    header .effective {
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+
+    /* ── Layout ── */
+    .wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    /* ── Table of Contents ── */
+    .toc {
+      background: var(--blue-light);
+      border: 1px solid #b8d8f5;
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin: 40px 0 48px;
+    }
+    .toc h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+    .toc ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .toc ol li {
+      margin: 5px 0;
+    }
+    .toc ol li a {
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .toc ol li a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 52px;
+      scroll-margin-top: 20px;
+    }
+    section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--blue);
+      border-bottom: 2px solid var(--blue-light);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    section h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 24px 0 10px;
+      color: var(--text);
+    }
+    section p {
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+    section ul, section ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+    section li {
+      margin: 6px 0;
+    }
+
+    /* ── Callout boxes ── */
+    .callout {
+      background: var(--section-bg);
+      border-left: 4px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.95rem;
+    }
+    .callout.warn {
+      border-left-color: #e07800;
+      background: #fff8ee;
+    }
+    .callout strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* ── Table ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin: 16px 0 20px;
+    }
+    th {
+      background: var(--blue);
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+    }
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: var(--section-bg); }
+
+    /* ── Contact box ── */
+    .contact-box {
+      display: inline-block;
+      background: var(--blue-light);
+      border: 1px solid #b8d8f5;
+      border-radius: 8px;
+      padding: 16px 24px;
+      margin-top: 8px;
+    }
+    .contact-box a {
+      color: var(--blue);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+    }
+    footer a { color: var(--blue); }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header { padding: 36px 16px 28px; }
+      header .logo { font-size: 1.6rem; }
+      .toc { padding: 20px; }
+      th, td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════ HEADER -->
+<header>
+  <div class="logo">ShieldNav <span>by DriveSafe</span></div>
+  <h1>Privacy Policy</h1>
+  <p class="effective">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Updated: June 21, 2026</p>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════ CONTENT -->
+<div class="wrapper">
+
+  <!-- ── Intro blurb ── -->
+  <section style="margin-top:40px; margin-bottom:0;">
+    <p>
+      ShieldNav ("ShieldNav," "we," "our," or "us") is a crime-aware navigation application for
+      iOS and Android. We take your privacy seriously. This Privacy Policy explains what
+      information we collect, why we collect it, how we use and protect it, and what choices you
+      have. Please read it carefully. By using ShieldNav you agree to the practices described here.
+    </p>
+    <p>
+      If you have questions, contact us at any time:
+    </p>
+    <div class="contact-box">
+      <strong>ShieldNav Support</strong>
+      Email: <a href="mailto:support@shieldnav.com">support@shieldnav.com</a>
+    </div>
+  </section>
+
+  <!-- ── TOC ── -->
+  <nav class="toc" aria-label="Table of Contents">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#scope">Scope and Who We Are</a></li>
+      <li><a href="#children">Children's Privacy (COPPA)</a></li>
+      <li><a href="#data-collected">Information We Collect</a></li>
+      <li><a href="#location">Location Data — What We Collect and What We Don't</a></li>
+      <li><a href="#how-we-use">How We Use Your Information</a></li>
+      <li><a href="#third-parties">Third-Party Services We Use</a></li>
+      <li><a href="#sharing">How We Share Your Information</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#cookies">Cookies, SDKs, and Tracking Technologies</a></li>
+      <li><a href="#your-rights">Your Rights and Choices</a></li>
+      <li><a href="#ccpa">California Privacy Rights (CCPA / CPRA)</a></li>
+      <li><a href="#delete-account">How to Delete Your Account</a></li>
+      <li><a href="#third-party-links">Third-Party Links and Services</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════════
+       1. SCOPE
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="scope">
+    <h2>1. Scope and Who We Are</h2>
+    <p>
+      This Privacy Policy applies to the ShieldNav mobile application (the "App") available on
+      iOS (Apple App Store) and Android (Google Play Store), as well as any related websites or
+      services that link to this policy (collectively, the "Services").
+    </p>
+    <p>
+      ShieldNav is operated by DriveSafe. Our primary contact for privacy matters is
+      <a href="mailto:support@shieldnav.com">support@shieldnav.com</a>.
+    </p>
+    <p>
+      ShieldNav is currently offered exclusively to users located in the United States.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       2. COPPA
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="children">
+    <h2>2. Children's Privacy (COPPA)</h2>
+    <div class="callout warn">
+      <strong>Age Requirement: 13 and older only.</strong>
+      ShieldNav is not directed to children under the age of 13.
+    </div>
+    <p>
+      We do not knowingly collect personal information from children under 13 years of age. By
+      creating an account or using the App, you represent that you are at least 13 years old. If
+      you are between 13 and 18, you represent that you have your parent's or guardian's
+      permission to use the App.
+    </p>
+    <p>
+      If we become aware that we have inadvertently collected personal information from a child
+      under 13 without verifiable parental consent, we will take immediate steps to delete that
+      information from our records. If you believe we have collected information from a child
+      under 13, please contact us immediately at
+      <a href="mailto:support@shieldnav.com">support@shieldnav.com</a>.
+    </p>
+    <p>
+      This policy is consistent with the Children's Online Privacy Protection Act (COPPA), 15
+      U.S.C. § 6501 et seq.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       3. DATA COLLECTED
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="data-collected">
+    <h2>3. Information We Collect</h2>
+    <p>We collect the following categories of information:</p>
+
+    <h3>3.1 Information You Provide Directly</h3>
+    <ul>
+      <li>
+        <strong>Account registration data:</strong> Your email address and display name when
+        you sign up with email/password, Google Sign-In, or Sign in with Apple.
+      </li>
+      <li>
+        <strong>Profile photo:</strong> An optional profile photo you choose to upload. Profile
+        photos are stored in Firebase Storage.
+      </li>
+      <li>
+        <strong>Feedback and bug reports:</strong> Text descriptions, severity ratings, report
+        type, and any optional screenshots you submit through the in-app feedback tool. These are
+        stored in Firebase Firestore.
+      </li>
+    </ul>
+
+    <h3>3.2 Information Collected Automatically</h3>
+    <ul>
+      <li>
+        <strong>Location data:</strong> GPS coordinates while the App is actively navigating.
+        See Section 4 for a full description of what is and is not stored.
+      </li>
+      <li>
+        <strong>Device information:</strong> iOS/Android version, device model, app version, and
+        unique device identifiers. Collected via Firebase Performance Monitoring.
+      </li>
+      <li>
+        <strong>Performance telemetry:</strong> App start times, screen render durations, network
+        request latencies, and crash reports. Collected via Firebase Performance Monitoring.
+      </li>
+      <li>
+        <strong>Push notification tokens:</strong> Firebase Cloud Messaging (FCM) registration
+        tokens, used to deliver in-app and system notifications to your device.
+      </li>
+    </ul>
+
+    <h3>3.3 Subscription and Purchase Information</h3>
+    <ul>
+      <li>
+        <strong>Subscription status and entitlements:</strong> Whether you are on a free, monthly
+        ($3.99/mo), or annual ($29.99/yr) plan. This is managed by RevenueCat and linked to your
+        Firebase UID. We do not store or process your payment card information — all payment
+        transactions are handled by Apple (App Store) or Google (Play Store) directly.
+      </li>
+    </ul>
+
+    <h3>3.4 Information from Third-Party Sign-In</h3>
+    <p>
+      If you sign in with Google or Apple, we receive a limited profile (name, email address,
+      and a provider-specific unique identifier) from those services. We do not receive your
+      passwords, payment details, or any other data held by those providers. See their respective
+      privacy policies for more information.
+    </p>
+
+    <h3>3.5 Drive Logs (Local Only)</h3>
+    <p>
+      The App may create drive logs on your device for diagnostic and personal review purposes.
+      These logs are stored locally on your device and are <strong>never uploaded to our
+      servers</strong>. You can delete them at any time by uninstalling the App or clearing
+      App data in your device settings.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       4. LOCATION DATA
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="location">
+    <h2>4. Location Data — What We Collect and What We Don't</h2>
+
+    <div class="callout">
+      <strong>Plain-English Summary</strong>
+      We use your location in real time to navigate you and to score crime risk along your
+      route. We do <em>not</em> store your GPS history or movement data on our servers.
+    </div>
+
+    <h3>4.1 What We Collect</h3>
+    <p>
+      When you actively use navigation in ShieldNav, the App accesses your device's GPS
+      coordinates. This location data is used <strong>only in real time</strong>, within that
+      active navigation session, for the following purposes:
+    </p>
+    <ul>
+      <li>Calculating and displaying your route (via the HERE Maps SDK).</li>
+      <li>Providing turn-by-turn directions and re-routing.</li>
+      <li>Overlaying crime heatmaps and scoring areas along your route.</li>
+      <li>Displaying current speed limits and toll information.</li>
+    </ul>
+
+    <h3>4.2 What We Do NOT Store</h3>
+    <p>
+      Your precise GPS coordinates from individual navigation sessions are
+      <strong>not stored persistently on our servers</strong>. Once a navigation session ends,
+      session-level location data is discarded. We do not build a history of your movements or
+      trips.
+    </p>
+
+    <h3>4.3 Data Sent to HERE Technologies</h3>
+    <p>
+      To calculate routes and provide mapping services, your location data is transmitted to
+      HERE Technologies' servers. HERE processes this data as a service provider on our behalf
+      subject to HERE's Data Privacy Notice (available at
+      <a href="https://www.here.com/privacy" target="_blank" rel="noopener">here.com/privacy</a>).
+      HERE may retain anonymized, aggregated telemetry for product improvement purposes in
+      accordance with their own policies.
+    </p>
+
+    <h3>4.4 Background Location</h3>
+    <p>
+      ShieldNav requests location access only while the App is actively navigating (foreground
+      use). If permitted, the App may continue to update your position while the screen is
+      locked during an active navigation session. We do not access your location when the App is
+      closed or when navigation is not active.
+    </p>
+
+    <h3>4.5 Revoking Location Permission</h3>
+    <p>
+      You may revoke location permission at any time via your device's Settings. Note that
+      revoking location access will disable navigation and crime-overlay features of the App.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       5. HOW WE USE YOUR INFORMATION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="how-we-use">
+    <h2>5. How We Use Your Information</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Purpose</th>
+          <th>Information Used</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Provide and operate the App (navigation, crime overlays, routing)</td>
+          <td>Location data, account info, subscription status</td>
+        </tr>
+        <tr>
+          <td>Authenticate your identity and maintain your account</td>
+          <td>Email, display name, Firebase UID, OAuth tokens</td>
+        </tr>
+        <tr>
+          <td>Manage your subscription and verify premium entitlements</td>
+          <td>Firebase UID, RevenueCat subscription data</td>
+        </tr>
+        <tr>
+          <td>Send push notifications (navigation alerts, product updates)</td>
+          <td>FCM registration token</td>
+        </tr>
+        <tr>
+          <td>Process and respond to feedback and bug reports</td>
+          <td>Feedback text, severity, type, optional screenshot, account info</td>
+        </tr>
+        <tr>
+          <td>Monitor App performance and fix bugs</td>
+          <td>Device info, performance telemetry, crash logs</td>
+        </tr>
+        <tr>
+          <td>Improve App features and user experience</td>
+          <td>Aggregated, anonymized usage patterns</td>
+        </tr>
+        <tr>
+          <td>Enforce our Terms of Service and prevent fraud</td>
+          <td>Account info, device info</td>
+        </tr>
+        <tr>
+          <td>Comply with legal obligations</td>
+          <td>As required by applicable law</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      We do not use your personal information to serve you third-party advertising. We do not
+      sell, rent, or trade your personal information to data brokers or marketing companies.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       6. THIRD-PARTY SERVICES
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="third-parties">
+    <h2>6. Third-Party Services We Use</h2>
+    <p>
+      ShieldNav relies on the following third-party service providers. Each acts as a service
+      provider or processor, meaning they may receive certain data only to perform services on
+      our behalf. They are not authorized to use your data for their own independent purposes.
+    </p>
+
+    <h3>6.1 Firebase (Google LLC)</h3>
+    <p>
+      We use multiple Firebase products: Authentication, Cloud Firestore (database), Cloud
+      Storage, Cloud Messaging (push notifications), Performance Monitoring, and App Check.
+      Google may collect device identifiers and usage data in connection with these services.
+      <br />Privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
+    </p>
+
+    <h3>6.2 HERE Technologies</h3>
+    <p>
+      HERE provides maps, geocoding, routing, and speed-limit data. Your location and route
+      queries are sent to HERE's servers to compute navigation results.
+      <br />Privacy policy: <a href="https://www.here.com/privacy" target="_blank" rel="noopener">here.com/privacy</a>
+    </p>
+
+    <h3>6.3 RevenueCat, Inc.</h3>
+    <p>
+      RevenueCat handles subscription management and in-app purchase validation for iOS and
+      Android. RevenueCat receives your Firebase UID, purchase receipts (from Apple), and
+      subscription status. RevenueCat does not receive your full name, email address, or payment
+      card details.
+      <br />Privacy policy: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>
+    </p>
+
+    <h3>6.4 Apple (Sign in with Apple / App Store)</h3>
+    <p>
+      When you use Sign in with Apple, Apple shares a stable identifier and, optionally, an
+      email address with us (Apple may relay the address). All payment processing for iOS
+      subscriptions is handled solely by Apple.
+      <br />Privacy policy: <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener">apple.com/privacy</a>
+    </p>
+
+    <h3>6.5 Google (Google Sign-In)</h3>
+    <p>
+      When you use Google Sign-In, Google shares your name, email address, and a Google-specific
+      identifier with us. No payment data is shared.
+      <br />Privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
+    </p>
+
+    <h3>6.6 Public City Crime Databases</h3>
+    <p>
+      Crime heatmap data is sourced from publicly available municipal and law-enforcement
+      databases. This data is purely public-record information and does not involve any personal
+      information about you.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       7. HOW WE SHARE YOUR INFORMATION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="sharing">
+    <h2>7. How We Share Your Information</h2>
+    <p>
+      We do not sell your personal information. We share your information only in the following
+      limited circumstances:
+    </p>
+
+    <h3>7.1 Service Providers</h3>
+    <p>
+      We share information with the third-party services listed in Section 6 strictly to operate
+      the App. These providers are bound by data processing agreements that prohibit them from
+      using your data for their own commercial purposes.
+    </p>
+
+    <h3>7.2 Legal Requirements</h3>
+    <p>
+      We may disclose your information if required to do so by law, regulation, court order,
+      subpoena, or other valid legal process. We may also disclose information when we believe
+      in good faith that disclosure is necessary to protect the safety of any person, prevent
+      fraud, or defend against legal claims.
+    </p>
+
+    <h3>7.3 Business Transfers</h3>
+    <p>
+      If ShieldNav or DriveSafe is involved in a merger, acquisition, asset sale, or other
+      business transfer, your information may be transferred as part of that transaction. We will
+      notify you via email or a prominent in-App notice before your personal information is
+      transferred and becomes subject to a different privacy policy.
+    </p>
+
+    <h3>7.4 With Your Consent</h3>
+    <p>
+      We may share your information with third parties when you have given us explicit consent
+      to do so.
+    </p>
+
+    <h3>7.5 Aggregated and De-Identified Data</h3>
+    <p>
+      We may share aggregated, anonymized, and de-identified information — information that
+      cannot reasonably be used to identify you — for research, product improvement, or
+      analytics purposes. This data is not linked to your individual account.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       8. DATA RETENTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="retention">
+    <h2>8. Data Retention</h2>
+    <p>
+      We retain your personal information only for as long as necessary to provide the Services
+      and fulfill the purposes described in this policy, unless a longer retention period is
+      required by law.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Data Type</th>
+          <th>Retention Period</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Account information (email, display name, Firebase UID)</td>
+          <td>Retained for the life of your account; deleted within 30 days of account deletion request</td>
+        </tr>
+        <tr>
+          <td>Profile photo</td>
+          <td>Retained until you delete it or delete your account</td>
+        </tr>
+        <tr>
+          <td>Real-time GPS location (active navigation session)</td>
+          <td>Not stored server-side; discarded at session end</td>
+        </tr>
+        <tr>
+          <td>Drive logs</td>
+          <td>Stored on-device only; not uploaded; deleted when you uninstall the App or clear App data</td>
+        </tr>
+        <tr>
+          <td>Feedback submissions</td>
+          <td>Retained for up to 2 years to allow us to track and resolve reported issues, then deleted</td>
+        </tr>
+        <tr>
+          <td>FCM push notification tokens</td>
+          <td>Retained while you have the App installed and notifications enabled; removed on account deletion</td>
+        </tr>
+        <tr>
+          <td>Performance telemetry / crash logs</td>
+          <td>Retained in aggregated form for up to 90 days per Firebase Performance defaults</td>
+        </tr>
+        <tr>
+          <td>Subscription records (RevenueCat)</td>
+          <td>Retained per RevenueCat's policies; typically up to 2 years for dispute resolution. See RevenueCat's privacy policy.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      When you delete your account, we initiate deletion within 30 days. Some anonymized or
+      aggregated data may be retained indefinitely as it cannot be linked back to you. Certain
+      data may be retained longer where required by applicable law (for example, for tax or
+      fraud-prevention purposes).
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       9. SECURITY
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="security">
+    <h2>9. Security</h2>
+    <p>
+      We implement reasonable administrative, technical, and physical safeguards designed to
+      protect your personal information from unauthorized access, use, alteration, or disclosure.
+      These measures include:
+    </p>
+    <ul>
+      <li>Data in transit is encrypted using TLS (Transport Layer Security).</li>
+      <li>Firebase Firestore and Firebase Storage access is governed by Security Rules that
+          enforce per-user read/write permissions.</li>
+      <li>Firebase App Check is used to verify that requests originate from genuine instances
+          of ShieldNav, reducing abuse by unauthorized clients.</li>
+      <li>Authentication credentials are managed by Firebase Authentication and are never
+          stored in plain text.</li>
+      <li>Third-party OAuth providers (Google, Apple) handle authentication secrets directly;
+          we never see your passwords for those services.</li>
+    </ul>
+    <p>
+      No method of electronic transmission or storage is 100% secure. While we strive to use
+      commercially acceptable means to protect your personal information, we cannot guarantee
+      absolute security. In the event of a data breach that is likely to result in a risk to
+      your rights or freedoms, we will notify affected users and relevant authorities as required
+      by applicable law.
+    </p>
+    <p>
+      If you discover a security vulnerability, please report it responsibly to
+      <a href="mailto:support@shieldnav.com">support@shieldnav.com</a>.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       10. COOKIES / SDKs / TRACKING
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="cookies">
+    <h2>10. Cookies, SDKs, and Tracking Technologies</h2>
+
+    <h3>10.1 Mobile App — No Traditional Cookies</h3>
+    <p>
+      ShieldNav is a native mobile app and does not use browser cookies. However, similar
+      tracking technologies operate within the App through third-party SDKs:
+    </p>
+    <ul>
+      <li>
+        <strong>Firebase SDKs</strong> use persistent installation identifiers (Firebase
+        Instance IDs) to link telemetry, crash reports, and push notification tokens to your
+        device.
+      </li>
+      <li>
+        <strong>HERE Maps SDK</strong> may store local cache data on your device (map tiles,
+        route data) to improve performance.
+      </li>
+      <li>
+        <strong>RevenueCat SDK</strong> stores a locally cached entitlement state on your
+        device to avoid unnecessary network calls.
+      </li>
+    </ul>
+
+    <h3>10.2 App Tracking Transparency (iOS)</h3>
+    <p>
+      ShieldNav does not engage in cross-app or cross-site behavioral advertising tracking.
+      We do not use the IDFA (Identifier for Advertisers) for advertising purposes. If Apple's
+      App Tracking Transparency framework prompts you, you may decline without any impact on
+      core App functionality.
+    </p>
+
+    <h3>10.3 Analytics</h3>
+    <p>
+      Firebase Performance Monitoring collects anonymized performance metrics. We do not use
+      Google Analytics for Firebase for behavioral analytics or user profiling. Performance data
+      is used solely to identify and fix technical issues.
+    </p>
+
+    <h3>10.4 Opting Out</h3>
+    <p>
+      You can limit certain data collection by:
+    </p>
+    <ul>
+      <li>Resetting your device's advertising identifier in iOS Settings &rsaquo; Privacy &amp;
+          Security &rsaquo; Tracking.</li>
+      <li>Disabling push notifications for ShieldNav in your device Settings.</li>
+      <li>Revoking location permission in your device Settings (this will disable navigation
+          features).</li>
+    </ul>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       11. YOUR RIGHTS AND CHOICES
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="your-rights">
+    <h2>11. Your Rights and Choices</h2>
+    <p>
+      Regardless of where you live, we provide the following rights to all ShieldNav users:
+    </p>
+
+    <h3>11.1 Right to Access</h3>
+    <p>
+      You may request a copy of the personal information we hold about you. Email us at
+      <a href="mailto:support@shieldnav.com">support@shieldnav.com</a> with the subject line
+      "Data Access Request." We will respond within 45 days.
+    </p>
+
+    <h3>11.2 Right to Correction</h3>
+    <p>
+      You may update your display name and profile photo directly in the App (Settings &rsaquo;
+      Profile). To correct your email address or other account data, contact us at
+      <a href="mailto:support@shieldnav.com">support@shieldnav.com</a>.
+    </p>
+
+    <h3>11.3 Right to Deletion</h3>
+    <p>
+      You may request deletion of your personal information at any time. See Section 13 for
+      step-by-step instructions. We will process deletion requests within 30 days, subject to
+      any legal retention requirements.
+    </p>
+
+    <h3>11.4 Right to Opt Out of Non-Essential Communications</h3>
+    <p>
+      You may opt out of push notifications at any time via your device Settings or within the
+      App's notification preferences. Note that we may still send you transactional messages
+      (e.g., account security alerts) that are necessary for the operation of your account.
+    </p>
+
+    <h3>11.5 Right to Withdraw Consent</h3>
+    <p>
+      Where processing is based on consent (for example, access to location), you may withdraw
+      consent at any time by adjusting your device permissions. Withdrawal does not affect the
+      lawfulness of processing prior to withdrawal.
+    </p>
+
+    <h3>11.6 Non-Discrimination</h3>
+    <p>
+      We will not discriminate against you for exercising any of these rights. You will not
+      receive a reduced quality of service, higher prices, or penalties for making a request.
+    </p>
+
+    <h3>11.7 Submitting a Request</h3>
+    <p>
+      To exercise any of the above rights, email us at
+      <a href="mailto:support@shieldnav.com">support@shieldnav.com</a>. We may ask you to
+      verify your identity before fulfilling the request to protect your account security.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       12. CCPA / CPRA
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="ccpa">
+    <h2>12. California Privacy Rights (CCPA / CPRA)</h2>
+    <p>
+      If you are a resident of California, the California Consumer Privacy Act (CCPA), as
+      amended by the California Privacy Rights Act (CPRA), grants you additional privacy rights
+      described below.
+    </p>
+
+    <h3>12.1 Categories of Personal Information Collected</h3>
+    <p>
+      Over the past 12 months, we have collected the following categories of personal
+      information as defined by the CCPA:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>CCPA Category</th>
+          <th>Examples</th>
+          <th>Collected?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Identifiers</td>
+          <td>Email address, Firebase UID, device ID</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Personal information (Cal. Civ. Code § 1798.80)</td>
+          <td>Name, profile photo</td>
+          <td>Yes (optional photo)</td>
+        </tr>
+        <tr>
+          <td>Geolocation data</td>
+          <td>GPS coordinates during active navigation</td>
+          <td>Yes (in-session only; not stored server-side)</td>
+        </tr>
+        <tr>
+          <td>Internet / electronic network activity</td>
+          <td>App performance telemetry, crash logs</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Inferences drawn from personal information</td>
+          <td>Subscription tier inference</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Sensitive personal information — precise geolocation</td>
+          <td>GPS coordinates during navigation</td>
+          <td>Yes (in-session only; see Section 4)</td>
+        </tr>
+        <tr>
+          <td>Financial information</td>
+          <td>Payment card data</td>
+          <td>No (handled by Apple/Google)</td>
+        </tr>
+        <tr>
+          <td>Protected classifications</td>
+          <td>Race, religion, health status, etc.</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Biometric information</td>
+          <td>Fingerprints, facial recognition data</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Audio/visual information</td>
+          <td>Voice recordings, photos taken in-app</td>
+          <td>No (profile photos only if you upload one)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>12.2 Sources of Personal Information</h3>
+    <p>We collect personal information from:</p>
+    <ul>
+      <li>You directly (account registration, profile settings, feedback forms).</li>
+      <li>Your device automatically (location, performance metrics).</li>
+      <li>Third-party sign-in providers (Google, Apple).</li>
+    </ul>
+
+    <h3>12.3 Business or Commercial Purposes for Collection</h3>
+    <p>As described in Section 5 above.</p>
+
+    <h3>12.4 Categories of Third Parties We Share With</h3>
+    <p>As described in Sections 6 and 7 above. We share with:</p>
+    <ul>
+      <li>Service providers (Firebase/Google, HERE Technologies, RevenueCat).</li>
+      <li>Government entities, when required by law.</li>
+    </ul>
+
+    <h3>12.5 Sale or Sharing of Personal Information</h3>
+    <div class="callout">
+      <strong>We do not sell your personal information.</strong>
+      We do not sell, rent, trade, or otherwise share your personal information with third
+      parties for monetary or other valuable consideration. We do not share your personal
+      information with third parties for cross-context behavioral advertising.
+    </div>
+
+    <h3>12.6 Use of Sensitive Personal Information</h3>
+    <p>
+      We collect precise geolocation data (a "sensitive" category under CPRA) only during
+      active navigation sessions to provide the core features of the App. We do not use this
+      information for any other purpose, and we do not store it persistently on our servers.
+      You have the right to direct us to limit the use of your sensitive personal information
+      to the uses necessary to provide the requested services. Our use is already limited as
+      described — no further opt-out is required.
+    </p>
+
+    <h3>12.7 Your CCPA Rights</h3>
+    <p>California residents have the right to:</p>
+    <ul>
+      <li>
+        <strong>Know:</strong> Request disclosure of the specific pieces of personal information
+        we have collected about you, the categories of sources, our business purpose for
+        collecting it, and the categories of third parties we share it with.
+      </li>
+      <li>
+        <strong>Delete:</strong> Request deletion of your personal information, subject to
+        certain exceptions (legal compliance, security, etc.).
+      </li>
+      <li>
+        <strong>Correct:</strong> Request correction of inaccurate personal information.
+      </li>
+      <li>
+        <strong>Opt Out of Sale/Sharing:</strong> Opt out of the sale or sharing of your
+        personal information for cross-context behavioral advertising. (We do not engage in
+        these activities, so no opt-out action is required.)
+      </li>
+      <li>
+        <strong>Limit Use of Sensitive Personal Information:</strong> Request that we limit our
+        use of your sensitive personal information to what is necessary to provide the Services.
+        (Our use is already so limited.)
+      </li>
+      <li>
+        <strong>Non-Discrimination:</strong> Not be discriminated against for exercising your
+        CCPA rights.
+      </li>
+    </ul>
+
+    <h3>12.8 How to Submit a CCPA Request</h3>
+    <p>
+      To exercise your CCPA rights, email us at
+      <a href="mailto:support@shieldnav.com">support@shieldnav.com</a> with the subject line
+      "CCPA Privacy Request." We will respond within 45 calendar days. We may extend the
+      response period by an additional 45 days when reasonably necessary and will notify you
+      of such extension. We will verify your identity before fulfilling the request.
+    </p>
+    <p>
+      You may designate an authorized agent to submit a request on your behalf. Authorized
+      agents must provide written authorization and we may require you to verify your identity
+      directly with us.
+    </p>
+
+    <h3>12.9 Shine the Light</h3>
+    <p>
+      California Civil Code § 1798.83 permits California residents to request information about
+      personal information shared with third parties for their direct marketing purposes. As
+      noted above, we do not share personal information with third parties for direct marketing.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       13. DELETE ACCOUNT
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="delete-account">
+    <h2>13. How to Delete Your Account</h2>
+    <p>
+      You can delete your ShieldNav account and associated data at any time using either of the
+      following methods:
+    </p>
+
+    <h3>Method 1: In-App Deletion (Recommended)</h3>
+    <ol>
+      <li>Open ShieldNav and go to <strong>Settings</strong>.</li>
+      <li>Tap <strong>Account</strong>.</li>
+      <li>Scroll to the bottom and tap <strong>Delete Account</strong>.</li>
+      <li>Confirm deletion when prompted.</li>
+    </ol>
+
+    <h3>Method 2: Email Request</h3>
+    <p>
+      Email <a href="mailto:support@shieldnav.com">support@shieldnav.com</a> from the email
+      address associated with your account. Use the subject line "Account Deletion Request."
+      We will confirm the deletion within 30 days.
+    </p>
+
+    <h3>What Happens When You Delete Your Account</h3>
+    <ul>
+      <li>Your Firebase Authentication record, Firestore profile, and profile photo in Firebase
+          Storage will be deleted within 30 days.</li>
+      <li>Your FCM push notification token will be revoked.</li>
+      <li>Feedback submissions associated with your account will be anonymized or deleted within
+          30 days.</li>
+      <li>Your RevenueCat subscription record will be retained per RevenueCat's data retention
+          policy for dispute-resolution purposes; cancellation must be done separately through
+          the App Store (iOS) or Play Store (Android).</li>
+      <li>Drive logs stored locally on your device are not affected — delete them by
+          uninstalling the App.</li>
+      <li>Anonymized and aggregated data that cannot identify you may be retained
+          indefinitely.</li>
+    </ul>
+
+    <div class="callout warn">
+      <strong>Important — Subscription Cancellation:</strong>
+      Deleting your ShieldNav account does NOT automatically cancel your App Store or Play Store
+      subscription. You must cancel your subscription separately through your device's
+      subscription settings to stop being charged. Deleting the App alone will not cancel a
+      subscription.
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       14. THIRD-PARTY LINKS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="third-party-links">
+    <h2>14. Third-Party Links and Services</h2>
+    <p>
+      ShieldNav may display links to external websites, map data attributed to public sources,
+      or references to third-party services. This Privacy Policy applies solely to information
+      collected by ShieldNav and does not govern the practices of third-party websites or
+      services that you may access through the App or that are linked from within the App.
+    </p>
+    <p>
+      We are not responsible for the privacy practices or content of third-party websites or
+      services. We encourage you to review the privacy policies of any third-party site or
+      service before providing your personal information. Third-party services integrated into
+      the App (Firebase, HERE, RevenueCat, etc.) are governed by their own respective privacy
+      policies, as linked in Section 6.
+    </p>
+    <p>
+      Crime data displayed in the App is sourced from publicly available municipal and
+      law-enforcement databases. We do not control the accuracy or completeness of that data
+      and are not responsible for how third-party data sources handle any information related
+      to their datasets.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       15. CHANGES
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="changes">
+    <h2>15. Changes to This Privacy Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time to reflect changes in our practices,
+      technology, legal requirements, or for other business reasons. When we make material
+      changes, we will:
+    </p>
+    <ul>
+      <li>Update the "Last Updated" date at the top of this page.</li>
+      <li>Post a notice in the App, or send you an email notification to the address on file,
+          at least 14 days before the changes take effect.</li>
+    </ul>
+    <p>
+      Your continued use of ShieldNav after the effective date of the revised policy constitutes
+      your acceptance of the changes. If you do not agree with the updated policy, please
+      discontinue use of the App and delete your account.
+    </p>
+    <p>
+      We encourage you to review this policy periodically. The current version is always
+      available within the App under Settings &rsaquo; Privacy Policy, and at
+      <strong>shieldnav.app/privacy</strong>.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       16. CONTACT
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="contact">
+    <h2>16. Contact Us</h2>
+    <p>
+      If you have any questions, concerns, or requests regarding this Privacy Policy or our
+      data practices, please contact us:
+    </p>
+    <div class="contact-box">
+      <strong>ShieldNav Privacy Team</strong>
+      Email: <a href="mailto:support@shieldnav.com">support@shieldnav.com</a><br />
+      Website: <a href="https://shieldnav.app" target="_blank" rel="noopener">shieldnav.app</a>
+    </div>
+    <p style="margin-top:20px;">
+      We aim to respond to all privacy-related inquiries within 5 business days and to fulfill
+      substantive rights requests within 45 calendar days, unless a longer period is permitted
+      by applicable law.
+    </p>
+  </section>
+
+</div><!-- /wrapper -->
+
+<!-- ═══════════════════════════════════════════════════════════ FOOTER -->
+<footer>
+  <p>
+    &copy; 2026 DriveSafe. All rights reserved. &nbsp;|&nbsp;
+    <a href="mailto:support@shieldnav.com">support@shieldnav.com</a> &nbsp;|&nbsp;
+    <a href="https://shieldnav.app" target="_blank" rel="noopener">shieldnav.app</a>
+  </p>
+  <p style="margin-top:8px;">
+    ShieldNav is not affiliated with law-enforcement agencies. Crime data is sourced from
+    public databases and is provided for informational purposes only.
+  </p>
+</footer>
+
+</body>
+</html>
