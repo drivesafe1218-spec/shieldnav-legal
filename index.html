@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShieldNav – Legal</title>
+  <title>ShieldNav</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -18,49 +18,43 @@
       padding: 40px 24px;
     }
     .logo { font-size: 2.5rem; font-weight: 800; color: #0B75C2; margin-bottom: 8px; letter-spacing: -0.5px; }
-    .sub { color: #5a5a5a; font-size: 1rem; margin-bottom: 48px; }
-    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 600px; width: 100%; }
+    .sub { color: #5a5a5a; font-size: 1rem; margin-bottom: 48px; text-align: center; }
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 560px; width: 100%; }
     a.card {
       display: block;
       background: #fff;
       border: 1px solid #d0d7de;
       border-radius: 12px;
-      padding: 24px 20px;
+      padding: 28px 24px;
       text-decoration: none;
       color: inherit;
       transition: border-color 0.15s, box-shadow 0.15s;
     }
-    a.card:hover { border-color: #0B75C2; box-shadow: 0 4px 16px rgba(11,117,194,0.1); }
-    a.card .icon { font-size: 1.6rem; margin-bottom: 10px; }
-    a.card h2 { font-size: 1rem; font-weight: 700; color: #0B75C2; margin-bottom: 4px; }
-    a.card p { font-size: 0.875rem; color: #5a5a5a; line-height: 1.4; }
+    a.card.primary { background: #0B75C2; border-color: #0B75C2; }
+    a.card.primary h2 { color: #fff; }
+    a.card.primary p { color: rgba(255,255,255,0.85); }
+    a.card.primary:hover { background: #0966ab; border-color: #0966ab; }
+    a.card:not(.primary):hover { border-color: #0B75C2; box-shadow: 0 4px 16px rgba(11,117,194,0.1); }
+    a.card .icon { font-size: 1.8rem; margin-bottom: 12px; }
+    a.card h2 { font-size: 1.05rem; font-weight: 700; color: #0B75C2; margin-bottom: 4px; }
+    a.card p { font-size: 0.875rem; color: #5a5a5a; line-height: 1.45; }
     footer { margin-top: 48px; color: #999; font-size: 0.8rem; text-align: center; }
-    @media (max-width: 500px) { .cards { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .cards { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
   <div class="logo">🛡️ ShieldNav</div>
-  <p class="sub">Legal &amp; Privacy Documents</p>
+  <p class="sub">Drive smarter. Stay safer.</p>
   <div class="cards">
-    <a class="card" href="/privacy">
-      <div class="icon">🔒</div>
-      <h2>Privacy Policy</h2>
-      <p>How we collect, use, and protect your data.</p>
+    <a class="card primary" href="/waitlist">
+      <div class="icon">🚀</div>
+      <h2>Join the Waitlist</h2>
+      <p>Be the first to know when ShieldNav is ready to purchase.</p>
     </a>
-    <a class="card" href="/terms">
-      <div class="icon">📄</div>
-      <h2>Terms of Use</h2>
-      <p>Subscription terms, usage rules, and disclaimers.</p>
-    </a>
-    <a class="card" href="/crime-disclaimer">
-      <div class="icon">⚠️</div>
-      <h2>Crime Data Disclaimer</h2>
-      <p>Accuracy limits, Fair Housing statement, and safety guidance.</p>
-    </a>
-    <a class="card" href="/support">
-      <div class="icon">💬</div>
-      <h2>Support</h2>
-      <p>Contact us, billing help, and account management.</p>
+    <a class="card" href="/legal">
+      <div class="icon">📋</div>
+      <h2>Legal &amp; Privacy</h2>
+      <p>Privacy policy, terms of use, and legal documents.</p>
     </a>
   </div>
   <footer>&copy; 2026 ShieldNav, LLC &nbsp;·&nbsp; <a href="mailto:support@shieldnav.com" style="color:#0B75C2;">support@shieldnav.com</a></footer>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShieldNav – Join the Waitlist</title>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f8fafc;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px 60px;
+    }
+    .back { align-self: flex-start; color: #0B75C2; text-decoration: none; font-size: 0.9rem; margin-bottom: 32px; }
+    .back:hover { text-decoration: underline; }
+    .logo { font-size: 2rem; font-weight: 800; color: #0B75C2; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .page-title { font-size: 1.6rem; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; text-align: center; }
+    .page-sub { color: #5a5a5a; font-size: 0.95rem; margin-bottom: 32px; text-align: center; max-width: 420px; line-height: 1.55; }
+    .card {
+      background: #fff;
+      border: 1px solid #d0d7de;
+      border-radius: 16px;
+      padding: 36px 32px;
+      width: 100%;
+      max-width: 480px;
+    }
+    .error-banner {
+      background: #fff3f3;
+      border: 1px solid #f5c2c2;
+      border-radius: 8px;
+      color: #b91c1c;
+      padding: 12px 14px;
+      font-size: 0.875rem;
+      margin-bottom: 20px;
+      display: none;
+      line-height: 1.4;
+    }
+    .field-group { margin-bottom: 20px; }
+    .field-group label { display: block; font-size: 0.875rem; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; }
+    .field-group label .opt { font-weight: 400; color: #888; font-size: 0.8rem; }
+    .field-group input {
+      width: 100%;
+      border: 1px solid #d0d7de;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: #1a1a1a;
+      background: #fff;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .field-group input:focus { border-color: #0B75C2; box-shadow: 0 0 0 3px rgba(11,117,194,0.12); }
+    /* Honeypot — visually hidden but not display:none so basic bots fill it */
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .turnstile-wrap { margin-bottom: 20px; min-height: 65px; }
+    .consent-wrap { margin-bottom: 24px; }
+    .consent-label {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.85rem;
+      color: #444;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+    .consent-label input[type="checkbox"] {
+      flex-shrink: 0;
+      margin-top: 2px;
+      accent-color: #0B75C2;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+    .consent-label a { color: #0B75C2; }
+    .submit-btn {
+      width: 100%;
+      background: #0B75C2;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 13px;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.15s;
+      margin-bottom: 16px;
+    }
+    .submit-btn:hover:not(:disabled) { background: #0966ab; }
+    .submit-btn:disabled { background: #a0c4e5; cursor: not-allowed; }
+    .privacy-note { font-size: 0.78rem; color: #999; text-align: center; line-height: 1.5; }
+    .privacy-note a { color: #0B75C2; }
+    .success-card {
+      background: #fff;
+      border: 1px solid #d0d7de;
+      border-radius: 16px;
+      padding: 52px 32px;
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+      display: none;
+    }
+    .success-icon { font-size: 3rem; margin-bottom: 16px; }
+    .success-card h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 10px; }
+    .success-card p { color: #5a5a5a; font-size: 0.95rem; line-height: 1.55; }
+    footer { margin-top: 40px; color: #999; font-size: 0.8rem; text-align: center; }
+    @media (max-width: 520px) { .card, .success-card { padding: 28px 20px; } }
+  </style>
+</head>
+<body>
+  <a class="back" href="/">← Back to Home</a>
+  <div class="logo">🛡️ ShieldNav</div>
+  <h1 class="page-title">Join the Waitlist</h1>
+  <p class="page-sub">Be the first to know when ShieldNav is ready to purchase. We'll reach out directly when it launches.</p>
+
+  <div class="card" id="form-card">
+    <div class="error-banner" id="error-banner"></div>
+    <form id="waitlist-form" novalidate>
+      <!-- Honeypot: hidden from real users via CSS, filled by naive bots -->
+      <div class="hp-field" aria-hidden="true">
+        <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+      </div>
+
+      <div class="field-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Jane Smith" maxlength="100" autocomplete="name" />
+      </div>
+
+      <div class="field-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="jane@example.com" maxlength="254" autocomplete="email" />
+      </div>
+
+      <div class="field-group">
+        <label for="phone">Phone Number <span class="opt">(optional)</span></label>
+        <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" maxlength="20" autocomplete="tel" />
+      </div>
+
+      <div class="turnstile-wrap">
+        <div class="cf-turnstile"
+          data-sitekey="0x4AAAAAADsXQs1nzjTOJqCy"
+          data-callback="onTurnstileSuccess"
+          data-error-callback="onTurnstileError"
+          data-expired-callback="onTurnstileExpired">
+        </div>
+      </div>
+
+      <div class="consent-wrap">
+        <label class="consent-label">
+          <input type="checkbox" id="consent" />
+          <span>I agree to the <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a> and consent to ShieldNav contacting me when the app launches.</span>
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submit-btn">Join Waitlist</button>
+      <p class="privacy-note">Your info is stored securely and only used to notify you at launch. &nbsp;<a href="/privacy">Privacy Policy</a></p>
+    </form>
+  </div>
+
+  <div class="success-card" id="success-card">
+    <div class="success-icon">✅</div>
+    <h2>You're on the list!</h2>
+    <p>We'll be in touch when ShieldNav launches.<br>Keep an eye on your inbox.</p>
+  </div>
+
+  <footer>&copy; 2026 ShieldNav, LLC &nbsp;·&nbsp; <a href="mailto:support@shieldnav.com" style="color:#0B75C2;">support@shieldnav.com</a></footer>
+
+  <script>
+    // After deploying, update this to the URL shown in Firebase Console → Functions → waitlistSubmit.
+    const WAITLIST_ENDPOINT = 'https://us-central1-drive-safe-vz7fh4.cloudfunctions.net/waitlistSubmit';
+
+    let turnstileToken = null;
+
+    function onTurnstileSuccess(token) { turnstileToken = token; }
+    function onTurnstileError()        { turnstileToken = null; }
+    function onTurnstileExpired()      { turnstileToken = null; }
+
+    function showError(msg) {
+      const el = document.getElementById('error-banner');
+      el.textContent = msg;
+      el.style.display = 'block';
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function hideError() {
+      document.getElementById('error-banner').style.display = 'none';
+    }
+
+    document.getElementById('waitlist-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      hideError();
+
+      const name    = document.getElementById('name').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const phone   = document.getElementById('phone').value.trim();
+      const consent = document.getElementById('consent').checked;
+      const hp      = document.querySelector('input[name="website"]').value;
+
+      if (!name)                                          return showError('Please enter your full name.');
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return showError('Please enter a valid email address.');
+      if (!consent)                                       return showError('Please agree to the privacy policy to continue.');
+      if (!turnstileToken)                                return showError('Security check not yet complete — please wait a moment and try again.');
+
+      const btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Submitting…';
+
+      try {
+        const payload = { name, email, turnstileToken, website: hp };
+        if (phone) payload.phone = phone;
+
+        const res = await fetch(WAITLIST_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (!res.ok) throw new Error(data.error || 'Something went wrong. Please try again.');
+
+        document.getElementById('form-card').style.display = 'none';
+        document.getElementById('success-card').style.display = 'block';
+      } catch (err) {
+        showError(err.message || 'Something went wrong. Please try again.');
+        btn.disabled = false;
+        btn.textContent = 'Join Waitlist';
+        if (window.turnstile) window.turnstile.reset();
+        turnstileToken = null;
+      }
+    });
+  </script>
+</body>
+</html>
