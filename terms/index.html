@@ -4,190 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ShieldNav – Terms of Use</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --brand:       #0B75C2;
-      --brand-light: #E8F3FB;
-      --text:        #1A1A1A;
-      --muted:       #555555;
-      --border:      #D8E2EC;
-      --warn-bg:     #FFF8E1;
-      --warn-border: #F9A825;
-      --danger-bg:   #FFF0F0;
-      --danger-border: #D32F2F;
-      --link:        #0B75C2;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--text);
-      background: #FFFFFF;
-    }
-
-    /* ── Header ── */
-    header {
-      background: var(--brand);
-      color: #fff;
-      padding: 40px 24px 32px;
-      text-align: center;
-    }
-    header .logo {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 6px;
-    }
-    header .logo span { opacity: 0.75; font-weight: 400; }
-    header h1 {
-      font-size: 20px;
-      font-weight: 500;
-      margin-bottom: 8px;
-    }
-    header .meta {
-      font-size: 13px;
-      opacity: 0.8;
-    }
-
-    /* ── Layout ── */
-    .container {
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 0 20px 80px;
-    }
-
-    /* ── Table of Contents ── */
-    .toc {
-      background: var(--brand-light);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 28px 32px;
-      margin: 36px 0 40px;
-    }
-    .toc h2 {
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--brand);
-      margin-bottom: 16px;
-    }
-    .toc ol {
-      padding-left: 22px;
-    }
-    .toc li {
-      margin-bottom: 6px;
-      font-size: 14px;
-    }
-    .toc a {
-      color: var(--link);
-      text-decoration: none;
-    }
-    .toc a:hover { text-decoration: underline; }
-
-    /* ── Sections ── */
-    section {
-      margin-bottom: 48px;
-    }
-    h2.section-heading {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--brand);
-      border-bottom: 2px solid var(--brand-light);
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-    }
-    h3 {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--text);
-      margin: 24px 0 10px;
-    }
-    p { margin-bottom: 14px; }
-    p:last-child { margin-bottom: 0; }
-    ul, ol {
-      padding-left: 24px;
-      margin-bottom: 14px;
-    }
-    li { margin-bottom: 6px; }
-    strong { font-weight: 600; }
-
-    /* ── Callout boxes ── */
-    .callout {
-      border-radius: 8px;
-      padding: 18px 22px;
-      margin: 20px 0;
-      font-size: 15px;
-    }
-    .callout.warn {
-      background: var(--warn-bg);
-      border-left: 4px solid var(--warn-border);
-    }
-    .callout.danger {
-      background: var(--danger-bg);
-      border-left: 4px solid var(--danger-border);
-    }
-    .callout.info {
-      background: var(--brand-light);
-      border-left: 4px solid var(--brand);
-    }
-    .callout p { margin-bottom: 8px; }
-    .callout p:last-child { margin-bottom: 0; }
-    .callout strong { display: block; margin-bottom: 6px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; }
-
-    /* ── Sub-list ── */
-    .feature-list {
-      list-style: none;
-      padding-left: 0;
-    }
-    .feature-list li::before {
-      content: "✓  ";
-      color: var(--brand);
-      font-weight: 700;
-    }
-
-    /* ── Footer ── */
-    footer {
-      background: #F4F7FA;
-      border-top: 1px solid var(--border);
-      padding: 28px 24px;
-      text-align: center;
-      font-size: 13px;
-      color: var(--muted);
-    }
-    footer a { color: var(--link); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-
-    /* ── Mobile ── */
-    @media (max-width: 600px) {
-      header .logo { font-size: 22px; }
-      header h1 { font-size: 17px; }
-      h2.section-heading { font-size: 17px; }
-      .toc { padding: 20px; }
-    }
-  </style>
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/brand.css" />
 </head>
 <body>
 
-<!-- ═══════════════════════  HEADER  ═══════════════════════ -->
-<header>
-  <div class="logo">ShieldNav <span>by ShieldNav, LLC</span></div>
+<nav class="site-nav">
+  <a href="/" class="nav-logo">
+    <img src="/assets/images/shieldnav_logo_icon.png" alt="ShieldNav" />
+    <span class="nav-brand">ShieldNav</span>
+  </a>
+  <a href="/legal" class="back">← Legal Hub</a>
+</nav>
+
+<header class="page-hero">
   <h1>Terms of Use</h1>
   <p class="meta">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Revised: June 21, 2026</p>
 </header>
 
-<!-- ═══════════════════════  BODY  ═══════════════════════ -->
-<div class="container">
+<div class="content-wrap">
 
   <div class="callout danger">
     <strong>Safety Notice — Read Before Use</strong>
     <p>ShieldNav is a navigation aid only. <strong>Never operate your phone while driving.</strong> Use audio guidance exclusively when the vehicle is in motion. In any emergency, call <strong>911</strong> immediately. Crime data displayed in the app may be incomplete or out of date and does not guarantee your safety or the absence of danger in any area.</p>
   </div>
 
-  <!-- ═══ TABLE OF CONTENTS ═══ -->
   <nav class="toc" aria-label="Table of Contents">
     <h2>Table of Contents</h2>
     <ol>
@@ -212,7 +56,6 @@
     </ol>
   </nav>
 
-  <!-- ═══ 1 ═══ -->
   <section id="s1">
     <h2 class="section-heading">1. Agreement to Terms</h2>
     <p>These Terms of Use ("Terms") constitute a legally binding agreement between you ("you" or "User") and ShieldNav, LLC ("ShieldNav," "we," "our," or "us") governing your access to and use of the ShieldNav mobile application and any related services, features, or content (collectively, the "Service").</p>
@@ -220,7 +63,6 @@
     <p>These Terms apply to all versions of the ShieldNav app, including iOS and Android versions, and any web-based properties operated by ShieldNav.</p>
   </section>
 
-  <!-- ═══ 2 ═══ -->
   <section id="s2">
     <h2 class="section-heading">2. Eligibility and Account Registration</h2>
 
@@ -243,7 +85,6 @@
     <p>ShieldNav uses Firebase Authentication to manage sign-in. We do not store your raw passwords. You are solely responsible for all actions taken through your account. ShieldNav will not be liable for any loss arising from unauthorized use of your account that results from your failure to safeguard your credentials.</p>
   </section>
 
-  <!-- ═══ 3 ═══ -->
   <section id="s3">
     <h2 class="section-heading">3. Description of the Service</h2>
 
@@ -272,7 +113,6 @@
     <p>We strive for high availability but do not guarantee that the Service will be uninterrupted, error-free, or available in all geographic areas. We may suspend or modify the Service at any time for maintenance, legal compliance, or other business reasons. We are not liable for any loss resulting from service interruptions.</p>
   </section>
 
-  <!-- ═══ 4 ═══ -->
   <section id="s4">
     <h2 class="section-heading">4. Subscriptions and Billing</h2>
 
@@ -323,7 +163,6 @@
     <p>If Family Sharing is enabled for your Apple ID and ShieldNav participates in Family Sharing, the purchasing account holder's subscription may be shared with qualifying family members. We are not responsible for any unintended sharing of subscription access resulting from Family Sharing settings you configure.</p>
   </section>
 
-  <!-- ═══ 5 ═══ -->
   <section id="s5">
     <h2 class="section-heading">5. Acceptable Use and Prohibited Conduct</h2>
 
@@ -354,7 +193,6 @@
     <p>If you become aware of any violation of these Terms or any misuse of the Service, please contact us at <a href="mailto:support@shieldnav.com">support@shieldnav.com</a>.</p>
   </section>
 
-  <!-- ═══ 6 ═══ -->
   <section id="s6">
     <h2 class="section-heading">6. Intellectual Property</h2>
 
@@ -374,7 +212,6 @@
     <p>"ShieldNav" and the ShieldNav shield logo are trademarks of ShieldNav, LLC. You may not use our trademarks without prior written permission. Other trademarks referenced in the app belong to their respective owners.</p>
   </section>
 
-  <!-- ═══ 7 ═══ -->
   <section id="s7">
     <h2 class="section-heading">7. Third-Party Services and Data</h2>
 
@@ -404,7 +241,6 @@
     <p>The availability of certain ShieldNav features depends on the continued availability of third-party APIs and services. If a third-party service experiences an outage or terminates our access, features dependent on that service may be temporarily or permanently unavailable. ShieldNav is not liable for disruptions caused by third-party service failures.</p>
   </section>
 
-  <!-- ═══ 8 ═══ -->
   <section id="s8">
     <h2 class="section-heading">8. Privacy and Location Data</h2>
 
@@ -424,7 +260,6 @@
     <p>We do not knowingly collect personal information from children under 13. Users between 13 and 17 should use ShieldNav only with parental or guardian consent. If you believe a child under 13 has provided us with personal information, please contact us immediately and we will take steps to delete such information.</p>
   </section>
 
-  <!-- ═══ 9 ═══ -->
   <section id="s9">
     <h2 class="section-heading">9. Safety Disclaimer and Crime Data Limitations</h2>
 
@@ -462,7 +297,6 @@
     <p>Crime data reflects reported incidents in specific geographic areas. It does not and must not be used to make assumptions about the character, safety, or criminality of any individual or group. Using ShieldNav's crime data to discriminate against individuals based on race, ethnicity, national origin, religion, gender, disability, or any other protected characteristic is strictly prohibited and a violation of these Terms.</p>
   </section>
 
-  <!-- ═══ 10 ═══ -->
   <section id="s10">
     <h2 class="section-heading">10. Disclaimer of Warranties</h2>
 
@@ -483,7 +317,6 @@
     <p>Some jurisdictions do not allow the exclusion of certain warranties. In such jurisdictions, the above disclaimers apply to the maximum extent permitted by law.</p>
   </section>
 
-  <!-- ═══ 11 ═══ -->
   <section id="s11">
     <h2 class="section-heading">11. Limitation of Liability</h2>
 
@@ -502,7 +335,6 @@
     <p>The limitations in this section reflect the allocation of risk between the parties and are a fundamental element of the basis of the bargain between ShieldNav and you. ShieldNav would not provide the Service without these limitations.</p>
   </section>
 
-  <!-- ═══ 12 ═══ -->
   <section id="s12">
     <h2 class="section-heading">12. Indemnification</h2>
     <p>You agree to defend, indemnify, and hold harmless the ShieldNav Parties from and against any claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or in any way related to:</p>
@@ -517,7 +349,6 @@
     <p>ShieldNav reserves the right to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, in which case you agree to cooperate fully with us in asserting any available defenses.</p>
   </section>
 
-  <!-- ═══ 13 ═══ -->
   <section id="s13">
     <h2 class="section-heading">13. Termination</h2>
 
@@ -540,7 +371,6 @@
     <p>ShieldNav reserves the right to discontinue the Service, or any feature of the Service, at any time. If we discontinue a paid feature of ShieldNav Premium, we will provide reasonable advance notice and, where technically feasible, a pro-rated credit or refund for any prepaid subscription period affected.</p>
   </section>
 
-  <!-- ═══ 14 ═══ -->
   <section id="s14">
     <h2 class="section-heading">14. Governing Law and Dispute Resolution</h2>
 
@@ -566,7 +396,6 @@
     <p>For any claim not subject to arbitration, you and ShieldNav consent to the exclusive jurisdiction of the state and federal courts located in the State of Illinois, and you waive any objection to the exercise of personal jurisdiction by such courts.</p>
   </section>
 
-  <!-- ═══ 15 ═══ -->
   <section id="s15">
     <h2 class="section-heading">15. Changes to These Terms</h2>
     <p>We may update these Terms from time to time. When we do, we will revise the "Last Revised" date at the top of this page. For material changes, we will provide you with at least thirty (30) days' advance notice through one or more of the following means:</p>
@@ -579,7 +408,6 @@
     <p>We encourage you to review these Terms periodically. The current version is always available at <a href="https://shieldnav.com/terms">shieldnav.com/terms</a>.</p>
   </section>
 
-  <!-- ═══ 16 ═══ -->
   <section id="s16">
     <h2 class="section-heading">16. Apple App Store — Additional EULA Terms</h2>
 
@@ -616,7 +444,6 @@
     <p>ShieldNav, LLC and you acknowledge and agree that Apple, and Apple's subsidiaries, are third-party beneficiaries of these Terms, and that, upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary thereof.</p>
   </section>
 
-  <!-- ═══ 17 ═══ -->
   <section id="s17">
     <h2 class="section-heading">17. Miscellaneous</h2>
 
@@ -651,7 +478,6 @@
     <p>These Terms are written in English. Any translation provided is for convenience only. In the event of any inconsistency between the English version and any translation, the English version governs.</p>
   </section>
 
-  <!-- ═══ 18 ═══ -->
   <section id="s18">
     <h2 class="section-heading">18. Contact Us</h2>
     <p>If you have any questions, concerns, or requests relating to these Terms or ShieldNav's practices, please contact us:</p>
@@ -664,20 +490,14 @@
     <p>We aim to respond to all inquiries within five (5) business days.</p>
   </section>
 
-</div><!-- /container -->
+</div>
 
-<!-- ═══════════════════════  FOOTER  ═══════════════════════ -->
-<footer>
-  <p><strong>ShieldNav Terms of Use</strong> &mdash; Effective June 21, 2026</p>
-  <p style="margin-top:8px;">
-    <a href="https://shieldnav.com/privacy">Privacy Policy</a>
-    &nbsp;&middot;&nbsp;
-    <a href="https://shieldnav.com/terms">Terms of Use</a>
-    &nbsp;&middot;&nbsp;
+<footer class="site-footer">
+  <p>&copy; 2026 ShieldNav, LLC. All rights reserved.</p>
+  <p>
+    <a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp;
+    <a href="/terms">Terms of Use</a> &nbsp;&middot;&nbsp;
     <a href="mailto:support@shieldnav.com">support@shieldnav.com</a>
-  </p>
-  <p style="margin-top:10px; font-size:12px; color:#888;">
-    &copy; 2026 ShieldNav, LLC. All rights reserved.
   </p>
 </footer>
 
