@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ShieldNav – Join the Waitlist</title>
+
+  <!-- Reddit Pixel -->
+  <script>
+  !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js?pixel_id=a2_jbz1iftiz421",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_jbz1iftiz421');rdt('track', 'PageVisit');
+  </script>
+  <!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
+  <!-- End Reddit Pixel -->
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -192,6 +199,12 @@
         const data = await res.json().catch(() => ({}));
 
         if (!res.ok) throw new Error(data.error || 'Something went wrong. Please try again.');
+
+        // Reddit Pixel: waitlist signup conversion (email passed for advanced matching)
+        if (window.rdt) {
+          rdt('init', 'a2_jbz1iftiz421', { email: email });
+          rdt('track', 'SignUp');
+        }
 
         document.getElementById('form-card').style.display = 'none';
         document.getElementById('success-card').style.display = 'block';
