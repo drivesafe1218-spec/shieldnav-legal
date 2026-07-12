@@ -22,7 +22,7 @@
 
 <header class="page-hero">
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Updated: June 21, 2026</p>
+  <p class="meta">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Updated: July 12, 2026</p>
 </header>
 
 <div class="content-wrap">
@@ -136,12 +136,18 @@
         See Section 4 for a full description of what is and is not stored.
       </li>
       <li>
+        <strong>Saved places and scheduled drives:</strong> Destinations you save (such as Home,
+        Work, or custom places), your recent destinations, and the start/end points of drives
+        you schedule. These include addresses and coordinates and are stored in your account so
+        they sync across your devices. See Section 4.3.
+      </li>
+      <li>
         <strong>Device information:</strong> iOS/Android version, device model, app version, and
         unique device identifiers. Collected via Firebase Performance Monitoring.
       </li>
       <li>
-        <strong>Performance telemetry:</strong> App start times, screen render durations, network
-        request latencies, and crash reports. Collected via Firebase Performance Monitoring.
+        <strong>Performance telemetry:</strong> App start times, screen render durations, and
+        network request latencies. Collected via Firebase Performance Monitoring.
       </li>
       <li>
         <strong>Push notification tokens:</strong> Firebase Cloud Messaging (FCM) registration
@@ -182,7 +188,10 @@
     <div class="callout info">
       <strong>Plain-English Summary</strong>
       We use your location in real time to navigate you and to score crime risk along your
-      route. We do <em>not</em> store your GPS history or movement data on our servers.
+      route. We do <em>not</em> store your GPS history or movement data on our servers. Places
+      you choose to save (like Home or Work), your recent destinations, and scheduled drives
+      <em>are</em> stored in your account so they sync across your devices — you can delete
+      them at any time.
     </div>
 
     <h3>4.1 What We Collect</h3>
@@ -203,10 +212,39 @@
       Your precise GPS coordinates from individual navigation sessions are
       <strong>not stored persistently on our servers</strong>. Once a navigation session ends,
       session-level location data is discarded. We do not build a history of your movements or
-      trips.
+      trips. The only location data stored in your account is the saved-place data described in
+      Section 4.3, which you control.
     </p>
 
-    <h3>4.3 Data Sent to HERE Technologies</h3>
+    <h3>4.3 Saved Places, Recent Destinations, and Scheduled Drives</h3>
+    <p>
+      Separately from real-time GPS data, we store certain destination data in your account
+      (in Firebase Firestore) so it can sync across your devices:
+    </p>
+    <ul>
+      <li>
+        <strong>Saved places:</strong> Destinations you explicitly save, such as Home, Work, or
+        custom places, including their names, addresses, and coordinates.
+      </li>
+      <li>
+        <strong>Recent destinations:</strong> A short list of destinations you have recently
+        navigated to, so you can quickly select them again. This is a list of endpoints you
+        chose — it is not a GPS trace or a record of the routes you traveled.
+      </li>
+      <li>
+        <strong>Scheduled drives:</strong> The origin and destination (addresses and
+        coordinates) of drives you schedule in the App, used to send you your requested
+        drive reminders.
+      </li>
+    </ul>
+    <p>
+      You can edit or delete saved places, recent destinations, and scheduled drives at any
+      time in the App. All of this data is deleted when you delete your account (see
+      Section 13). We do not use it for advertising, and we do not sell it or share it with
+      third parties except the service providers described in Section 6.
+    </p>
+
+    <h3>4.4 Data Sent to HERE Technologies</h3>
     <p>
       To calculate routes and provide mapping services, your location data is transmitted to
       HERE Technologies' servers. HERE processes this data as a service provider on our behalf
@@ -216,7 +254,7 @@
       accordance with their own policies.
     </p>
 
-    <h3>4.4 Background Location</h3>
+    <h3>4.5 Background Location</h3>
     <p>
       ShieldNav requests location access only while the App is actively navigating (foreground
       use). If permitted, the App may continue to update your position while the screen is
@@ -224,7 +262,7 @@
       closed or when navigation is not active.
     </p>
 
-    <h3>4.5 Revoking Location Permission</h3>
+    <h3>4.6 Revoking Location Permission</h3>
     <p>
       You may revoke location permission at any time via your device's Settings. Note that
       revoking location access will disable navigation and crime-overlay features of the App.
@@ -264,7 +302,7 @@
         </tr>
         <tr>
           <td>Monitor App performance and fix bugs</td>
-          <td>Device info, performance telemetry, crash logs</td>
+          <td>Device info, performance telemetry</td>
         </tr>
         <tr>
           <td>Improve App features and user experience</td>
@@ -353,7 +391,10 @@
     <p>
       We share information with the third-party services listed in Section 6 strictly to operate
       the App. These providers are bound by data processing agreements that prohibit them from
-      using your data for their own commercial purposes.
+      using your personal information for their own commercial purposes. Some providers (for
+      example, HERE Technologies) may retain and use anonymized, aggregated data — data that can
+      no longer reasonably identify you — to improve their own services, as described in
+      Section 4.4.
     </p>
 
     <h3>7.2 Legal Requirements</h3>
@@ -415,6 +456,10 @@
           <td>Not stored server-side; discarded at session end</td>
         </tr>
         <tr>
+          <td>Saved places, recent destinations, and scheduled drives (addresses and coordinates)</td>
+          <td>Retained until you edit or delete them in the App; deleted with your account</td>
+        </tr>
+        <tr>
           <td>Drive logs</td>
           <td>Stored on-device only; not uploaded; deleted when you uninstall the App or clear App data</td>
         </tr>
@@ -427,7 +472,7 @@
           <td>Retained while you have the App installed and notifications enabled; removed on account deletion</td>
         </tr>
         <tr>
-          <td>Performance telemetry / crash logs</td>
+          <td>Performance telemetry</td>
           <td>Retained in aggregated form for up to 90 days per Firebase Performance defaults</td>
         </tr>
         <tr>
@@ -487,8 +532,7 @@
     <ul>
       <li>
         <strong>Firebase SDKs</strong> use persistent installation identifiers (Firebase
-        Instance IDs) to link telemetry, crash reports, and push notification tokens to your
-        device.
+        Instance IDs) to link telemetry and push notification tokens to your device.
       </li>
       <li>
         <strong>HERE Maps SDK</strong> may store local cache data on your device (map tiles,
@@ -617,12 +661,12 @@
         </tr>
         <tr>
           <td>Geolocation data</td>
-          <td>GPS coordinates during active navigation</td>
-          <td>Yes (in-session only; not stored server-side)</td>
+          <td>GPS coordinates during active navigation; saved places and scheduled-drive endpoints you choose</td>
+          <td>Yes (navigation coordinates are in-session only; saved places are stored until you delete them — see Section 4.3)</td>
         </tr>
         <tr>
           <td>Internet / electronic network activity</td>
-          <td>App performance telemetry, crash logs</td>
+          <td>App performance telemetry</td>
           <td>Yes</td>
         </tr>
         <tr>
@@ -632,8 +676,8 @@
         </tr>
         <tr>
           <td>Sensitive personal information — precise geolocation</td>
-          <td>GPS coordinates during navigation</td>
-          <td>Yes (in-session only; see Section 4)</td>
+          <td>GPS coordinates during navigation; coordinates of places you save</td>
+          <td>Yes (navigation is in-session only; saved places are stored at your direction — see Section 4)</td>
         </tr>
         <tr>
           <td>Financial information</td>
@@ -686,12 +730,15 @@
 
     <h3>12.6 Use of Sensitive Personal Information</h3>
     <p>
-      We collect precise geolocation data (a "sensitive" category under CPRA) only during
-      active navigation sessions to provide the core features of the App. We do not use this
-      information for any other purpose, and we do not store it persistently on our servers.
-      You have the right to direct us to limit the use of your sensitive personal information
-      to the uses necessary to provide the requested services. Our use is already limited as
-      described — no further opt-out is required.
+      We collect precise geolocation data (a "sensitive" category under CPRA) in two ways:
+      (1) during active navigation sessions, used in real time only and not stored persistently
+      on our servers; and (2) as the coordinates of places you explicitly save (Home, Work,
+      custom places, recent destinations, and scheduled drives), which are stored in your
+      account at your direction until you delete them (see Section 4.3). We use this
+      information only to provide the core features of the App. You have the right to direct
+      us to limit the use of your sensitive personal information to the uses necessary to
+      provide the requested services. Our use is already limited as described — no further
+      opt-out is required.
     </p>
 
     <h3>12.7 Your CCPA Rights</h3>
