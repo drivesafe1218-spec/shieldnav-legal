@@ -80,6 +80,8 @@
 </head>
 <body>
 
+  <a href="#main" class="skip-link">Skip to content</a>
+
   <nav class="site-nav">
     <a href="/" class="nav-logo">
       <img src="/assets/images/shieldnav_logo_icon.png" alt="ShieldNav" />
@@ -88,12 +90,12 @@
     <a href="/" class="back">← Home</a>
   </nav>
 
-  <main>
+  <main id="main">
     <h1 class="page-title">Join the Waitlist</h1>
     <p class="page-sub">Be the first to know when ShieldNav is ready to purchase. We'll reach out directly when it launches.</p>
 
     <div class="form-card" id="form-card">
-      <div class="error-banner" id="error-banner"></div>
+      <div class="error-banner" id="error-banner" role="alert" aria-live="assertive"></div>
       <form id="waitlist-form" novalidate>
         <!-- Honeypot: hidden from real users via CSS, filled by naive bots -->
         <div class="hp-field" aria-hidden="true">
@@ -136,9 +138,9 @@
       </form>
     </div>
 
-    <div class="success-state" id="success-card">
-      <div class="success-icon">✅</div>
-      <h2>You're on the list!</h2>
+    <div class="success-state" id="success-card" role="status" aria-live="polite">
+      <div class="success-icon" aria-hidden="true">✅</div>
+      <h2 id="success-heading" tabindex="-1">You're on the list!</h2>
       <p>We'll be in touch when ShieldNav launches.<br>Keep an eye on your inbox.</p>
     </div>
   </main>
@@ -208,6 +210,8 @@
 
         document.getElementById('form-card').style.display = 'none';
         document.getElementById('success-card').style.display = 'block';
+        // Move focus so screen-reader + keyboard users land on the confirmation.
+        document.getElementById('success-heading').focus();
       } catch (err) {
         showError(err.message || 'Something went wrong. Please try again.');
         btn.disabled = false;
