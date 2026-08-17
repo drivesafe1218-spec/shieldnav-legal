@@ -3,81 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShieldNav – Navigate Safer</title>
+  <title>ShieldNav — Crime-aware GPS navigation for iPhone</title>
+  <meta name="description" content="ShieldNav is an iPhone navigation app that shows reported crime data from public municipal records alongside turn-by-turn directions. Built by ShieldNav, LLC in Illinois." />
+  <link rel="canonical" href="https://shieldnav.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ShieldNav" />
+  <meta property="og:title" content="ShieldNav — Crime-aware GPS navigation for iPhone" />
+  <meta property="og:description" content="ShieldNav is an iPhone navigation app that shows reported crime data from public municipal records alongside turn-by-turn directions. Built by ShieldNav, LLC in Illinois." />
+  <meta property="og:url" content="https://shieldnav.com/" />
+  <meta property="og:image" content="https://shieldnav.com/assets/images/shieldnav_logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="ShieldNav — Crime-aware GPS navigation for iPhone" />
+  <meta name="twitter:description" content="ShieldNav is an iPhone navigation app that shows reported crime data from public municipal records alongside turn-by-turn directions. Built by ShieldNav, LLC in Illinois." />
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/brand.css" />
-  <style>
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 48px 24px;
-    }
-    .hero-logo {
-      max-width: 240px;
-      max-height: 80px;
-      width: auto;
-      height: auto;
-      margin-bottom: 16px;
-    }
-    .hero-tagline {
-      font-family: 'Sora', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text-2);
-      margin-bottom: 44px;
-      text-align: center;
-      letter-spacing: -0.2px;
-    }
-    .cards-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      max-width: 560px;
-      width: 100%;
-    }
-    .landing-footer {
-      margin-top: 48px;
-      font-size: 0.82rem;
-      color: var(--text-3);
-      text-align: center;
-    }
-    .landing-footer a { color: var(--blue); text-decoration: none; }
-    .landing-footer a:hover { text-decoration: underline; }
-    @media (max-width: 480px) {
-      .cards-grid { grid-template-columns: 1fr; }
-      .hero-logo { max-height: 60px; }
-    }
-  </style>
 </head>
 <body>
 
-  <h1 class="sr-only">ShieldNav — Navigate Safer</h1>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-  <img src="/assets/images/shieldnav_logo.png" alt="ShieldNav" class="hero-logo" />
-  <p class="hero-tagline">Navigate Safer</p>
-
-  <div class="cards-grid">
-    <a class="hub-card primary" href="/waitlist">
-      <div class="card-icon" aria-hidden="true">🚀</div>
-      <h2>Join the Waitlist</h2>
-      <p>Be the first to know when ShieldNav is ready to purchase.</p>
+  <nav class="site-nav full">
+    <a href="/" class="nav-logo">
+      <img src="/assets/images/shieldnav_logo_icon.png" alt="" />
+      <span class="nav-brand">ShieldNav</span>
     </a>
-    <a class="hub-card" href="/legal">
-      <div class="card-icon" aria-hidden="true">📋</div>
-      <h2>Legal &amp; Privacy</h2>
-      <p>Privacy policy, terms of use, and legal documents.</p>
-    </a>
-  </div>
+    <div class="nav-links">
+      <a href="/product">Product</a>
+      <a href="/about">About</a>
+      <a href="/faq">FAQ</a>
+      <a href="/support">Support</a>
+      <a href="/legal">Legal</a>
+      <a href="/waitlist" class="nav-cta">Join Waitlist</a>
+    </div>
+  </nav>
 
-  <div class="landing-footer">
-    <p>&copy; 2026 ShieldNav, LLC &nbsp;&middot;&nbsp; <a href="mailto:support@shieldnav.com">support@shieldnav.com</a></p>
-  </div>
+  <header class="hero">
+    <div class="hero-inner">
+      <img src="/assets/images/shieldnav_logo.png" alt="ShieldNav" class="hero-logo" />
+      <h1>Crime-aware navigation for everyday driving</h1>
+      <p class="hero-lede">ShieldNav is an iPhone navigation app that puts reported crime data on the map beside your route. You get turn-by-turn directions, plus the context most navigation apps leave out.</p>
+      <p class="hero-lede">Built and operated by ShieldNav,&nbsp;LLC, an independent software company based in Illinois.</p>
+      <div class="hero-actions">
+        <a class="cta" href="/waitlist">Join the waitlist</a>
+        <a class="cta-secondary" href="/product">See what&rsquo;s in the app</a>
+      </div>
+      <p class="hero-status">In active development for iOS. Not yet available on the App&nbsp;Store &mdash; join the waitlist and we&rsquo;ll email you when it launches.</p>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="band">
+      <div class="band-inner">
+        <h2 class="band-title">What ShieldNav does</h2>
+        <p class="band-lede">A full navigation app first, with a crime data layer built into the same map rather than bolted on as a separate tool.</p>
+        <div class="feature-grid">
+
+          <div class="feature-card">
+            <h3>Turn-by-turn voice navigation</h3>
+            <p>Spoken directions, route planning, and rerouting powered by the HERE Maps SDK &mdash; a mapping platform used widely in automotive navigation. Point-of-interest search is included for every registered user, no subscription required.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Crime data on the map</h3>
+            <p>A heatmap overlay assembled from incident records published by municipal governments. See reported incident density along a route or around a destination before you set off, rather than reading about the area afterward.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Places you drive often</h3>
+            <p>Save home, work, and custom destinations, and schedule drives in advance. Saved places and recent destinations live on your account, so they follow you if you change devices.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Detail when you need it</h3>
+            <p>A Premium subscription opens up the full crime radar &mdash; incident type, date, and block-level location &mdash; alongside real-time speed limits, toll cost estimates, live search autosuggest, and priority data refresh.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="band alt">
+      <div class="band-inner">
+        <h2 class="band-title">Where the crime data comes from</h2>
+        <div class="prose">
+          <p>ShieldNav&rsquo;s crime layer is assembled from open data published by city and county governments &mdash; the same public records portals police departments use to publish incident logs. We normalize records from each jurisdiction into a common format so one map can span multiple cities.</p>
+          <p>Three things we are explicit about, both in the app and here:</p>
+          <ul>
+            <li><strong>Coverage varies by city.</strong> A jurisdiction that does not publish open incident data will not have a crime layer in ShieldNav. What you see on the map reflects what was reported and published, not everything that happened.</li>
+            <li><strong>The data is historical, not live.</strong> Municipal feeds publish on their own schedules &mdash; some daily, some weekly, some with a lag of several weeks. ShieldNav shows the most recent data available for a jurisdiction and does not present it as a real-time picture.</li>
+            <li><strong>It describes places, not people.</strong> Crime data covers reported incidents in an area. It is not a prediction, not a judgment about the people who live or work there, and not a substitute for your own awareness while driving.</li>
+          </ul>
+          <p>Our <a href="/crime-disclaimer">Crime Data Disclaimer</a> sets out the accuracy limits and our Fair Housing position in full. It is worth reading before you rely on the map.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="band">
+      <div class="band-inner">
+        <h2 class="band-title">Free and Premium</h2>
+        <p class="band-lede">Navigation works without a subscription. Premium adds depth to the crime layer and the live road data around it.</p>
+        <div class="tier-grid">
+
+          <div class="tier-card">
+            <div class="tier-name">Included with every account</div>
+            <p class="tier-note">Free, for all registered users</p>
+            <ul>
+              <li>Turn-by-turn voice navigation</li>
+              <li>Map display and route planning</li>
+              <li>Crime heatmap overlay (limited)</li>
+              <li>Point-of-interest search</li>
+              <li>Saved places and scheduled drives</li>
+            </ul>
+          </div>
+
+          <div class="tier-card premium">
+            <div class="tier-name">ShieldNav Premium</div>
+            <p class="tier-note">Auto-renewing subscription, billed through the Apple App&nbsp;Store</p>
+            <ul>
+              <li>Everything in the free tier</li>
+              <li>Full crime radar &mdash; incident type, date, block-level location</li>
+              <li>Real-time speed limit display</li>
+              <li>Toll information and cost estimates</li>
+              <li>Live autosuggest search</li>
+              <li>Unlimited searches and route calculations</li>
+              <li>Priority crime data refresh</li>
+            </ul>
+          </div>
+
+        </div>
+        <p class="band-lede" style="margin-top:24px;margin-bottom:0;">Subscription pricing will be shown in the app at launch. Billing, renewals, and refunds are handled by Apple &mdash; see <a href="/terms">Terms of Use</a> for the full subscription disclosure, or <a href="/support">Support</a> for how to cancel or request a refund.</p>
+      </div>
+    </div>
+
+    <div class="band alt">
+      <div class="band-inner">
+        <h2 class="band-title">The company behind it</h2>
+        <div class="prose" style="margin-bottom:24px;">
+          <p>ShieldNav is built by ShieldNav,&nbsp;LLC, a limited liability company organized in Illinois. We are a small independent software team &mdash; not a data broker and not an advertising business. Read more <a href="/about">about the company</a>, or <a href="/contact">get in touch</a>.</p>
+        </div>
+        <ul class="fact-list">
+          <li><span class="k">Legal entity</span><span class="v">ShieldNav,&nbsp;LLC</span></li>
+          <li><span class="k">Jurisdiction</span><span class="v">Illinois, United States</span></li>
+          <li><span class="k">Product</span><span class="v">ShieldNav for iOS (iPhone)</span></li>
+          <li><span class="k">Status</span><span class="v">In development &mdash; pre-launch</span></li>
+          <li><span class="k">Contact</span><span class="v"><a href="mailto:support@shieldnav.com">support@shieldnav.com</a></span></li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer rich">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/images/shieldnav_logo.png" alt="ShieldNav" class="footer-logo" />
+          <p>Crime-aware GPS navigation for iPhone. Built and operated by ShieldNav,&nbsp;LLC, an independent software company in Illinois.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Product</h2>
+          <ul>
+            <li><a href="/product">Features</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/waitlist">Join the waitlist</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Company</h2>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/support">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Use</a></li>
+            <li><a href="/crime-disclaimer">Crime Data Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; 2026 ShieldNav,&nbsp;LLC. All rights reserved.</p>
+        <p>Illinois, United States &nbsp;&middot;&nbsp; <a href="mailto:support@shieldnav.com">support@shieldnav.com</a></p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

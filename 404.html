@@ -3,28 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShieldNav – Page Not Found</title>
+  <title>Page not found — ShieldNav</title>
+  <meta name="robots" content="noindex" />
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/brand.css" />
   <style>
-    body {
-      min-height: 100vh;
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+    main.nf {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 24px;
-    }
-    .not-found-logo {
-      max-width: 180px;
-      max-height: 60px;
-      width: auto;
-      height: auto;
-      margin-bottom: 32px;
+      padding: 72px 24px;
     }
     .not-found-code {
       font-family: 'Sora', sans-serif;
@@ -32,32 +27,93 @@
       font-weight: 800;
       color: var(--blue);
       line-height: 1;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
-    .not-found-msg {
-      color: var(--text-2);
-      font-size: 1rem;
-      margin-bottom: 28px;
+    .not-found-msg { color: var(--text-2); font-size: 1rem; margin-bottom: 8px; }
+    .not-found-links {
+      margin-top: 26px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      justify-content: center;
+      font-size: 0.92rem;
     }
-    .btn-home {
-      display: inline-flex;
-      align-items: center;
-      height: 48px;
-      padding: 0 24px;
-      background: var(--blue);
-      color: #fff;
-      border-radius: var(--r-btn);
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.15s;
-    }
-    .btn-home:hover { background: var(--blue-hover); text-decoration: none; color: #fff; }
+    .not-found-links a { color: var(--blue); text-decoration: none; font-weight: 500; }
+    .not-found-links a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <img src="/assets/images/shieldnav_logo.png" alt="ShieldNav" class="not-found-logo" />
-  <div class="not-found-code">404</div>
-  <p class="not-found-msg">Page not found.</p>
-  <a href="/" class="btn-home">← Back to Home</a>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="site-nav full">
+    <a href="/" class="nav-logo">
+      <img src="/assets/images/shieldnav_logo_icon.png" alt="" />
+      <span class="nav-brand">ShieldNav</span>
+    </a>
+    <div class="nav-links">
+      <a href="/product">Product</a>
+      <a href="/about">About</a>
+      <a href="/faq">FAQ</a>
+      <a href="/support">Support</a>
+      <a href="/legal">Legal</a>
+      <a href="/waitlist" class="nav-cta">Join Waitlist</a>
+    </div>
+  </nav>
+
+  <main id="main" class="nf">
+    <div class="not-found-code">404</div>
+    <h1 class="not-found-msg">We couldn&rsquo;t find that page.</h1>
+    <p class="not-found-msg">It may have moved, or the link may be out of date.</p>
+    <a href="/" class="cta">Back to home</a>
+    <div class="not-found-links">
+      <a href="/product">Product</a>
+      <a href="/about">About</a>
+      <a href="/faq">FAQ</a>
+      <a href="/support">Support</a>
+      <a href="/contact">Contact</a>
+      <a href="/legal">Legal</a>
+    </div>
+  </main>
+
+  <footer class="site-footer rich">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/images/shieldnav_logo.png" alt="ShieldNav" class="footer-logo" />
+          <p>Crime-aware GPS navigation for iPhone. Built and operated by ShieldNav,&nbsp;LLC, an independent software company in Illinois.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Product</h2>
+          <ul>
+            <li><a href="/product">Features</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/waitlist">Join the waitlist</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Company</h2>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/support">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Use</a></li>
+            <li><a href="/crime-disclaimer">Crime Data Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; 2026 ShieldNav,&nbsp;LLC. All rights reserved.</p>
+        <p>Illinois, United States &nbsp;&middot;&nbsp; <a href="mailto:support@shieldnav.com">support@shieldnav.com</a></p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
