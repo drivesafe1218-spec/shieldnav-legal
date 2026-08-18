@@ -40,7 +40,7 @@
 
 <header class="page-hero">
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Updated: August 3, 2026</p>
+  <p class="meta">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Updated: August 17, 2026</p>
 </header>
 
 <div class="content-wrap" id="main">
@@ -170,6 +170,13 @@
       <li>
         <strong>Push notification tokens:</strong> Firebase Cloud Messaging (FCM) registration
         tokens, used to deliver in-app and system notifications to your device.
+      </li>
+      <li>
+        <strong>Service usage counts:</strong> A running monthly count, stored with your account,
+        of how many routing and place-search requests our servers made on your behalf. These are
+        counts only — they do not record what you searched for, where you drove, or any
+        coordinates — and we use them to manage infrastructure costs, plan capacity, and detect
+        abuse of the paid services behind the App.
       </li>
     </ul>
 
@@ -322,6 +329,10 @@
         <tr>
           <td>Monitor App performance and fix bugs</td>
           <td>Device info, performance telemetry</td>
+        </tr>
+        <tr>
+          <td>Manage infrastructure costs, plan capacity, and detect abuse of paid services</td>
+          <td>Firebase UID, service usage counts (routing and search request totals)</td>
         </tr>
         <tr>
           <td>Improve App features and user experience</td>
@@ -499,6 +510,10 @@
         <tr>
           <td>Product-interaction analytics events (Firebase Analytics)</td>
           <td>Retained per Google Analytics for Firebase's configured data-retention setting</td>
+        </tr>
+        <tr>
+          <td>Service usage counts (monthly routing/search request totals for your account)</td>
+          <td>Retained 13 months, then deleted automatically; deleted sooner if you delete your account</td>
         </tr>
         <tr>
           <td>Subscription records (RevenueCat)</td>
@@ -697,7 +712,8 @@
         </tr>
         <tr>
           <td>Internet / electronic network activity</td>
-          <td>App performance telemetry</td>
+          <td>App performance telemetry; monthly counts of routing and place-search requests made
+              for your account</td>
           <td>Yes</td>
         </tr>
         <tr>
@@ -850,8 +866,9 @@
 
     <h3>What Happens When You Delete Your Account</h3>
     <ul>
-      <li>Your Firebase Authentication record, Firestore profile, and profile photo in Firebase
-          Storage will be deleted within 30 days.</li>
+      <li>Your Firebase Authentication record, your Firestore profile and the data stored under it
+          — including saved places, recent destinations, scheduled drives, and service usage
+          counts — and your profile photo in Firebase Storage will be deleted within 30 days.</li>
       <li>Your FCM push notification token will be revoked.</li>
       <li>Feedback submissions associated with your account will be anonymized or deleted within
           30 days.</li>
