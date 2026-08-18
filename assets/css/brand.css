@@ -580,6 +580,7 @@ a.hub-card.primary p { color: rgba(255,255,255,0.88); }
 
 /* ── Tier comparison ── */
 .tier-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.tier-grid.single { grid-template-columns: minmax(0, 620px); justify-content: center; }
 .tier-card {
   background: var(--surface);
   border: 1px solid var(--border);
