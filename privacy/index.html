@@ -40,7 +40,7 @@
 
 <header class="page-hero">
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Updated: September 21, 2026</p>
+  <p class="meta">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Updated: October 5, 2026</p>
 </header>
 
 <div class="content-wrap" id="main">
@@ -134,7 +134,17 @@
     <ul>
       <li>
         <strong>Account registration data:</strong> Your email address and display name when
-        you sign up with email/password, Google Sign-In, or Sign in with Apple.
+        you sign up with email/password, Google Sign-In, or Sign in with Apple. An account is
+        optional. You can use the App and subscribe without one, as a guest. A guest is
+        identified only by a random Firebase UID created on your device, with no name or email
+        address attached. If you create an account later, it keeps that same UID, so your
+        subscription and saved places carry over.
+      </li>
+      <li>
+        <strong>Product email preference:</strong> When you create an account you can tick a box
+        to receive ShieldNav news and tips by email. The box is unticked by default. If you tick
+        it, we record that you agreed and when. If you leave it unticked, we never send you
+        marketing email.
       </li>
       <li>
         <strong>Profile photo:</strong> An optional profile photo you choose to upload. Profile
@@ -197,7 +207,7 @@
         trial, on a monthly plan, or on an annual plan, and whether that subscription is active.
         Current pricing is shown in the App Store and in the app before you subscribe. This is
         managed by RevenueCat and linked to your
-        Firebase UID. We do not store or process your payment card information — all payment
+        Firebase UID (the random guest UID if you subscribe without an account). We do not store or process your payment card information — all payment
         transactions are handled by Apple (App Store) or Google (Play Store) directly.
       </li>
     </ul>
@@ -333,6 +343,10 @@
         <tr>
           <td>Send push notifications (navigation alerts, product updates)</td>
           <td>FCM registration token</td>
+        </tr>
+        <tr>
+          <td>Send product news and tips by email, only if you opted in when creating an account</td>
+          <td>Email address, your opt-in choice and when you made it</td>
         </tr>
         <tr>
           <td>Process and respond to feedback and bug reports</td>
@@ -490,6 +504,10 @@
         <tr>
           <td>Account information (email, display name, Firebase UID)</td>
           <td>Retained for the life of your account; deleted within 30 days of account deletion request</td>
+        </tr>
+        <tr>
+          <td>Product email opt-in (your choice and when you made it)</td>
+          <td>Retained until you unsubscribe or delete your account</td>
         </tr>
         <tr>
           <td>Profile photo</td>
@@ -684,8 +702,11 @@
     <h3>11.4 Right to Opt Out of Non-Essential Communications</h3>
     <p>
       You may opt out of push notifications at any time via your device Settings or within the
-      App's notification preferences. Note that we may still send you transactional messages
-      (e.g., account security alerts) that are necessary for the operation of your account.
+      App's notification preferences. If you opted in to product emails, every one includes a
+      link to unsubscribe, or you can email
+      <a href="mailto:support@shieldnav.com">support@shieldnav.com</a> to stop them. Note that we
+      may still send you transactional messages (e.g., account security alerts) that are
+      necessary for the operation of your account.
     </p>
 
     <h3>11.5 Right to Withdraw Consent</h3>
