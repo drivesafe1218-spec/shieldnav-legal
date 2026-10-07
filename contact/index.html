@@ -11,14 +11,16 @@
   <meta property="og:title" content="Contact — ShieldNav LLC" />
   <meta property="og:description" content="How to reach ShieldNav LLC: support and billing, privacy and data requests, crime data corrections, legal notices, and press enquiries." />
   <meta property="og:url" content="https://shieldnav.com/contact" />
-  <meta property="og:image" content="https://shieldnav.com/assets/images/shieldnav_logo.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://shieldnav.com/assets/images/og-banner.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ShieldNav — crime-aware GPS navigation for iPhone" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact — ShieldNav LLC" />
   <meta name="twitter:description" content="How to reach ShieldNav LLC: support and billing, privacy and data requests, crime data corrections, legal notices, and press enquiries." />
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/css/fonts.css" />
   <link rel="stylesheet" href="/assets/css/brand.css" />
 </head>
 <body>
@@ -27,10 +29,11 @@
 
   <nav class="site-nav full">
     <a href="/" class="nav-logo">
-      <img src="/assets/images/shieldnav_logo_icon.png" alt="" />
+      <img src="/assets/images/shieldnav_logo_icon-84.webp" width="28" height="28" alt="" />
       <span class="nav-brand">ShieldNav</span>
     </a>
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">Menu</button>
+    <div class="nav-links" id="site-nav-links">
       <a href="/product">Product</a>
       <a href="/about">About</a>
       <a href="/faq">FAQ</a>
@@ -64,13 +67,13 @@
 
     <div class="card">
       <h2>Crime data corrections</h2>
-      <p>If a record on the map looks wrong, tell us. Email <a href="mailto:support@shieldnav.com?subject=Data%20Issue">support@shieldnav.com</a> with the subject <strong>&ldquo;Data Issue&rdquo;</strong>, including the city, the location, and what appears incorrect. In-app, use <strong>Settings &rarr; Development Feedback &rarr; Data Issue</strong>.</p>
-      <p>Because our records come from municipal open data, some corrections have to be made at the source by the publishing agency. We will tell you when that is the case.</p>
+      <p>If a record on the map looks wrong, tell us. Email <a href="mailto:support@shieldnav.com?subject=Data%20Issue">support@shieldnav.com</a> with the subject <strong>&ldquo;Data Issue&rdquo;</strong>, including the city, the location, and what appears incorrect. With an account, you can also use <strong>Settings &rarr; Development Feedback</strong> in the app (type &ldquo;Problem&rdquo;).</p>
+      <p>Because our records come from police departments&rsquo; published data, collected for us by CrimeoMeter, some corrections have to be made at the source by the publishing agency. We will tell you when that is the case.</p>
     </div>
 
     <div class="card">
       <h2>Legal notices</h2>
-      <p>For legal notices, intellectual property claims, or matters arising under our <a href="/terms">Terms of Use</a>, write to ShieldNav&nbsp;LLC at <a href="mailto:support@shieldnav.com?subject=Legal%20Notice">support@shieldnav.com</a> with the subject <strong>&ldquo;Legal Notice&rdquo;</strong>, or use the mailing address below.</p>
+      <p>For legal notices, intellectual property claims, or matters arising under our <a href="/terms">Terms of Use</a>, write to ShieldNav&nbsp;LLC at <a href="mailto:support@shieldnav.com?subject=Legal%20Notice">support@shieldnav.com</a> with the subject <strong>&ldquo;Legal Notice&rdquo;</strong>.</p>
     </div>
 
     <div class="card">
@@ -95,7 +98,7 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/assets/images/shieldnav_logo.png" alt="ShieldNav" class="footer-logo" />
+          <img src="/assets/images/shieldnav_logo-176.webp" alt="ShieldNav" class="footer-logo" width="36" height="36" loading="lazy" />
           <p>Crime-aware GPS navigation for iPhone. Built and operated by ShieldNav&nbsp;LLC, an independent software company in the Chicagoland area.</p>
         </div>
         <div class="footer-col">
@@ -130,5 +133,6 @@
     </div>
   </footer>
 
+<script src="/assets/js/nav.js" defer></script>
 </body>
 </html>

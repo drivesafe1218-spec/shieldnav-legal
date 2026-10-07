@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShieldNav – Crime Data Disclaimer</title>
+  <title>Crime Data Disclaimer — ShieldNav</title>
   <meta name="description" content="How ShieldNav sources crime data, the accuracy limits that apply, our Fair Housing statement, and guidance on using the crime layer responsibly." />
   <link rel="canonical" href="https://shieldnav.com/crime-disclaimer" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ShieldNav" />
-  <meta property="og:title" content="ShieldNav – Crime Data Disclaimer" />
+  <meta property="og:title" content="Crime Data Disclaimer — ShieldNav" />
   <meta property="og:description" content="How ShieldNav sources crime data, the accuracy limits that apply, our Fair Housing statement, and guidance on using the crime layer responsibly." />
   <meta property="og:url" content="https://shieldnav.com/crime-disclaimer" />
-  <meta property="og:image" content="https://shieldnav.com/assets/images/shieldnav_logo.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://shieldnav.com/assets/images/og-banner.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ShieldNav — crime-aware GPS navigation for iPhone" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/css/fonts.css" />
   <link rel="stylesheet" href="/assets/css/brand.css" />
   <style>
     html { scroll-behavior: smooth; }
@@ -28,10 +30,11 @@
 
   <nav class="site-nav full">
     <a href="/" class="nav-logo">
-      <img src="/assets/images/shieldnav_logo_icon.png" alt="" />
+      <img src="/assets/images/shieldnav_logo_icon-84.webp" width="28" height="28" alt="" />
       <span class="nav-brand">ShieldNav</span>
     </a>
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">Menu</button>
+    <div class="nav-links" id="site-nav-links">
       <a href="/product">Product</a>
       <a href="/about">About</a>
       <a href="/faq">FAQ</a>
@@ -43,7 +46,7 @@
 
 <header class="page-hero">
   <h1>Crime Data Disclaimer</h1>
-  <p class="meta">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Revised: August 15, 2026</p>
+  <p class="meta">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Revised: October 6, 2026</p>
 </header>
 
 <nav class="toc" aria-label="Table of contents">
@@ -71,7 +74,7 @@
 
   <section id="s1">
     <h2>1. What Crime Data Is</h2>
-    <p>ShieldNav displays publicly available crime incident data sourced from official municipal and law enforcement databases. This data includes reported incidents such as theft, assault, burglary, vandalism, and other offenses as classified by local law enforcement agencies.</p>
+    <p>ShieldNav displays crime incident data licensed from CrimeoMeter, which collects incident reports published by police departments and city open-data portals. This data includes reported incidents such as theft, assault, burglary, vandalism, and other offenses as classified by local law enforcement agencies.</p>
     <p>Crime data is used to:</p>
     <ul>
       <li>Display incident markers and heatmaps on the map</li>
@@ -83,7 +86,7 @@
 
   <section id="s2">
     <h2>2. Data Sources and Limitations</h2>
-    <p>ShieldNav obtains crime incident data from public municipal open data portals and law enforcement agencies. This data has significant inherent limitations:</p>
+    <p>ShieldNav obtains crime incident data from CrimeoMeter, which collects it from police departments and city open-data portals. ShieldNav currently covers select Illinois cities, listed in the app under Settings &rsaquo; Crime Coverage Cities. This data has significant inherent limitations:</p>
     <ul>
       <li><strong>Underreporting:</strong> Many crimes, particularly domestic violence, sexual assault, and hate crimes, are chronically underreported to law enforcement. The absence of reported incidents does not mean an area is free of crime.</li>
       <li><strong>Reporting delays:</strong> Data is published on a lag. Incidents from the past 24–72 hours (or longer) may not yet appear in our data feed.</li>
@@ -95,7 +98,7 @@
     </ul>
     <div class="callout warn">
       <strong>Important:</strong>
-      <p>ShieldNav does not independently verify individual incident reports. We display data as received from official sources. ShieldNav is not responsible for errors, omissions, or inaccuracies in source data.</p>
+      <p>ShieldNav does not independently verify individual incident reports. We display data as received from our data provider. ShieldNav is not responsible for errors, omissions, or inaccuracies in source data.</p>
     </div>
   </section>
 
@@ -108,7 +111,7 @@
       <li>Does <strong>not</strong> provide alerts about crimes in progress</li>
       <li>Does <strong>not</strong> have access to non-public law enforcement data</li>
     </ul>
-    <p>All crime data shown in ShieldNav is historical, typically ranging from hours to years old depending on the data source refresh cycle and the city. Route safety rankings are based on historical incident patterns, not live conditions.</p>
+    <p>All crime data shown in ShieldNav is historical, typically ranging from hours to years old depending on the data source refresh cycle and the city. Route comparisons are based on historical incident patterns, not live conditions.</p>
   </section>
 
   <section id="s4">
@@ -116,7 +119,7 @@
     <p>ShieldNav is committed to ensuring its services are not used to facilitate unlawful discrimination. Crime data has historically been correlated with race and socioeconomic status due to decades of systemic over-policing in certain communities — this correlation reflects historical law enforcement patterns, not the character or safety of those communities or the people who live there.</p>
     <div class="callout info">
       <strong>Our data policy:</strong>
-      <p>ShieldNav's crime safety rankings and the underlying scoring that produces them are derived solely from reported incident data. They do not incorporate, reflect, or correlate with the demographic characteristics, racial composition, national origin, religion, sex, disability status, or any other protected class attributes of any neighborhood or its residents.</p>
+      <p>ShieldNav's route comparisons are derived solely from reported incident data (type, location, and date). They do not use the demographic characteristics, racial composition, national origin, religion, sex, disability status, or any other protected class attributes of any neighborhood or its residents.</p>
     </div>
     <p><strong>You must not use ShieldNav to:</strong></p>
     <ul>
@@ -164,26 +167,26 @@
 
   <section id="s8">
     <h2>8. Data Methodology</h2>
-    <p>ShieldNav ranks routes and assesses areas using a proprietary crime-scoring algorithm that considers:</p>
+    <p>When you plan a trip, HERE returns several possible routes. ShieldNav compares them using the reported incidents near each one:</p>
     <ul>
-      <li>Type of incident (weighted by severity)</li>
-      <li>Frequency of incidents within a geographic radius</li>
-      <li>Recency of incidents (more recent incidents weighted more heavily)</li>
-      <li>Normalization relative to the city's overall incident baseline</li>
+      <li><strong>Incidents near each route:</strong> ShieldNav counts the reported incidents within your Crime Detection Radius of each route. You can change the radius in Crime Routing Preferences.</li>
+      <li><strong>Compared per mile:</strong> A longer route passes more places, so routes are compared by incidents per mile checked. The route with the lowest rate gets the <strong>Safest</strong> badge. If it is also the quickest, it is marked Safest and Fastest.</li>
+      <li><strong>Only routes we could check:</strong> A route with no crime data covering it is left out of the comparison rather than counted as clear.</li>
+      <li><strong>Sometimes there is no Safest:</strong> If every route comes back clean, or too little was checked to call one safer, no route gets the badge.</li>
     </ul>
-    <p>Rankings are recalculated periodically as new data becomes available. This methodology may change over time as we refine our models, including which results are surfaced in the app. ShieldNav does not publish the specific weights or formulas used in these calculations, as these are proprietary.</p>
-    <p><strong>Data attribution:</strong> Crime data is sourced from municipal open data portals operated by the respective city governments. ShieldNav does not claim ownership of underlying incident data. City attribution is displayed within the app's crime coverage section.</p>
+    <p>ShieldNav does not give neighborhoods, streets, or routes a safety score. The Safest and Fastest badges are the only safety signal in the app. The comparison uses only the type, location, and date of reported incidents &mdash; never the demographics of an area or its residents. Reported crime reflects which crimes are reported and where police patrol, not just where crime happens, so treat the comparison as one input, not a verdict on an area. This methodology may change over time; the in-app guide (Settings &rsaquo; How ShieldNav works) always describes the current version.</p>
+    <p><strong>Data attribution:</strong> Crime data is licensed from <a href="https://www.crimeometer.com" target="_blank" rel="noopener">CrimeoMeter</a>, which collects incident reports published by police departments and city open-data portals. ShieldNav does not claim ownership of the underlying incident data. Every screen that shows crime data in the app credits CrimeoMeter as the source.</p>
   </section>
 
   <section id="s9">
     <h2>9. Limitation of Liability</h2>
     <p>To the fullest extent permitted by applicable law, ShieldNav and its officers, directors, employees, agents, licensors, and service providers shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from:</p>
     <ul>
-      <li>Your reliance on crime data, safety rankings, safety scores, or route recommendations provided by the app</li>
+      <li>Your reliance on crime data, Safest or Fastest badges, or route recommendations provided by the app</li>
       <li>Inaccuracies, errors, or omissions in crime data</li>
       <li>Any crime, accident, personal injury, or property damage experienced while using ShieldNav's navigation services</li>
       <li>Failure of the app to alert you to a crime or hazard</li>
-      <li>Decisions made based on crime safety rankings or scores</li>
+      <li>Decisions made based on route comparisons or badges</li>
     </ul>
     <p>This limitation applies regardless of the legal theory under which such damages are claimed and even if ShieldNav has been advised of the possibility of such damages.</p>
     <p>This disclaimer is subject to the full <a href="https://shieldnav.com/terms#s10">Limitation of Liability</a> section in our Terms of Use.</p>
@@ -197,7 +200,7 @@
       <li><strong>Privacy Policy:</strong> <a href="https://shieldnav.com/privacy">shieldnav.com/privacy</a></li>
       <li><strong>Terms of Use:</strong> <a href="https://shieldnav.com/terms">shieldnav.com/terms</a></li>
     </ul>
-    <p>To report an error in crime data displayed in the app, use the in-app feedback tool (Settings → Development Feedback) and select "Data Issue" as the type.</p>
+    <p>To report an error in crime data displayed in the app, use the in-app feedback tool (Settings → Development Feedback, type "Problem"; requires an account), or email <a href="mailto:support@shieldnav.com?subject=Data%20Issue">support@shieldnav.com</a> with "Data Issue" in the subject line.</p>
   </section>
 
 </div>
@@ -206,7 +209,7 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/assets/images/shieldnav_logo.png" alt="ShieldNav" class="footer-logo" />
+          <img src="/assets/images/shieldnav_logo-176.webp" alt="ShieldNav" class="footer-logo" width="36" height="36" loading="lazy" />
           <p>Crime-aware GPS navigation for iPhone. Built and operated by ShieldNav&nbsp;LLC, an independent software company in the Chicagoland area.</p>
         </div>
         <div class="footer-col">
@@ -241,5 +244,6 @@
     </div>
   </footer>
 
+<script src="/assets/js/nav.js" defer></script>
 </body>
 </html>

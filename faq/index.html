@@ -11,14 +11,16 @@
   <meta property="og:title" content="FAQ — ShieldNav" />
   <meta property="og:description" content="Common questions about ShieldNav: what the app does, where the crime data comes from, how current it is, the subscription and refunds, and how we handle your data." />
   <meta property="og:url" content="https://shieldnav.com/faq" />
-  <meta property="og:image" content="https://shieldnav.com/assets/images/shieldnav_logo.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://shieldnav.com/assets/images/og-banner.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ShieldNav — crime-aware GPS navigation for iPhone" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="FAQ — ShieldNav" />
   <meta name="twitter:description" content="Common questions about ShieldNav: what the app does, where the crime data comes from, how current it is, the subscription and refunds, and how we handle your data." />
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/css/fonts.css" />
   <link rel="stylesheet" href="/assets/css/brand.css" />
 </head>
 <body>
@@ -27,10 +29,11 @@
 
   <nav class="site-nav full">
     <a href="/" class="nav-logo">
-      <img src="/assets/images/shieldnav_logo_icon.png" alt="" />
+      <img src="/assets/images/shieldnav_logo_icon-84.webp" width="28" height="28" alt="" />
       <span class="nav-brand">ShieldNav</span>
     </a>
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">Menu</button>
+    <div class="nav-links" id="site-nav-links">
       <a href="/product">Product</a>
       <a href="/about">About</a>
       <a href="/faq" aria-current="page">FAQ</a>
@@ -51,7 +54,7 @@
 
       <div class="faq-item">
         <h3>What is ShieldNav?</h3>
-        <p>A GPS navigation app for iPhone. It gives you turn-by-turn driving directions, and it displays crime data drawn from public municipal records on the same map, so you can see reported incident activity along a route or around a destination.</p>
+        <p>A GPS navigation app for iPhone. It gives you turn-by-turn driving directions, and it displays police-reported crime data on the same map, so you can see reported incident activity along a route or around a destination.</p>
       </div>
 
       <div class="faq-item">
@@ -66,17 +69,17 @@
 
       <div class="faq-item">
         <h3>Where does the crime data come from?</h3>
-        <p>From open data published by city and county governments &mdash; the public records portals where police departments post incident logs. We normalize each jurisdiction&rsquo;s format into a common structure so one map can cover multiple cities.</p>
+        <p>We license it from CrimeoMeter, which collects the incident reports that police departments and city governments publish on their open-data portals. CrimeoMeter never receives anything about you or your location.</p>
       </div>
 
       <div class="faq-item">
         <h3>How current is the data?</h3>
-        <p>It depends on the city. Municipal feeds publish on their own schedules &mdash; some daily, some weekly, some with a lag of several weeks. ShieldNav shows the most recent data available for a jurisdiction. It is historical data and we do not present it as a live picture of what is happening right now.</p>
+        <p>It depends on the city. Police departments and cities publish on their own schedules &mdash; some daily, some weekly, some with a lag of several weeks. ShieldNav shows the most recent data available for a jurisdiction. It is historical data and we do not present it as a live picture of what is happening right now.</p>
       </div>
 
       <div class="faq-item">
         <h3>Which cities are covered?</h3>
-        <p>Coverage follows publication. A jurisdiction that publishes open incident data can have a crime layer; one that does not, cannot. We are expanding coverage as we add and validate new municipal sources.</p>
+        <p>Crime data currently covers Chicago, Schaumburg, Downers Grove, and Hanover Park, Illinois. Navigation works everywhere HERE has maps, but the crime layer and the Safest badge only appear where we have crime data. The in-app list under Settings &rarr; Crime Coverage Cities is always current. We add cities as we validate new data.</p>
       </div>
 
       <div class="faq-item">
@@ -86,7 +89,17 @@
 
       <div class="faq-item">
         <h3>Do I need a subscription?</h3>
-        <p>Yes, after the free trial. ShieldNav is one app with one subscription &mdash; there is no limited free version. Every new account starts with a <strong>7-day free trial</strong> with full access; when the trial ends, an active subscription is required to keep using the app. If you do not cancel at least 24 hours before the trial ends, it converts automatically into a paid <strong>auto-renewing subscription</strong> &mdash; monthly or annual, whichever you chose &mdash; which renews automatically each period until you cancel. Pricing is shown in the App&nbsp;Store and in the app before you subscribe. The <a href="/product">product page</a> lists everything included.</p>
+        <p>Yes, after the free trial. ShieldNav is one app with one subscription &mdash; there is no limited free version. New subscribers start with a <strong>7-day free trial</strong> with full access (Apple decides eligibility based on your Apple&nbsp;ID); when the trial ends, an active subscription is required to keep using the app. If you do not cancel at least 24 hours before the trial ends, it converts automatically into a paid <strong>auto-renewing subscription</strong> &mdash; monthly or annual, whichever you chose &mdash; which renews automatically each period until you cancel. Pricing is shown in the App&nbsp;Store and in the app before you subscribe. The <a href="/product">product page</a> lists everything included.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do I need an account?</h3>
+        <p>No. You can subscribe and use ShieldNav as a guest. Create a free account if you want your saved places to follow you to a new phone, or to use scheduled drives, invites, and in-app feedback. If you create an account later, your subscription and saved places carry over. You must be 18 or older to use ShieldNav.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>I have a code. How do I use it?</h3>
+        <p>Tap <strong>Have a code?</strong> on the subscription screen to redeem an App&nbsp;Store offer code. Referral codes from friends go in <strong>Settings &rarr; Invite Friends/Redeem Code</strong> (account needed, within 7 days of creating it).</p>
       </div>
 
       <div class="faq-item">
@@ -101,7 +114,7 @@
 
       <div class="faq-item">
         <h3>How do I delete my account and data?</h3>
-        <p>In the app, go to <strong>Settings &rarr; Account &rarr; Delete Account</strong>. You can also email <a href="mailto:support@shieldnav.com?subject=Delete%20My%20Account">support@shieldnav.com</a> with the subject &ldquo;Delete My Account&rdquo; from the address on your account. Requests are processed within 30 days.</p>
+        <p>In the app, go to <strong>Settings &rarr; tap your profile card &rarr; Delete Account</strong>. If you use ShieldNav without an account, go to <strong>Settings &rarr; Delete Guest Data</strong>. You can also email <a href="mailto:support@shieldnav.com?subject=Delete%20My%20Account">support@shieldnav.com</a> with the subject &ldquo;Delete My Account&rdquo; from the address on your account (guests: include the Guest ID shown under Settings &rarr; Delete Guest Data). Requests are processed within 30 days. Deleting your data does not cancel an App&nbsp;Store subscription.</p>
       </div>
 
       <div class="faq-item">
@@ -117,7 +130,7 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/assets/images/shieldnav_logo.png" alt="ShieldNav" class="footer-logo" />
+          <img src="/assets/images/shieldnav_logo-176.webp" alt="ShieldNav" class="footer-logo" width="36" height="36" loading="lazy" />
           <p>Crime-aware GPS navigation for iPhone. Built and operated by ShieldNav&nbsp;LLC, an independent software company in the Chicagoland area.</p>
         </div>
         <div class="footer-col">
@@ -152,5 +165,6 @@
     </div>
   </footer>
 
+<script src="/assets/js/nav.js" defer></script>
 </body>
 </html>

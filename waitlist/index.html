@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShieldNav – Join the Waitlist</title>
+  <title>Join the Waitlist — ShieldNav</title>
   <meta name="description" content="Join the waitlist to hear when ShieldNav, crime-aware GPS navigation for iPhone, launches on the App Store." />
   <link rel="canonical" href="https://shieldnav.com/waitlist" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ShieldNav" />
-  <meta property="og:title" content="ShieldNav – Join the Waitlist" />
+  <meta property="og:title" content="Join the Waitlist — ShieldNav" />
   <meta property="og:description" content="Join the waitlist to hear when ShieldNav, crime-aware GPS navigation for iPhone, launches on the App Store." />
   <meta property="og:url" content="https://shieldnav.com/waitlist" />
-  <meta property="og:image" content="https://shieldnav.com/assets/images/shieldnav_logo.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://shieldnav.com/assets/images/og-banner.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ShieldNav — crime-aware GPS navigation for iPhone" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Reddit Ads pixel removed 2026-08-20. It loaded before any consent
        interaction and, on submit, re-initialised with the signup email for
@@ -22,9 +25,8 @@
        page and the policy contradicted each other. Do not re-add without
        updating the policy and adding a consent gate first. -->
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/css/fonts.css" />
   <link rel="stylesheet" href="/assets/css/brand.css" />
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <style>
@@ -94,10 +96,11 @@
 
   <nav class="site-nav full">
     <a href="/" class="nav-logo">
-      <img src="/assets/images/shieldnav_logo_icon.png" alt="" />
+      <img src="/assets/images/shieldnav_logo_icon-84.webp" width="28" height="28" alt="" />
       <span class="nav-brand">ShieldNav</span>
     </a>
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">Menu</button>
+    <div class="nav-links" id="site-nav-links">
       <a href="/product">Product</a>
       <a href="/about">About</a>
       <a href="/faq">FAQ</a>
@@ -129,11 +132,6 @@
           <input type="email" id="email" name="email" placeholder="jane@example.com" maxlength="254" autocomplete="email" />
         </div>
 
-        <div class="field-group">
-          <label for="phone">Phone Number <span class="opt">(optional)</span></label>
-          <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" maxlength="20" autocomplete="tel" />
-        </div>
-
         <div class="turnstile-wrap">
           <div class="cf-turnstile"
             data-sitekey="0x4AAAAAADsXQs1nzjTOJqCy"
@@ -151,14 +149,14 @@
         </div>
 
         <button type="submit" class="submit-btn" id="submit-btn">Join Waitlist</button>
-        <p class="privacy-note">Your info is stored securely and only used to notify you at launch. &nbsp;<a href="/privacy">Privacy Policy</a></p>
+        <p class="privacy-note">We only use your name and email to tell you when ShieldNav launches. To be removed at any time, email <a href="mailto:support@shieldnav.com?subject=Remove%20me%20from%20the%20waitlist">support@shieldnav.com</a>. &nbsp;<a href="/privacy">Privacy Policy</a></p>
       </form>
     </div>
 
     <div class="success-state" id="success-card" role="status" aria-live="polite">
       <div class="success-icon" aria-hidden="true">✅</div>
       <h2 id="success-heading" tabindex="-1">You're on the list!</h2>
-      <p>We'll be in touch when ShieldNav launches.<br>Keep an eye on your inbox.</p>
+      <p>We&rsquo;ll email you when ShieldNav launches &mdash; that&rsquo;s the only email you&rsquo;ll get from this list.<br>Changed your mind? Email <a href="mailto:support@shieldnav.com?subject=Remove%20me%20from%20the%20waitlist">support@shieldnav.com</a> and we&rsquo;ll remove you.</p>
     </div>
   </main>
 
@@ -166,7 +164,7 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/assets/images/shieldnav_logo.png" alt="ShieldNav" class="footer-logo" />
+          <img src="/assets/images/shieldnav_logo-176.webp" alt="ShieldNav" class="footer-logo" width="36" height="36" loading="lazy" />
           <p>Crime-aware GPS navigation for iPhone. Built and operated by ShieldNav&nbsp;LLC, an independent software company in the Chicagoland area.</p>
         </div>
         <div class="footer-col">
@@ -227,7 +225,6 @@
 
       const name    = document.getElementById('name').value.trim();
       const email   = document.getElementById('email').value.trim();
-      const phone   = document.getElementById('phone').value.trim();
       const consent = document.getElementById('consent').checked;
       const hp      = document.querySelector('input[name="website"]').value;
 
@@ -241,8 +238,10 @@
       btn.textContent = 'Submitting…';
 
       try {
-        const payload = { name, email, turnstileToken, website: hp };
-        if (phone) payload.phone = phone;
+        // consent is posted explicitly: the server stores consentGiven only
+        // when the caller asserts it, so leaving it out recorded every
+        // sign-up as "no consent" even though the box had to be ticked.
+        const payload = { name, email, consent: true, turnstileToken, website: hp };
 
         const res = await fetch(WAITLIST_ENDPOINT, {
           method: 'POST',
@@ -267,5 +266,6 @@
       }
     });
   </script>
+<script src="/assets/js/nav.js" defer></script>
 </body>
 </html>

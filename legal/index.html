@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShieldNav – Legal &amp; Privacy</title>
+  <title>Legal &amp; Privacy — ShieldNav</title>
   <meta name="description" content="Privacy Policy, Terms of Use, Crime Data Disclaimer, and support resources for ShieldNav, the crime-aware navigation app built by ShieldNav LLC." />
   <link rel="canonical" href="https://shieldnav.com/legal" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ShieldNav" />
-  <meta property="og:title" content="ShieldNav – Legal &amp; Privacy" />
+  <meta property="og:title" content="Legal &amp; Privacy — ShieldNav" />
   <meta property="og:description" content="Privacy Policy, Terms of Use, Crime Data Disclaimer, and support resources for ShieldNav, the crime-aware navigation app built by ShieldNav LLC." />
   <meta property="og:url" content="https://shieldnav.com/legal" />
-  <meta property="og:image" content="https://shieldnav.com/assets/images/shieldnav_logo.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://shieldnav.com/assets/images/og-banner.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ShieldNav — crime-aware GPS navigation for iPhone" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/css/fonts.css" />
   <link rel="stylesheet" href="/assets/css/brand.css" />
   <style>
     body {
@@ -63,10 +65,11 @@
 
   <nav class="site-nav full">
     <a href="/" class="nav-logo">
-      <img src="/assets/images/shieldnav_logo_icon.png" alt="" />
+      <img src="/assets/images/shieldnav_logo_icon-84.webp" width="28" height="28" alt="" />
       <span class="nav-brand">ShieldNav</span>
     </a>
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">Menu</button>
+    <div class="nav-links" id="site-nav-links">
       <a href="/product">Product</a>
       <a href="/about">About</a>
       <a href="/faq">FAQ</a>
@@ -108,7 +111,7 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/assets/images/shieldnav_logo.png" alt="ShieldNav" class="footer-logo" />
+          <img src="/assets/images/shieldnav_logo-176.webp" alt="ShieldNav" class="footer-logo" width="36" height="36" loading="lazy" />
           <p>Crime-aware GPS navigation for iPhone. Built and operated by ShieldNav&nbsp;LLC, an independent software company in the Chicagoland area.</p>
         </div>
         <div class="footer-col">
@@ -143,5 +146,6 @@
     </div>
   </footer>
 
+<script src="/assets/js/nav.js" defer></script>
 </body>
 </html>

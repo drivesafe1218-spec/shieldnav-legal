@@ -722,3 +722,31 @@ a.hub-card.primary p { color: rgba(255,255,255,0.88); }
   margin: 16px 0 20px;
 }
 .table-scroll table { margin: 0; min-width: 460px; }
+
+/* ── Mobile nav menu (assets/js/nav.js) ── */
+.site-nav .nav-toggle { display: none; }
+@media (max-width: 700px) {
+  .site-nav.js-collapsible .nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: var(--r-input);
+    padding: 6px 12px;
+    font: 500 0.875rem 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-1);
+    cursor: pointer;
+  }
+  .site-nav.js-collapsible .nav-links { display: none; }
+  .site-nav.js-collapsible.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding-top: 6px;
+  }
+  .site-nav.js-collapsible.open .nav-links a { font-size: 1rem; padding: 8px 0; }
+  .site-nav.js-collapsible.open .nav-links a.nav-cta { padding: 8px 16px; margin-top: 4px; }
+}

@@ -4,22 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ShieldNav — Crime-aware GPS navigation for iPhone</title>
-  <meta name="description" content="ShieldNav is an iPhone navigation app that shows reported crime data from public municipal records alongside turn-by-turn directions. Built by ShieldNav LLC in the Chicagoland area." />
+  <meta name="description" content="ShieldNav is an iPhone navigation app that shows police-reported crime data alongside turn-by-turn directions. Built by ShieldNav LLC in the Chicagoland area." />
   <link rel="canonical" href="https://shieldnav.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ShieldNav" />
   <meta property="og:title" content="ShieldNav — Crime-aware GPS navigation for iPhone" />
-  <meta property="og:description" content="ShieldNav is an iPhone navigation app that shows reported crime data from public municipal records alongside turn-by-turn directions. Built by ShieldNav LLC in the Chicagoland area." />
+  <meta property="og:description" content="ShieldNav is an iPhone navigation app that shows police-reported crime data alongside turn-by-turn directions. Built by ShieldNav LLC in the Chicagoland area." />
   <meta property="og:url" content="https://shieldnav.com/" />
-  <meta property="og:image" content="https://shieldnav.com/assets/images/shieldnav_logo.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://shieldnav.com/assets/images/og-banner.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ShieldNav — crime-aware GPS navigation for iPhone" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ShieldNav — Crime-aware GPS navigation for iPhone" />
-  <meta name="twitter:description" content="ShieldNav is an iPhone navigation app that shows reported crime data from public municipal records alongside turn-by-turn directions. Built by ShieldNav LLC in the Chicagoland area." />
+  <meta name="twitter:description" content="ShieldNav is an iPhone navigation app that shows police-reported crime data alongside turn-by-turn directions. Built by ShieldNav LLC in the Chicagoland area." />
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/css/fonts.css" />
   <link rel="stylesheet" href="/assets/css/brand.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://shieldnav.com/#organization",
+        "name": "ShieldNav LLC",
+        "url": "https://shieldnav.com/",
+        "logo": "https://shieldnav.com/assets/images/apple-touch-icon.png",
+        "email": "support@shieldnav.com",
+        "address": {"@type": "PostalAddress", "addressRegion": "IN", "addressCountry": "US"},
+        "sameAs": ["https://x.com/shieldnavLLC"]
+      },
+      {
+        "@type": "MobileApplication",
+        "name": "ShieldNav",
+        "operatingSystem": "iOS 15.2 or later",
+        "applicationCategory": "TravelApplication",
+        "description": "Crime-aware GPS navigation for iPhone. Turn-by-turn directions with police-reported crime data on the same map.",
+        "publisher": {"@id": "https://shieldnav.com/#organization"},
+        "url": "https://shieldnav.com/product"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -27,10 +55,11 @@
 
   <nav class="site-nav full">
     <a href="/" class="nav-logo">
-      <img src="/assets/images/shieldnav_logo_icon.png" alt="" />
+      <img src="/assets/images/shieldnav_logo_icon-84.webp" width="28" height="28" alt="" />
       <span class="nav-brand">ShieldNav</span>
     </a>
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">Menu</button>
+    <div class="nav-links" id="site-nav-links">
       <a href="/product">Product</a>
       <a href="/about">About</a>
       <a href="/faq">FAQ</a>
@@ -42,7 +71,7 @@
 
   <header class="hero">
     <div class="hero-inner">
-      <img src="/assets/images/shieldnav_logo.png" alt="ShieldNav" class="hero-logo" />
+      <img src="/assets/images/shieldnav_logo-176.webp" alt="ShieldNav" class="hero-logo" width="88" height="88" />
       <h1>Crime-aware navigation for everyday driving</h1>
       <p class="hero-lede">ShieldNav is an iPhone navigation app that puts reported crime data on the map beside your route. You get turn-by-turn directions, plus the context most navigation apps leave out.</p>
       <p class="hero-lede">Built and operated by ShieldNav&nbsp;LLC, an independent software company based in the Chicagoland area.</p>
@@ -69,12 +98,12 @@
 
           <div class="feature-card">
             <h3>Crime data on the map</h3>
-            <p>A heatmap overlay assembled from incident records published by municipal governments. See reported incident density along a route or around a destination before you set off, rather than reading about the area afterward.</p>
+            <p>A heatmap overlay built from incident reports that police departments publish. See reported incident density along a route or around a destination before you set off, rather than reading about the area afterward.</p>
           </div>
 
           <div class="feature-card">
             <h3>Places you drive often</h3>
-            <p>Save home, work, and custom destinations, and schedule drives in advance. Saved places and recent destinations live on your account, so they follow you if you change devices.</p>
+            <p>Save home, work, and custom destinations, and schedule drives in advance. Sign in to an account and your saved places and recent destinations follow you if you change phones.</p>
           </div>
 
           <div class="feature-card">
@@ -90,11 +119,11 @@
       <div class="band-inner">
         <h2 class="band-title">Where the crime data comes from</h2>
         <div class="prose">
-          <p>ShieldNav&rsquo;s crime layer is assembled from open data published by city and county governments &mdash; the same public records portals police departments use to publish incident logs. We normalize records from each jurisdiction into a common format so one map can span multiple cities.</p>
+          <p>ShieldNav&rsquo;s crime layer is built from data licensed from CrimeoMeter, which collects the incident reports that police departments and city governments publish on their open-data portals. Crime data currently covers Chicago, Schaumburg, Downers Grove, and Hanover Park, Illinois.</p>
           <p>Three things we are explicit about, both in the app and here:</p>
           <ul>
             <li><strong>Coverage varies by city.</strong> A jurisdiction that does not publish open incident data will not have a crime layer in ShieldNav. What you see on the map reflects what was reported and published, not everything that happened.</li>
-            <li><strong>The data is historical, not live.</strong> Municipal feeds publish on their own schedules &mdash; some daily, some weekly, some with a lag of several weeks. ShieldNav shows the most recent data available for a jurisdiction and does not present it as a real-time picture.</li>
+            <li><strong>The data is historical, not live.</strong> Police departments and cities publish on their own schedules &mdash; some daily, some weekly, some with a lag of several weeks. ShieldNav shows the most recent data available for a jurisdiction and does not present it as a real-time picture.</li>
             <li><strong>It describes places, not people.</strong> Crime data covers reported incidents in an area. It is not a prediction, not a judgment about the people who live or work there, and not a substitute for your own awareness while driving.</li>
           </ul>
           <p>Our <a href="/crime-disclaimer">Crime Data Disclaimer</a> sets out the accuracy limits and our Fair Housing position in full. It is worth reading before you rely on the map.</p>
@@ -110,11 +139,11 @@
 
           <div class="tier-card premium">
             <div class="tier-name">Everything included</div>
-            <p class="tier-note">Every new account starts with a 7-day free trial</p>
+            <p class="tier-note">New subscribers start with a 7-day free trial</p>
             <ul>
               <li>Turn-by-turn voice navigation with automatic rerouting</li>
               <li>Map display and route planning</li>
-              <li>Unlimited routes and place searches</li>
+              <li>Routes and place searches for everyday driving</li>
               <li>Crime radar along your route &mdash; incident type, date, block-level location</li>
               <li>Live address autosuggest</li>
               <li>Real-time speed limits and toll awareness</li>
@@ -124,7 +153,7 @@
 
         </div>
         <div class="prose" style="margin-top:24px;">
-          <p><strong>A subscription is required to use ShieldNav after the free trial.</strong> ShieldNav is an auto-renewing subscription sold through the Apple App&nbsp;Store, available monthly or annually. New accounts begin with a 7-day free trial. If you do not cancel at least 24 hours before the trial ends, it converts automatically into a paid subscription and your Apple&nbsp;ID is charged the price shown at sign-up. The subscription then renews automatically each period until you cancel.</p>
+          <p><strong>A subscription is required to use ShieldNav after the free trial.</strong> ShieldNav is an auto-renewing subscription sold through the Apple App&nbsp;Store, available monthly or annually. New subscribers begin with a 7-day free trial (Apple decides eligibility based on your Apple&nbsp;ID). No account is needed to subscribe. If you do not cancel at least 24 hours before the trial ends, it converts automatically into a paid subscription and your Apple&nbsp;ID is charged the price shown at sign-up. The subscription then renews automatically each period until you cancel.</p>
           <p>Current pricing is shown in the App&nbsp;Store and in the app before you subscribe. Cancel any time from <strong>Settings &rarr; [your Apple&nbsp;ID] &rarr; Subscriptions</strong> on your iPhone. Billing, renewals, and refunds are handled by Apple &mdash; see our <a href="/terms">Terms of Use</a> for the full subscription disclosure, the <a href="/privacy">Privacy Policy</a> for how we handle your data, or <a href="/support">Support</a> for how to cancel or request a refund.</p>
         </div>
       </div>
@@ -154,7 +183,7 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/assets/images/shieldnav_logo.png" alt="ShieldNav" class="footer-logo" />
+          <img src="/assets/images/shieldnav_logo-176.webp" alt="ShieldNav" class="footer-logo" width="36" height="36" loading="lazy" />
           <p>Crime-aware GPS navigation for iPhone. Built and operated by ShieldNav&nbsp;LLC, an independent software company in the Chicagoland area.</p>
         </div>
         <div class="footer-col">
@@ -189,5 +218,6 @@
     </div>
   </footer>
 
+<script src="/assets/js/nav.js" defer></script>
 </body>
 </html>

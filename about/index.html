@@ -11,14 +11,16 @@
   <meta property="og:title" content="About — ShieldNav LLC" />
   <meta property="og:description" content="ShieldNav LLC is an independent software company in the Chicagoland area building crime-aware GPS navigation for iPhone. Who we are, why we built it, and how we handle crime and user data." />
   <meta property="og:url" content="https://shieldnav.com/about" />
-  <meta property="og:image" content="https://shieldnav.com/assets/images/shieldnav_logo.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://shieldnav.com/assets/images/og-banner.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ShieldNav — crime-aware GPS navigation for iPhone" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About — ShieldNav LLC" />
   <meta name="twitter:description" content="ShieldNav LLC is an independent software company in the Chicagoland area building crime-aware GPS navigation for iPhone. Who we are, why we built it, and how we handle crime and user data." />
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/css/fonts.css" />
   <link rel="stylesheet" href="/assets/css/brand.css" />
 </head>
 <body>
@@ -27,10 +29,11 @@
 
   <nav class="site-nav full">
     <a href="/" class="nav-logo">
-      <img src="/assets/images/shieldnav_logo_icon.png" alt="" />
+      <img src="/assets/images/shieldnav_logo_icon-84.webp" width="28" height="28" alt="" />
       <span class="nav-brand">ShieldNav</span>
     </a>
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">Menu</button>
+    <div class="nav-links" id="site-nav-links">
       <a href="/product">Product</a>
       <a href="/about" aria-current="page">About</a>
       <a href="/faq">FAQ</a>
@@ -53,29 +56,28 @@
 
         <h3>Why we built it</h3>
         <p>Navigation apps are very good at answering &ldquo;what is the fastest way there.&rdquo; They are silent on everything else about the route. Meanwhile, most American cities publish detailed crime incident data as open records &mdash; it sits in municipal data portals, in formats that differ from city to city, effectively unreadable to anyone who is not already looking for it.</p>
-        <p>ShieldNav exists to close that gap. We take public incident records, normalize them across jurisdictions, and put them on the same map you are already using to drive. The goal is context, available before you leave rather than after you arrive.</p>
+        <p>ShieldNav exists to close that gap. We license police-reported incident data from CrimeoMeter, which gathers it from city open-data portals, and put it on the same map you are already using to drive. The goal is context, available before you leave rather than after you arrive.</p>
 
         <h3>How we approach the data</h3>
         <p>Crime data is easy to present irresponsibly, and we have made deliberate choices about not doing that.</p>
         <ul>
-          <li><strong>We show what was reported, and say so.</strong> Our map reflects incidents that were reported to and published by a municipal government. That is not the same as everything that happened, and we do not describe it as if it were.</li>
+          <li><strong>We show what was reported, and say so.</strong> Our map reflects incidents that were reported to police and published by a police department or city government. That is not the same as everything that happened, and we do not describe it as if it were.</li>
           <li><strong>We do not score neighborhoods or predict crime.</strong> ShieldNav displays historical incident data. It does not rank areas, forecast risk, or make claims about the people who live in a place.</li>
           <li><strong>We state our coverage limits plainly.</strong> Jurisdictions that do not publish open data do not get a crime layer, and refresh cadence varies with each city&rsquo;s publishing schedule. Both facts are documented in our <a href="/crime-disclaimer">Crime Data Disclaimer</a>.</li>
         </ul>
 
         <h3>How we approach your data</h3>
-        <p>We are not a data broker and we do not run an advertising business. ShieldNav is funded entirely by subscriptions, which means we have no reason to sell location history and no plans to build a business that would require it. Account data, saved places, and route history are covered in detail in our <a href="/privacy">Privacy Policy</a>, including how to request access to or deletion of everything we hold.</p>
+        <p>We are not a data broker and we do not run an advertising business. ShieldNav is funded entirely by subscriptions, which means we have no reason to sell location history and no plans to build a business that would require it. We do not keep a history of where you drive. Account data, saved places, and scheduled drives are covered in detail in our <a href="/privacy">Privacy Policy</a>, including how to request access to or deletion of everything we hold.</p>
 
         <h3>Where things stand</h3>
         <p>ShieldNav is in active development for iOS and is not yet on the App&nbsp;Store. If you would like to know when it launches, <a href="/waitlist">join the waitlist</a> &mdash; we will email you at release and will not use the list for anything else.</p>
       </div>
     </div>
 
-    <!-- TODO before resubmitting enrollment: add a short founder/leadership paragraph here.
-         Apple's reviewer is checking that a real organization stands behind the domain, and a
-         named person with a role is the single strongest signal on this page.
-         Suggested shape: "ShieldNav was founded by [FULL NAME], [TITLE], who [one sentence of
-         relevant background]." Keep it factual — do not add a team page with people who do not exist. -->
+    <div class="prose">
+      <h3>Who we are</h3>
+      <p>ShieldNav was founded by a Chicagoland local who wants to keep drivers safe and informed. It is built and run in the Chicago area, for the roads we drive every day.</p>
+    </div>
 
     <h2 class="section-heading">Company details</h2>
     <ul class="fact-list">
@@ -95,7 +97,7 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/assets/images/shieldnav_logo.png" alt="ShieldNav" class="footer-logo" />
+          <img src="/assets/images/shieldnav_logo-176.webp" alt="ShieldNav" class="footer-logo" width="36" height="36" loading="lazy" />
           <p>Crime-aware GPS navigation for iPhone. Built and operated by ShieldNav&nbsp;LLC, an independent software company in the Chicagoland area.</p>
         </div>
         <div class="footer-col">
@@ -130,5 +132,6 @@
     </div>
   </footer>
 
+<script src="/assets/js/nav.js" defer></script>
 </body>
 </html>

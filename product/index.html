@@ -4,21 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product — ShieldNav</title>
-  <meta name="description" content="Turn-by-turn navigation powered by the HERE Maps SDK, a crime data layer built from public municipal records, saved places, and what is included in a ShieldNav subscription." />
+  <meta name="description" content="Turn-by-turn navigation powered by the HERE Maps SDK, a crime data layer built from police-reported incident data, saved places, and what is included in a ShieldNav subscription." />
   <link rel="canonical" href="https://shieldnav.com/product" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ShieldNav" />
   <meta property="og:title" content="Product — ShieldNav" />
-  <meta property="og:description" content="Turn-by-turn navigation powered by the HERE Maps SDK, a crime data layer built from public municipal records, saved places, and what is included in a ShieldNav subscription." />
+  <meta property="og:description" content="Turn-by-turn navigation powered by the HERE Maps SDK, a crime data layer built from police-reported incident data, saved places, and what is included in a ShieldNav subscription." />
   <meta property="og:url" content="https://shieldnav.com/product" />
-  <meta property="og:image" content="https://shieldnav.com/assets/images/shieldnav_logo.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://shieldnav.com/assets/images/og-banner.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ShieldNav — crime-aware GPS navigation for iPhone" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Product — ShieldNav" />
-  <meta name="twitter:description" content="Turn-by-turn navigation powered by the HERE Maps SDK, a crime data layer built from public municipal records, saved places, and what is included in a ShieldNav subscription." />
+  <meta name="twitter:description" content="Turn-by-turn navigation powered by the HERE Maps SDK, a crime data layer built from police-reported incident data, saved places, and what is included in a ShieldNav subscription." />
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/css/fonts.css" />
   <link rel="stylesheet" href="/assets/css/brand.css" />
 </head>
 <body>
@@ -27,10 +29,11 @@
 
   <nav class="site-nav full">
     <a href="/" class="nav-logo">
-      <img src="/assets/images/shieldnav_logo_icon.png" alt="" />
+      <img src="/assets/images/shieldnav_logo_icon-84.webp" width="28" height="28" alt="" />
       <span class="nav-brand">ShieldNav</span>
     </a>
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">Menu</button>
+    <div class="nav-links" id="site-nav-links">
       <a href="/product" aria-current="page">Product</a>
       <a href="/about">About</a>
       <a href="/faq">FAQ</a>
@@ -55,12 +58,12 @@
         <li><strong>Route planning</strong> between any origin and destination, with the crime layer visible on the same map.</li>
         <li><strong>Point-of-interest search</strong> for finding destinations by name or category.</li>
       </ul>
-      <p>All of the above is part of the ShieldNav subscription, which every new account starts as a 7-day free trial.</p>
+      <p>All of the above is part of the ShieldNav subscription, which new subscribers start with a 7-day free trial.</p>
     </section>
 
     <section>
       <h2>The crime layer</h2>
-      <p>ShieldNav assembles crime data from open records published by city and county governments, then normalizes each jurisdiction&rsquo;s format into a common structure so a single map can span multiple cities.</p>
+      <p>ShieldNav&rsquo;s crime data is licensed from CrimeoMeter, which collects the incident reports that police departments and city governments publish as open data. Crime data currently covers Chicago, Schaumburg, Downers Grove, and Hanover Park, Illinois; navigation works everywhere HERE has maps.</p>
       <p>The map shows a <strong>heatmap overlay</strong> of reported incident density in an area, and the <strong>full crime radar</strong>, which surfaces the individual records behind the heatmap &mdash; incident type, date, and block-level location. Both are included in the subscription.</p>
       <div class="callout warn">
         <strong>Important limits</strong>
@@ -70,19 +73,19 @@
 
     <section>
       <h2>Saved places and scheduled drives</h2>
-      <p>Save home, work, and any custom destination so they are one tap away, and schedule drives ahead of time. Saved places, recent destinations, and scheduled drives are stored against your account rather than only on the device, so they survive a phone upgrade.</p>
+      <p>Save home, work, and any custom destination so they are one tap away, and schedule drives ahead of time. When you are signed in to an account, saved places, recent destinations, and scheduled drives are stored against it rather than only on the device, so they survive a phone upgrade. Scheduled drives need an account; as a guest, saved places stay on your phone.</p>
       <p>You can view, correct, or delete any of this from within the app. See the <a href="/privacy">Privacy Policy</a> for what is stored and for how long.</p>
     </section>
 
     <section>
       <h2>Accounts and sign-in</h2>
-      <p>ShieldNav requires a registered account so your saved data can follow you across devices. You can sign in with:</p>
+      <p>An account is optional. You can subscribe and use ShieldNav as a guest, without giving us a name or email address. Create an account if you want your saved places to follow you to a new phone, or to use scheduled drives, invites, and in-app feedback. You can sign in with:</p>
       <ul>
         <li><strong>Email and password</strong>, with email verification and password reset;</li>
         <li><strong>Sign in with Apple</strong>, including Apple&rsquo;s private email relay if you prefer not to share your address;</li>
         <li><strong>Google Sign-In</strong>.</li>
       </ul>
-      <p>You can delete your account and all associated data at any time from <strong>Settings &rarr; Account &rarr; Delete Account</strong>, or by emailing us. See <a href="/support">Support</a> for the full procedure.</p>
+      <p>You can delete your account and all associated data at any time from <strong>Settings &rarr; tap your profile card &rarr; Delete Account</strong>. Guests can use <strong>Settings &rarr; Delete Guest Data</strong>. You can also email us. See <a href="/support">Support</a> for the full procedure.</p>
     </section>
 
     <section>
@@ -91,7 +94,7 @@
       <ul>
         <li>Turn-by-turn voice navigation with automatic rerouting</li>
         <li>Map display and route planning</li>
-        <li>Unlimited routes and place searches</li>
+        <li>Routes and place searches for normal personal use (fair-use limits apply, and one device can navigate per subscription at a time)</li>
         <li>Live address autosuggest</li>
         <li>Crime heatmap overlay</li>
         <li>Crime radar &mdash; incident type, date, and block-level location</li>
@@ -101,17 +104,17 @@
       </ul>
       <div class="callout">
         <strong>Subscription and free trial</strong>
-        <p>ShieldNav is an auto-renewing subscription sold through the Apple App&nbsp;Store, available as a monthly or an annual plan. Every new account starts with a <strong>7-day free trial</strong>. If you do not cancel at least 24 hours before the trial ends, it converts automatically into a paid subscription and your Apple&nbsp;ID is charged the price shown at sign-up; it then renews automatically each period until you cancel. Current pricing is shown in the App&nbsp;Store and in the app before you subscribe.</p>
+        <p>ShieldNav is an auto-renewing subscription sold through the Apple App&nbsp;Store, available as a monthly or an annual plan. New subscribers start with a <strong>7-day free trial</strong> (Apple decides eligibility based on your Apple&nbsp;ID). If you do not cancel at least 24 hours before the trial ends, it converts automatically into a paid subscription and your Apple&nbsp;ID is charged the price shown at sign-up; it then renews automatically each period until you cancel. Current pricing is shown in the App&nbsp;Store and in the app before you subscribe.</p>
         <p>Apple processes all payments, renewals, and refunds. The full subscription disclosure is in our <a href="/terms">Terms of Use</a>, and cancellation and refund instructions are on our <a href="/support">Support</a> page.</p>
       </div>
     </section>
 
     <section>
       <h2>Requirements and availability</h2>
-      <!-- TODO before resubmitting: replace the iOS version below with the actual deployment
-           target from the Xcode project, and confirm the launch region list. -->
       <ul>
-        <li><strong>Platform:</strong> iPhone. An Android version is not currently in development.</li>
+        <li><strong>Platform:</strong> iPhone, running iOS&nbsp;15.2 or later. An Android version is not currently in development.</li>
+        <li><strong>Availability:</strong> United States App&nbsp;Store. Crime data covers Chicago, Schaumburg, Downers Grove, and Hanover Park, Illinois.</li>
+        <li><strong>Age:</strong> 18 or older.</li>
         <li><strong>Permissions:</strong> location access is required for navigation and for the crime layer to centre on where you are.</li>
         <li><strong>Connection:</strong> an internet connection is required for routing, search, and crime data.</li>
         <li><strong>Status:</strong> in active development, not yet released on the App&nbsp;Store. <a href="/waitlist">Join the waitlist</a> to hear at launch.</li>
@@ -123,8 +126,8 @@
       <p>We name our providers rather than describing them vaguely, because you should be able to check what your data touches.</p>
       <ul class="fact-list">
         <li><span class="k">Mapping and routing</span><span class="v">HERE Maps SDK &mdash; navigation, places search, speed limits, toll estimates</span></li>
-        <li><span class="k">Crime records</span><span class="v">Open data published by municipal and county governments</span></li>
-        <li><span class="k">Accounts and storage</span><span class="v">Firebase (Google&nbsp;LLC) &mdash; authentication and account data</span></li>
+        <li><span class="k">Crime records</span><span class="v">CrimeoMeter &mdash; incident reports published by police departments and city open-data portals</span></li>
+        <li><span class="k">Accounts and storage</span><span class="v">Firebase (Google&nbsp;LLC) &mdash; authentication, account data, product analytics (you can turn analytics off)</span></li>
         <li><span class="k">Subscriptions</span><span class="v">RevenueCat &mdash; subscription status; Apple processes payment</span></li>
         <li><span class="k">Sign-in providers</span><span class="v">Sign in with Apple, Google Sign-In</span></li>
       </ul>
@@ -137,7 +140,7 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/assets/images/shieldnav_logo.png" alt="ShieldNav" class="footer-logo" />
+          <img src="/assets/images/shieldnav_logo-176.webp" alt="ShieldNav" class="footer-logo" width="36" height="36" loading="lazy" />
           <p>Crime-aware GPS navigation for iPhone. Built and operated by ShieldNav&nbsp;LLC, an independent software company in the Chicagoland area.</p>
         </div>
         <div class="footer-col">
@@ -172,5 +175,6 @@
     </div>
   </footer>
 
+<script src="/assets/js/nav.js" defer></script>
 </body>
 </html>
