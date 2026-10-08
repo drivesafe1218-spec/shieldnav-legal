@@ -295,8 +295,10 @@
 
     <h3>4.1 What We Collect</h3>
     <p>
-      If you allow location access, the App reads your device's GPS coordinates while you are
-      using it. This location data is used <strong>only in real time</strong>, for the
+      The App uses your precise location only with your permission. It explains why it needs
+      location, then shows Apple's location prompt, and it never reads your location if you
+      decline. If you allow location access, the App reads your device's GPS coordinates while
+      you are using it. This location data is used <strong>only in real time</strong>, for the
       following purposes:
     </p>
     <ul>
@@ -665,7 +667,7 @@
         </tr>
         <tr>
           <td>Product-interaction analytics events (Firebase Analytics)</td>
-          <td>Retained per Google Analytics for Firebase's configured data-retention setting</td>
+          <td>Event-level data is kept for [X] months under our Google Analytics data-retention setting, then deleted automatically; any copy in our own Google Cloud project (BigQuery) is kept no longer than that</td>
         </tr>
         <tr>
           <td>Service usage counts (monthly and daily request totals for your account)</td>
@@ -835,7 +837,8 @@
 
     <h3>11.1 Right to Access</h3>
     <p>
-      You may request a copy of the personal information we hold about you. Email us at
+      You may request a copy of the personal information we hold about you, which we provide in
+      a commonly used, machine-readable format (such as JSON or CSV). Email us at
       <a href="mailto:support@shieldnav.com">support@shieldnav.com</a> with the subject line
       "Data Access Request." We will respond within 45 days.
     </p>
@@ -866,7 +869,8 @@
 
     <h3>11.5 Right to Withdraw Consent</h3>
     <p>
-      Where processing is based on consent (for example, access to location), you may withdraw
+      We process your precise location only with your consent, which you give through Apple's
+      location prompt. Where processing is based on consent, including location, you may withdraw
       consent at any time by adjusting your device permissions. Withdrawal does not affect the
       lawfulness of processing prior to withdrawal.
     </p>
@@ -907,6 +911,7 @@
           <th>CCPA Category</th>
           <th>Examples</th>
           <th>Collected?</th>
+          <th>Disclosed for a business purpose to</th>
         </tr>
       </thead>
       <tbody>
@@ -914,22 +919,26 @@
           <td>Identifiers</td>
           <td>Email address, Firebase UID, install ID, app-instance ID, hashed IP address</td>
           <td>Yes</td>
+          <td>Google (Firebase and Google Cloud); RevenueCat (Firebase UID, and IP address through its SDK); HERE (your device's IP address when the map downloads tiles); for the website, GitHub and Cloudflare (IP address)</td>
         </tr>
         <tr>
           <td>Personal information (Cal. Civ. Code § 1798.80)</td>
           <td>Name, email address, sign-in provider profile photo URL</td>
           <td>Yes</td>
+          <td>Google (Firebase)</td>
         </tr>
         <tr>
           <td>Commercial information</td>
           <td>Subscription status, free-trial and purchase history, redeemed offer codes</td>
           <td>Yes</td>
+          <td>RevenueCat; Google (Firebase, including whether you are on a trial or a paid plan as an analytics attribute)</td>
         </tr>
         <tr>
           <td>Geolocation data</td>
           <td>GPS coordinates while you use the App; saved places and scheduled-drive endpoints you
               choose; approximate area estimated from your IP address by Google Analytics</td>
           <td>Yes (real-time coordinates are not stored; saved places are stored until you delete them — see Section 4.3)</td>
+          <td>HERE (coordinates and addresses needed to answer a route, search, or map request); Google (Firebase stores your saved places and scheduled drives; Google Analytics estimates your general area)</td>
         </tr>
         <tr>
           <td>Internet / electronic network activity</td>
@@ -937,36 +946,43 @@
               daily counts of requests made for your account; drive-session check-ins;
               access-denial records</td>
           <td>Yes</td>
+          <td>Google (Firebase and Google Cloud); HERE (search text)</td>
         </tr>
         <tr>
           <td>Inferences drawn from personal information</td>
           <td>We do not build profiles of you or draw inferences about your characteristics</td>
           <td>No</td>
+          <td>—</td>
         </tr>
         <tr>
           <td>Sensitive personal information — precise geolocation</td>
           <td>GPS coordinates while you use the App; coordinates of places you save</td>
           <td>Yes (navigation is in-session only; saved places are stored at your direction — see Section 4)</td>
+          <td>HERE; Google (Firebase)</td>
         </tr>
         <tr>
           <td>Financial information</td>
           <td>Payment card data</td>
-          <td>No (handled by Apple/Google)</td>
+          <td>No (payments are handled by Apple)</td>
+          <td>—</td>
         </tr>
         <tr>
           <td>Protected classifications</td>
           <td>Race, religion, health status, etc.</td>
           <td>No</td>
+          <td>—</td>
         </tr>
         <tr>
           <td>Biometric information</td>
           <td>Fingerprints, facial recognition data</td>
           <td>No</td>
+          <td>—</td>
         </tr>
         <tr>
           <td>Audio/visual information</td>
           <td>Voice recordings, photos taken in-app</td>
           <td>No (feedback screenshots only if you attach them)</td>
+          <td>Google (Firebase Storage holds any screenshot you attach)</td>
         </tr>
       </tbody>
     </table>
@@ -978,6 +994,7 @@
       <li>You directly (account registration, profile settings, feedback forms).</li>
       <li>Your device automatically (location, install ID, product analytics events).</li>
       <li>Third-party sign-in providers (Google, Apple).</li>
+      <li>Apple, through RevenueCat, for your subscription and purchase status.</li>
     </ul>
 
     <h3>12.3 Business or Commercial Purposes for Collection</h3>
@@ -996,12 +1013,18 @@
       <strong>We do not sell your personal information.</strong>
       We do not sell, rent, trade, or otherwise share your personal information with third
       parties for monetary or other valuable consideration. We do not share your personal
-      information with third parties for cross-context behavioral advertising.
+      information with third parties for cross-context behavioral advertising. Because we do
+      not sell or share anyone's personal information, we have no actual knowledge of selling or
+      sharing the personal information of consumers under 16. ShieldNav is for adults 18 and older
+      (Section 2).
     </div>
 
     <h3>12.6 Use of Sensitive Personal Information</h3>
     <p>
-      We collect precise geolocation data (a "sensitive" category under CPRA) in two ways:
+      Precise geolocation is "sensitive" data under the CPRA and under other state laws such as
+      Indiana's, Colorado's, Connecticut's, and Virginia's. We process it only with your consent,
+      given through Apple's location prompt, which you can withdraw at any time in your device
+      Settings (Section 4.6). We collect it in two ways:
       (1) while you use the App, used in real time only and not stored persistently on our
       servers; and (2) as the coordinates of places you explicitly save (Home, Work,
       custom places, recent destinations, and scheduled drives), which are stored in your
@@ -1049,7 +1072,11 @@
       <a href="mailto:support@shieldnav.com">support@shieldnav.com</a> with the subject line
       "CCPA Privacy Request." We will respond within 45 calendar days. We may extend the
       response period by an additional 45 days when reasonably necessary and will notify you
-      of such extension. We will verify your identity before fulfilling the request.
+      of such extension. We will verify your identity before fulfilling the request. If you have
+      an account, we verify you by asking you to send the request from, or reply from, the email
+      address on your account, or to sign in to the App again. If you use ShieldNav as a guest,
+      we verify you with the Guest ID shown under Settings › Delete Guest Data. We ask only for
+      what we need to match your request to your data.
     </p>
     <p>
       You may designate an authorized agent to submit a request on your behalf. Authorized
