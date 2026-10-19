@@ -14,7 +14,7 @@
   <meta property="og:image" content="https://shieldnav.com/assets/images/og-banner.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="ShieldNav — crime-aware GPS navigation for iPhone" />
+  <meta property="og:image:alt" content="ShieldNav — crime-aware GPS navigation for iPhone and Android" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
@@ -43,7 +43,7 @@
 
 <header class="page-hero">
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Updated: October 8, 2026</p>
+  <p class="meta">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Updated: October 19, 2026</p>
 </header>
 
 <div class="content-wrap" id="main">
@@ -52,7 +52,7 @@
   <section style="margin-top:40px; margin-bottom:0;">
     <p>
       ShieldNav LLC, an Indiana limited liability company ("ShieldNav," "we," "our," or "us"),
-      makes ShieldNav, a crime-aware navigation app for iPhone. We take your privacy seriously. This Privacy Policy explains what
+      makes ShieldNav, a crime-aware navigation app for iPhone and Android. We take your privacy seriously. This Privacy Policy explains what
       information we collect, why we collect it, how we use and protect it, and what choices you
       have. Please read it carefully. By using ShieldNav you agree to the practices described here.
     </p>
@@ -91,10 +91,11 @@
   <section id="scope">
     <h2>1. Scope and Who We Are</h2>
     <p>
-      This Privacy Policy applies to the ShieldNav mobile application for iPhone (the "App"),
-      available on the Apple App Store, and to our website at shieldnav.com and any related
-      services that link to this policy (collectively, the "Services"). There is no Android
-      version of the App.
+      This Privacy Policy applies to the ShieldNav mobile application for iPhone and Android
+      (the "App"), available on the Apple App Store and Google Play, and to our website at
+      shieldnav.com and any related services that link to this policy (collectively, the
+      "Services"). The App collects and uses the same information on both platforms. Where
+      something works differently on iPhone and Android, this policy says so.
     </p>
     <p>
       ShieldNav LLC is the company responsible for your personal information (the "controller").
@@ -197,7 +198,7 @@
         they sync across your devices. See Section 4.3.
       </li>
       <li>
-        <strong>Device information:</strong> iOS version, device model, app version, and an
+        <strong>Device information:</strong> operating system and version (iOS or Android), device model, app version, and an
         app-instance identifier, collected through Firebase Analytics (unless you turn analytics
         off &mdash; see Section 10.4) and attached to feedback you send.
       </li>
@@ -208,8 +209,9 @@
       </li>
       <li>
         <strong>Install identifier:</strong> A random ID created when the App is first installed
-        and kept in your iPhone's Keychain, so it survives deleting and reinstalling the App. The
-        App sends it with requests to our servers. We use it to enforce one active drive per
+        and kept on your device &mdash; on iPhone in the Keychain, so it survives deleting and
+        reinstalling the App; on Android in the App's encrypted storage, which is removed when you
+        uninstall the App. The App sends it with requests to our servers. We use it to enforce one active drive per
         account (see our Terms of Use) and to detect misuse.
       </li>
       <li>
@@ -251,15 +253,15 @@
       <li>
         <strong>Subscription status and entitlements:</strong> Whether your account is in its free
         trial, on a monthly plan, or on an annual plan, and whether that subscription is active.
-        Current pricing is shown in the App Store and in the app before you subscribe. This is
+        Current pricing is shown in the App Store or Google Play and in the app before you subscribe. This is
         managed by RevenueCat and linked to your
         Firebase UID (the random guest UID if you subscribe without an account). We do not store
-        or process your payment card information &mdash; all payment transactions are handled by
-        Apple (App Store) directly.
+        or process your payment card information &mdash; all payment transactions are handled
+        directly by Apple (App Store) on iPhone and by Google (Google Play) on Android.
       </li>
       <li>
-        <strong>Offer codes:</strong> App Store offer codes you redeem, which Apple applies to
-        your subscription and RevenueCat records.
+        <strong>Offer codes:</strong> App Store offer codes or Google Play promo codes you redeem,
+        which the store applies to your subscription and RevenueCat records.
       </li>
     </ul>
 
@@ -296,7 +298,8 @@
     <h3>4.1 What We Collect</h3>
     <p>
       The App uses your precise location only with your permission. It explains why it needs
-      location, then shows Apple's location prompt, and it never reads your location if you
+      location, then shows your device's location permission prompt (from iOS or Android), and
+      it never reads your location if you
       decline. If you allow location access, the App reads your device's GPS coordinates while
       you are using it. This location data is used <strong>only in real time</strong>, for the
       following purposes:
@@ -375,10 +378,16 @@
 
     <h3>4.5 Background Location</h3>
     <p>
-      ShieldNav asks for location access only while you are using the App. During an active
+      ShieldNav uses your location only while you are using the App. During an active
       navigation session, if permitted, the App keeps updating your position while the screen
-      is locked or you switch to another app, so that directions keep working. We do not access
-      your location when the App is closed, and we never ask for "Always" location access.
+      is locked or you switch to another app, so that directions keep working. On iPhone, when
+      you start a drive the App may ask you to allow "Always" location access so this keeps
+      working; you can decline and still navigate, and either way the App uses your location
+      only during an active session. On Android, this
+      runs as a foreground service that shows an ongoing "ShieldNav is navigating" notification
+      for as long as the drive lasts, and stops when the drive ends. We do not access your
+      location when the App is closed, and on Android we never ask for background ("Allow all
+      the time") location access.
     </p>
 
     <h3>4.6 Revoking Location Permission</h3>
@@ -485,9 +494,9 @@
     <h3>6.3 RevenueCat, Inc.</h3>
     <p>
       RevenueCat handles subscription management and in-app purchase validation. RevenueCat
-      receives your Firebase UID, purchase receipts (from Apple), and subscription status, and
-      its SDK collects basic device information (such as device model, iOS version, and IP
-      address) to operate the service. RevenueCat does not receive your full name, email
+      receives your Firebase UID, purchase receipts and tokens (from Apple or Google Play), and
+      subscription status, and its SDK collects basic device information (such as device model,
+      operating system version, and IP address) to operate the service. RevenueCat does not receive your full name, email
       address, or payment card details.
       <br />Privacy policy: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>
     </p>
@@ -500,10 +509,12 @@
       <br />Privacy policy: <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener">apple.com/privacy</a>
     </p>
 
-    <h3>6.5 Google (Google Sign-In)</h3>
+    <h3>6.5 Google (Google Sign-In / Google Play)</h3>
     <p>
       When you use Google Sign-In, Google shares your name, email address, and a Google-specific
-      identifier with us. No payment data is shared.
+      identifier with us. No payment data is shared. All payment processing for Android
+      subscriptions is handled solely by Google Play, which shares only the purchase record and
+      subscription status with RevenueCat.
       <br />Privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
     </p>
 
@@ -643,7 +654,8 @@
         </tr>
         <tr>
           <td>Install identifier</td>
-          <td>Stays in your iPhone's Keychain, including across reinstalls; on our servers, kept only
+          <td>On iPhone, stays in the Keychain, including across reinstalls; on Android, removed when
+              you uninstall the App. On our servers, kept only
               inside the drive-session and access-denial records below</td>
         </tr>
         <tr>
@@ -737,7 +749,7 @@
       </li>
       <li>
         <strong>ShieldNav install identifier</strong> &mdash; the random ID described in Section
-        3.2, kept in the Keychain and used for the one-active-drive rule and abuse prevention.
+        3.2, kept in the iPhone Keychain or Android encrypted app storage and used for the one-active-drive rule and abuse prevention.
       </li>
       <li>
         <strong>HERE Maps SDK</strong> may store local cache data on your device (map tiles,
@@ -749,11 +761,12 @@
       </li>
     </ul>
 
-    <h3>10.2 App Tracking Transparency (iOS)</h3>
+    <h3>10.2 Advertising Identifiers (App Tracking Transparency and Android Advertising ID)</h3>
     <p>
-      ShieldNav does not track you across other companies' apps or websites. The App does not
-      include Apple's advertising-identifier framework, never reads the IDFA (Identifier for
-      Advertisers), and never asks for tracking permission.
+      ShieldNav does not track you across other companies' apps or websites. On iPhone, the App
+      does not include Apple's advertising-identifier framework, never reads the IDFA
+      (Identifier for Advertisers), and never asks for tracking permission. On Android, the App
+      does not request the advertising ID permission and never reads the Android Advertising ID.
     </p>
 
     <h3>10.3 Analytics</h3>
@@ -792,8 +805,9 @@
           features).</li>
     </ul>
     <p>
-      Resetting your device's advertising identifier in iOS Settings &rsaquo; Privacy &amp;
-      Security &rsaquo; Tracking has no effect on ShieldNav, because we do not use the advertising
+      Resetting or deleting your device's advertising identifier (in iOS Settings &rsaquo;
+      Privacy &amp; Security &rsaquo; Tracking, or in Android's Settings &rsaquo; Privacy &rsaquo;
+      Ads) has no effect on ShieldNav, because we do not use the advertising
       identifier and our analytics are not tied to it (see Section 10.2).
     </p>
 
@@ -870,8 +884,8 @@
 
     <h3>11.5 Right to Withdraw Consent</h3>
     <p>
-      We process your precise location only with your consent, which you give through Apple's
-      location prompt. Where processing is based on consent, including location, you may withdraw
+      We process your precise location only with your consent, which you give through your
+      device's location permission prompt. Where processing is based on consent, including location, you may withdraw
       consent at any time by adjusting your device permissions. Withdrawal does not affect the
       lawfulness of processing prior to withdrawal.
     </p>
@@ -964,7 +978,7 @@
         <tr>
           <td>Financial information</td>
           <td>Payment card data</td>
-          <td>No (payments are handled by Apple)</td>
+          <td>No (payments are handled by Apple or Google Play)</td>
           <td>—</td>
         </tr>
         <tr>
@@ -995,7 +1009,7 @@
       <li>You directly (account registration, profile settings, feedback forms).</li>
       <li>Your device automatically (location, install ID, product analytics events).</li>
       <li>Third-party sign-in providers (Google, Apple).</li>
-      <li>Apple, through RevenueCat, for your subscription and purchase status.</li>
+      <li>Apple and Google Play, through RevenueCat, for your subscription and purchase status.</li>
     </ul>
 
     <h3>12.3 Business or Commercial Purposes for Collection</h3>
@@ -1024,7 +1038,7 @@
     <p>
       Precise geolocation is "sensitive" data under the CPRA and under other state laws such as
       Indiana's, Colorado's, Connecticut's, and Virginia's. We process it only with your consent,
-      given through Apple's location prompt, which you can withdraw at any time in your device
+      given through your device's location permission prompt, which you can withdraw at any time in your device
       Settings (Section 4.6). We collect it in two ways:
       (1) while you use the App, used in real time only and not stored persistently on our
       servers; and (2) as the coordinates of places you explicitly save (Home, Work,
@@ -1144,9 +1158,9 @@
           them, will be deleted within 30 days.</li>
       <li>Your RevenueCat subscription record will be retained per RevenueCat's data retention
           policy for dispute-resolution purposes; cancellation must be done separately through
-          the App Store.</li>
-      <li>The install identifier stays in your iPhone's Keychain, but nothing on our servers is
-          linked to it any longer.</li>
+          the App Store or Google Play.</li>
+      <li>On iPhone, the install identifier stays in the Keychain (on Android it is removed when
+          you uninstall the App), but nothing on our servers is linked to it any longer.</li>
       <li>Drive logs stored locally on your device are not affected — delete them by
           uninstalling the App.</li>
       <li>Anonymized and aggregated data that cannot identify you may be retained
@@ -1156,8 +1170,9 @@
     <div class="callout warn">
       <strong>Important — Subscription Cancellation:</strong>
       Deleting your ShieldNav account or guest data does NOT automatically cancel your App Store
-      subscription. You must cancel your subscription separately through your device's
-      subscription settings to stop being charged. Deleting the App alone will not cancel a
+      or Google Play subscription. You must cancel your subscription separately through your
+      device's subscription settings (on Android, in the Google Play Store app under Payments
+      &amp; subscriptions) to stop being charged. Deleting the App alone will not cancel a
       subscription.
     </div>
   </section>
@@ -1234,7 +1249,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="/assets/images/shieldnav_logo-176.webp" alt="ShieldNav" class="footer-logo" width="36" height="36" loading="lazy" />
-          <p>Crime-aware GPS navigation for iPhone. Built and operated by ShieldNav&nbsp;LLC, an independent software company in the Chicagoland area.</p>
+          <p>Crime-aware GPS navigation for iPhone and Android. Built and operated by ShieldNav&nbsp;LLC, an independent software company in the Chicagoland area.</p>
         </div>
         <div class="footer-col">
           <h2>Product</h2>
