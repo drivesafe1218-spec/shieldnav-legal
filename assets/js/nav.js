@@ -20,7 +20,7 @@
 // so the injected links get rewritten too.
 (function () {
   var APP_URL = 'https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&ct=website&mt=8';
-  var PLAY_URL = 'https://play.google.com/store/apps/details?id=com.shieldnavllc.shieldnav&referrer=utm_source%3Dwebsite';
+  var PLAY_URL = 'https://play.google.com/store/apps/details?id=com.shieldnavllc.shieldnav&referrer=utm_source%3Dwebsite%26utm_medium%3Dweb';
   var isAndroid = /Android/i.test(navigator.userAgent);
   var path = location.pathname.replace(/index\.html$/, '').replace(/\/+$/, '') || '/';
   if (!/^\/(product|about|faq|support|contact)?$/.test(path)) return;
@@ -62,7 +62,7 @@
 
 // Visitors from the Meta ad land with ?utm_source=meta. Tag their App Store
 // links ct=meta-ads (instead of ct=website) and their Google Play links
-// referrer=utm_source%3Dmeta-ads (instead of ...%3Dwebsite) so each store's
+// referrer=utm_source%3Dmeta-ads%26utm_medium%3Dpaid (instead of website/web) so each store's
 // console can tell the two apart. Remembered for the visit so it survives clicking to other pages.
 (function () {
   try {
@@ -75,6 +75,6 @@
     a.href = a.href.replace('ct=website', 'ct=meta-ads');
   });
   document.querySelectorAll('a[href*="play.google.com"]').forEach(function (a) {
-    a.href = a.href.replace('utm_source%3Dwebsite', 'utm_source%3Dmeta-ads');
+    a.href = a.href.replace('utm_source%3Dwebsite%26utm_medium%3Dweb', 'utm_source%3Dmeta-ads%26utm_medium%3Dpaid');
   });
 })();
