@@ -23,6 +23,11 @@
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
   <link rel="stylesheet" href="/assets/css/fonts.css" />
   <link rel="stylesheet" href="/assets/css/brand.css" />
+  <link rel="stylesheet" href="/assets/css/home.css" />
+  <link rel="preload" as="image" href="/assets/media/tour/hero.jpg" imagesrcset="/assets/media/tour/hero.jpg 590w, /assets/media/tour/hero@2x.jpg 1180w" imagesizes="(max-width: 820px) 60vw, 380px" fetchpriority="high" />
+  <!-- ANALYTICS: the cookie-free Plausible script goes here once the account exists:
+       <script defer data-domain="shieldnav.com" src="https://plausible.io/js/script.tagged-events.js"></script>
+       App Store links already carry class="plausible-event-name=App+Store+Click" and a data-placement attribute. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,7 +56,7 @@
   }
   </script>
 </head>
-<body>
+<body class="home has-dl-bar">
 
   <a href="#main" class="skip-link">Skip to content</a>
 
@@ -67,116 +72,154 @@
       <a href="/faq">FAQ</a>
       <a href="/support">Support</a>
       <a href="/legal">Legal</a>
-      <a href="https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&amp;ct=website&amp;mt=8" class="nav-badge"><img src="/assets/images/app-store-badge.svg" alt="Download on the App Store" width="105" height="35" /></a>
+      <a href="https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&amp;ct=website&amp;mt=8" class="nav-badge plausible-event-name=App+Store+Click" data-placement="nav"><img src="/assets/images/app-store-badge.svg" alt="Download on the App Store" width="105" height="35" /></a>
+      <a href="https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&amp;ct=website&amp;mt=8" class="nav-dl plausible-event-name=App+Store+Click" data-placement="nav">Download</a>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="hero-inner">
-      <img src="/assets/images/shieldnav_logo-176.webp" alt="ShieldNav" class="hero-logo" width="88" height="88" />
-      <h1>Crime-aware navigation for everyday driving</h1>
-      <p class="hero-lede">ShieldNav is a navigation app for iPhone (Android coming soon) that puts reported crime data on the map beside your route. You get turn-by-turn directions, plus the context most navigation apps leave out.</p>
-      <p class="hero-lede">Built and operated by ShieldNav&nbsp;LLC, an independent software company based in the Chicagoland area.</p>
-      <div class="hero-actions">
-        <a class="store-badge" href="https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&amp;ct=website&amp;mt=8"><img src="/assets/images/app-store-badge.svg" alt="Download on the App Store" width="150" height="50" /></a>
-        <a class="cta-secondary" href="/product">See what&rsquo;s in the app</a>
+  <header class="home-hero">
+    <div class="home-hero-inner">
+      <div class="home-hero-copy">
+        <h1>Know what&rsquo;s along your&nbsp;route.</h1>
+        <p class="home-hero-sub">Turn-by-turn navigation with police-reported crime data on the same map.</p>
+        <div class="home-hero-actions">
+          <a class="store-badge plausible-event-name=App+Store+Click" href="https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&amp;ct=website&amp;mt=8" data-placement="hero"><img src="/assets/images/app-store-badge.svg" alt="Download on the App Store" width="150" height="50" /></a>
+          <p class="home-hero-status">iPhone now. Android coming soon.</p>
+        </div>
       </div>
-      <p class="hero-status">Now available on iPhone. Android coming soon.</p>
+      <div class="phone home-hero-phone">
+        <div class="phone-screen"><img src="/assets/media/tour/hero.jpg" srcset="/assets/media/tour/hero.jpg 590w, /assets/media/tour/hero@2x.jpg 1180w" sizes="(max-width: 820px) 60vw, 380px" alt="ShieldNav showing a route through downtown Chicago with reported incidents marked along it" width="590" height="1282" fetchpriority="high" decoding="async" /></div>
+      </div>
     </div>
   </header>
 
   <main id="main">
 
-    <div class="band">
-      <div class="band-inner">
-        <h2 class="band-title">What ShieldNav does</h2>
-        <p class="band-lede">A full navigation app first, with a crime data layer built into the same map rather than bolted on as a separate tool.</p>
-        <div class="feature-grid">
+    <section class="statement" aria-label="Why ShieldNav">
+      <p class="statement-line">Most maps show you the fastest way. ShieldNav shows you what&rsquo;s along&nbsp;it.</p>
+    </section>
 
-          <div class="feature-card">
-            <h3>Turn-by-turn voice navigation</h3>
-            <p>Spoken directions, route planning, and rerouting powered by the HERE Maps SDK &mdash; a mapping platform used widely in automotive navigation. Point-of-interest search is built in.</p>
-          </div>
-
-          <div class="feature-card">
-            <h3>Crime data on the map</h3>
-            <p>A heatmap overlay built from incident reports that police departments publish. See reported incident density along a route or around a destination before you set off, rather than reading about the area afterward.</p>
-          </div>
-
-          <div class="feature-card">
-            <h3>Places you drive often</h3>
-            <p>Save home, work, and custom destinations, and schedule drives in advance. Sign in to an account and your saved places and recent destinations follow you if you change phones.</p>
-          </div>
-
-          <div class="feature-card">
-            <h3>Detail when you need it</h3>
-            <p>The full crime radar &mdash; incident type, date, and block-level location &mdash; alongside real-time speed limits, toll cost estimates, and live search autosuggest. All of it is part of the app, not a separate upgrade.</p>
-          </div>
-
+    <!-- Pinned phone tour. Without JS (or with reduced motion) this is a plain
+         list: each step shows its own poster. assets/js/tour.js builds the pinned
+         stage and moves the images into it. -->
+    <section class="tour" data-tour aria-labelledby="tour-title">
+      <h2 class="sr-only" id="tour-title">A tour of the app</h2>
+      <div class="tour-inner">
+        <div class="tour-counter" aria-hidden="true"><b>[</b><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><b>]</b></div>
+        <div class="tour-stage">
+          <div class="phone"><div class="phone-screen tour-screen"></div></div>
+          <p class="credit">Crime data from CrimeoMeter</p>
         </div>
+        <ol class="tour-steps">
+        <li class="tour-step" data-step="1" data-video="/assets/media/tour/01-search.mp4">
+          <div class="step-card">
+            <p class="step-num" aria-hidden="true">01</p>
+            <h3>Where to?</h3>
+            <p>Search with live suggestions as you type. Save home, work and your favorite places so your usual drives are one tap away.</p>
+          </div>
+          <div class="phone phone-sm"><div class="phone-screen"><img class="step-img" data-src="/assets/media/tour/01-search.jpg" alt="ShieldNav search screen with live address suggestions" width="590" height="1282" decoding="async" /><noscript><img src="/assets/media/tour/01-search.jpg" alt="ShieldNav search screen with live address suggestions" width="590" height="1282" loading="lazy" /></noscript></div></div>
+        </li>
+        <li class="tour-step" data-step="2" data-video="/assets/media/tour/02-routes.mp4">
+          <div class="step-card">
+            <p class="step-num" aria-hidden="true">02</p>
+            <h3>Pick your route.</h3>
+            <p>Compare routes side by side. Each one is labeled Fastest or Safest by the incidents reported along it, and each incident is marked on the map.</p>
+          </div>
+          <div class="phone phone-sm"><div class="phone-screen"><img class="step-img" data-src="/assets/media/tour/02-routes.jpg" alt="ShieldNav route options with Fastest and Safest labels and incident counts for each route" width="590" height="1282" decoding="async" /><noscript><img src="/assets/media/tour/02-routes.jpg" alt="ShieldNav route options with Fastest and Safest labels and incident counts for each route" width="590" height="1282" loading="lazy" /></noscript></div></div>
+        </li>
+        <li class="tour-step" data-step="3" data-video="/assets/media/tour/03-navigate.mp4">
+          <div class="step-card">
+            <p class="step-num" aria-hidden="true">03</p>
+            <h3>Turn-by-turn, by voice.</h3>
+            <p>Spoken directions and automatic rerouting, plus real-time speed limits and toll estimates.</p>
+            <p class="step-note">Navigation powered by HERE.</p>
+          </div>
+          <div class="phone phone-sm"><div class="phone-screen"><img class="step-img" data-src="/assets/media/tour/03-navigate.jpg" alt="ShieldNav turn-by-turn navigation with the current speed limit" width="590" height="1282" decoding="async" /><noscript><img src="/assets/media/tour/03-navigate.jpg" alt="ShieldNav turn-by-turn navigation with the current speed limit" width="590" height="1282" loading="lazy" /></noscript></div></div>
+        </li>
+        <li class="tour-step" data-step="4" data-video="/assets/media/tour/04-radar.mp4">
+          <div class="step-card">
+            <p class="step-num" aria-hidden="true">04</p>
+            <h3>Tap for the details.</h3>
+            <p>See the incident type, date and block-level location from police reports, right on the map.</p>
+          </div>
+          <div class="phone phone-sm"><div class="phone-screen"><img class="step-img" data-src="/assets/media/tour/04-radar.jpg" alt="ShieldNav crime radar showing the details of a reported incident" width="590" height="1282" decoding="async" /><noscript><img src="/assets/media/tour/04-radar.jpg" alt="ShieldNav crime radar showing the details of a reported incident" width="590" height="1282" loading="lazy" /></noscript></div></div>
+        </li>
+        <li class="tour-step" data-step="5" data-video="/assets/media/tour/05-plan.mp4">
+          <div class="step-card">
+            <p class="step-num" aria-hidden="true">05</p>
+            <h3>Plan ahead.</h3>
+            <p>Schedule drives in advance. Signed in, your saved places follow you to a new phone.</p>
+          </div>
+          <div class="phone phone-sm"><div class="phone-screen"><img class="step-img" data-src="/assets/media/tour/05-plan.jpg" alt="ShieldNav scheduled drives and saved places" width="590" height="1282" decoding="async" /><noscript><img src="/assets/media/tour/05-plan.jpg" alt="ShieldNav scheduled drives and saved places" width="590" height="1282" loading="lazy" /></noscript></div></div>
+        </li>
+        <li class="tour-step" data-step="6" data-video="/assets/media/tour/06-trial.mp4">
+          <div class="step-card">
+            <p class="step-num" aria-hidden="true">06</p>
+            <h3>One subscription. Try it free for 7 days.</h3>
+            <p>Everything is included, with no tiers. Cancel any time in the App Store.</p>
+            <p class="step-cta"><a class="store-badge plausible-event-name=App+Store+Click" href="https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&amp;ct=website&amp;mt=8" data-placement="tour"><img src="/assets/images/app-store-badge.svg" alt="Download on the App Store" width="132" height="44" /></a></p>
+          </div>
+          <div class="phone phone-sm"><div class="phone-screen"><img class="step-img" data-src="/assets/media/tour/06-trial.jpg" alt="ShieldNav subscription screen with a 7-day free trial" width="590" height="1282" decoding="async" /><noscript><img src="/assets/media/tour/06-trial.jpg" alt="ShieldNav subscription screen with a 7-day free trial" width="590" height="1282" loading="lazy" /></noscript></div></div>
+        </li>
+        </ol>
       </div>
-    </div>
+      <p class="tour-fine">ShieldNav is an auto-renewing subscription. The 7-day free trial converts to a paid subscription unless you cancel at least 24 hours before it ends, and Apple decides trial eligibility. Pricing is shown in the App Store before you subscribe. See the <a href="/terms">Terms of Use</a>.</p>
+    </section>
 
-    <div class="band alt">
+    <section class="stats" aria-labelledby="stats-title">
+      <h2 class="sr-only" id="stats-title">ShieldNav at a glance</h2>
+      <ul class="stats-row">
+        <li><span class="stat-big">4</span><span class="stat-label">Chicagoland cities</span><span class="stat-sub">Chicago, Schaumburg, Downers Grove, Hanover Park</span></li>
+        <li><span class="stat-big">Block</span><span class="stat-label">level incident detail</span><span class="stat-sub">Type, date and location from police reports</span></li>
+        <li><span class="stat-big">7-day</span><span class="stat-label">free trial</span><span class="stat-sub">Cancel any time in the App Store</span></li>
+        <li><span class="stat-big">1</span><span class="stat-label">subscription</span><span class="stat-sub">Everything included, no tiers</span></li>
+      </ul>
+    </section>
+
+    <div class="band alt data-band">
       <div class="band-inner">
         <h2 class="band-title">Where the crime data comes from</h2>
         <div class="prose">
-          <p>ShieldNav&rsquo;s crime layer is built from data licensed from CrimeoMeter, which collects the incident reports that police departments and city governments publish on their open-data portals. Crime data currently covers Chicago, Schaumburg, Downers Grove, and Hanover Park, Illinois.</p>
-          <p>Three things we are explicit about, both in the app and here:</p>
+          <p>Crime data from CrimeoMeter, which collects the incident reports that police departments and city governments publish on their open-data portals. It currently covers Chicago, Schaumburg, Downers Grove, and Hanover Park, Illinois.</p>
           <ul>
-            <li><strong>Coverage varies by city.</strong> A jurisdiction that does not publish open incident data will not have a crime layer in ShieldNav. What you see on the map reflects what was reported and published, not everything that happened.</li>
-            <li><strong>The data is historical, not live.</strong> Police departments and cities publish on their own schedules &mdash; some daily, some weekly, some with a lag of several weeks. ShieldNav shows the most recent data available for a jurisdiction and does not present it as a real-time picture.</li>
-            <li><strong>It describes places, not people.</strong> Crime data covers reported incidents in an area. It is not a prediction, not a judgment about the people who live or work there, and not a substitute for your own awareness while driving.</li>
+            <li><strong>Coverage varies by city.</strong> A place that does not publish open incident data has no crime layer. The map shows what was reported and published, not everything that happened.</li>
+            <li><strong>The data is historical, not live.</strong> Departments publish on their own schedules, some daily and some with a lag of weeks. ShieldNav shows the most recent data available.</li>
+            <li><strong>It describes places, not people.</strong> It covers reported incidents in an area. It is not a prediction, not a judgment about the people who live or work there, and not a substitute for your own awareness while driving.</li>
           </ul>
-          <p>Our <a href="/crime-disclaimer">Crime Data Disclaimer</a> sets out the accuracy limits and our Fair Housing position in full. It is worth reading before you rely on the map.</p>
+          <p>Our <a href="/crime-disclaimer">Crime Data Disclaimer</a> sets out the accuracy limits and our Fair Housing position in full.</p>
         </div>
       </div>
     </div>
 
     <div class="band">
       <div class="band-inner">
-        <h2 class="band-title">What you get</h2>
-        <p class="band-lede">ShieldNav is one app with one subscription. Everything below is included &mdash; there is no limited free version and no second tier.</p>
-        <div class="tier-grid single">
-
-          <div class="tier-card premium">
-            <div class="tier-name">Everything included</div>
-            <p class="tier-note">New subscribers start with a 7-day free trial</p>
-            <ul>
-              <li>Turn-by-turn voice navigation with automatic rerouting</li>
-              <li>Map display and route planning</li>
-              <li>Routes and place searches for everyday driving</li>
-              <li>Crime radar along your route &mdash; incident type, date, block-level location</li>
-              <li>Live address autosuggest</li>
-              <li>Real-time speed limits and toll awareness</li>
-              <li>Saved places and scheduled drives</li>
-            </ul>
-          </div>
-
+        <h2 class="band-title">Common questions</h2>
+        <div class="home-faq">
+          <details>
+            <summary>What does ShieldNav show me?</summary>
+            <p>Turn-by-turn driving directions, with incidents reported to police shown on the same map. You can see reported incident activity along a route or around a destination before you set off.</p>
+          </details>
+          <details>
+            <summary>Which cities have crime data?</summary>
+            <p>Chicago, Schaumburg, Downers Grove, and Hanover Park, Illinois. Navigation works anywhere HERE has maps, but the crime layer only appears where we have data.</p>
+          </details>
+          <details>
+            <summary>Is it free?</summary>
+            <p>New subscribers get a 7-day free trial with everything included. After that it is one auto-renewing subscription, billed through the App Store, and you can cancel any time. No account is needed to subscribe.</p>
+          </details>
+          <details>
+            <summary>Is there an Android version?</summary>
+            <p>Not yet. ShieldNav is on iPhone now, and Android is coming soon.</p>
+          </details>
         </div>
-        <div class="prose" style="margin-top:24px;">
-          <p><strong>A subscription is required to use ShieldNav after the free trial.</strong> ShieldNav is an auto-renewing subscription sold through the Apple App&nbsp;Store on iPhone and through Google&nbsp;Play on Android, available monthly or annually. New subscribers begin with a 7-day free trial (the store decides eligibility based on your Apple&nbsp;ID or Google account). No account is needed to subscribe. If you do not cancel at least 24 hours before the trial ends, it converts automatically into a paid subscription and your Apple&nbsp;ID or Google account is charged the price shown at sign-up. The subscription then renews automatically each period until you cancel.</p>
-          <p>Current pricing is shown in the App&nbsp;Store or Google&nbsp;Play and in the app before you subscribe. Cancel any time from <strong>Settings &rarr; [your Apple&nbsp;ID] &rarr; Subscriptions</strong> on your iPhone, or from <strong>the Google Play Store app &rarr; your profile icon &rarr; Payments &amp; subscriptions &rarr; Subscriptions</strong> on Android. Billing, renewals, and refunds are handled by Apple or Google&nbsp;Play &mdash; see our <a href="/terms">Terms of Use</a> for the full subscription disclosure, the <a href="/privacy">Privacy Policy</a> for how we handle your data, or <a href="/support">Support</a> for how to cancel or request a refund.</p>
-        </div>
+        <p class="home-faq-more"><a href="/faq">See all questions</a></p>
       </div>
     </div>
 
-    <div class="band alt">
-      <div class="band-inner">
-        <h2 class="band-title">The company behind it</h2>
-        <div class="prose" style="margin-bottom:24px;">
-          <p>ShieldNav is built by ShieldNav&nbsp;LLC, a limited liability company organized in Indiana and based in the Chicagoland area. We are a small independent software team &mdash; not a data broker and not an advertising business. Read more <a href="/about">about the company</a>, or <a href="/contact">get in touch</a>.</p>
-        </div>
-        <ul class="fact-list">
-          <li><span class="k">Legal entity</span><span class="v">ShieldNav&nbsp;LLC</span></li>
-          <li><span class="k">Entity type</span><span class="v">Limited liability company</span></li>
-          <li><span class="k">Jurisdiction</span><span class="v">Indiana, United States</span></li>
-          <li><span class="k">Based in</span><span class="v">Chicagoland area, United States</span></li>
-          <li><span class="k">Product</span><span class="v">ShieldNav for iPhone (iOS); Android coming soon</span></li>
-          <li><span class="k">Status</span><span class="v">In development &mdash; pre-launch</span></li>
-          <li><span class="k">Contact</span><span class="v"><a href="mailto:support@shieldnav.com">support@shieldnav.com</a></span></li>
-        </ul>
-      </div>
+    <div class="final-cta">
+      <h2>Ready to see what&rsquo;s along your route?</h2>
+      <p>Try ShieldNav free for 7 days on iPhone. Android coming soon.</p>
+      <a class="store-badge plausible-event-name=App+Store+Click" href="https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&amp;ct=website&amp;mt=8" data-placement="footer-cta"><img src="/assets/images/app-store-badge.svg" alt="Download on the App Store" width="150" height="50" /></a>
     </div>
 
   </main>
@@ -193,7 +236,7 @@
           <ul>
             <li><a href="/product">Features</a></li>
             <li><a href="/faq">FAQ</a></li>
-            <li><a href="https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&amp;ct=website&amp;mt=8">Download on the App Store</a></li>
+            <li><a href="https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&amp;ct=website&amp;mt=8" class="plausible-event-name=App+Store+Click" data-placement="footer">Download on the App Store</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -220,6 +263,13 @@
     </div>
   </footer>
 
+  <div class="dl-bar" role="region" aria-label="Download ShieldNav">
+    <img src="/assets/images/apple-touch-icon.png" width="40" height="40" alt="" />
+    <p class="dl-bar-text"><strong>ShieldNav</strong><span class="sr-only"> &mdash; </span><span>Free 7-day trial</span></p>
+    <a class="dl-bar-btn plausible-event-name=App+Store+Click" data-placement="sticky-bar" href="https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&amp;ct=website&amp;mt=8">Get on the App Store</a>
+  </div>
+
 <script src="/assets/js/nav.js" defer></script>
+<script src="/assets/js/tour.js" defer></script>
 </body>
 </html>
