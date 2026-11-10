@@ -219,3 +219,28 @@
 /* Step posters carry data-src until tour.js (or the <noscript> copy) supplies
    a src; keep the alt text of an unloaded one from showing. */
 .step-img:not([src]) { display: none; }
+
+/* ── Store badges: App Store image + CSS-drawn Google Play button ──
+   No Google badge artwork is hosted here; .play-badge is plain text on a black
+   rounded rectangle sized to sit beside the 50px App Store badge. */
+.store-badges { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; }
+.store-badge.play-badge {
+  display: inline-flex; flex-direction: column; justify-content: center;
+  box-sizing: border-box; height: 50px; min-width: 150px; padding: 0 16px 0 14px;
+  background: #000; color: #fff; border: 1px solid #A6A6A6; border-radius: 9px;
+  text-decoration: none; text-align: left; white-space: nowrap;
+  font-family: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+.store-badge.play-badge:hover { color: #fff; text-decoration: none; background: #111; }
+.play-badge .pb-small { display: block; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.08em; line-height: 1.1; text-transform: uppercase; }
+.play-badge .pb-big { display: block; font-size: 1.28rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.1; }
+.play-badge:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.final-cta .play-badge:focus-visible { outline-color: #fff; }
+.step-cta .store-badge.play-badge { height: 44px; min-width: 132px; padding: 0 14px 0 12px; }
+.step-cta .play-badge .pb-big { font-size: 1.12rem; }
+@media (min-width: 821px) {
+  .tour-step .step-cta .play-badge { height: 50px; min-width: 150px; padding: 0 16px 0 14px; }
+  .tour-step .step-cta .play-badge .pb-big { font-size: 1.28rem; }
+}
+.step-cta .store-badges { justify-content: flex-start; }
+.final-cta .store-badges .store-badge { margin: 0; }

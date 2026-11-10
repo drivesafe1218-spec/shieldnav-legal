@@ -20,6 +20,8 @@
 // so the injected links get rewritten too.
 (function () {
   var APP_URL = 'https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&ct=website&mt=8';
+  var PLAY_URL = 'https://play.google.com/store/apps/details?id=com.shieldnavllc.shieldnav&referrer=utm_source%3Dwebsite';
+  var isAndroid = /Android/i.test(navigator.userAgent);
   var path = location.pathname.replace(/index\.html$/, '').replace(/\/+$/, '') || '/';
   if (!/^\/(product|about|faq|support|contact)?$/.test(path)) return;
   document.body.classList.add('has-dl-bar');
@@ -27,14 +29,24 @@
   var nav = document.querySelector('.site-nav.full .nav-links');
   if (nav && !nav.querySelector('.nav-dl')) {
     var dl = document.createElement('a');
-    dl.className = 'nav-dl plausible-event-name=App+Store+Click';
-    dl.href = APP_URL;
+    dl.className = 'nav-dl';
+    dl.href = '/#download';
     dl.setAttribute('data-placement', 'nav');
     dl.textContent = 'Download';
     nav.appendChild(dl);
   }
 
-  if (document.querySelector('.dl-bar')) return;
+  var existing = document.querySelector('.dl-bar');
+  if (existing) {
+    // Homepage ships the bar in its HTML (App Store); swap the button on Android.
+    var btn = existing.querySelector('.dl-bar-btn');
+    if (isAndroid && btn) {
+      btn.href = PLAY_URL;
+      btn.className = 'dl-bar-btn plausible-event-name=Google+Play+Click';
+      btn.textContent = 'Get it on Google Play';
+    }
+    return;
+  }
   var bar = document.createElement('div');
   bar.className = 'dl-bar';
   bar.setAttribute('role', 'region');
@@ -42,13 +54,16 @@
   bar.innerHTML =
     '<img src="/assets/images/apple-touch-icon.png" width="40" height="40" alt="" />' +
     '<p class="dl-bar-text"><strong>ShieldNav</strong><span class="sr-only"> \u2014 </span><span>Free 7-day trial</span></p>' +
-    '<a class="dl-bar-btn plausible-event-name=App+Store+Click" data-placement="sticky-bar" href="' + APP_URL + '">Get on the App Store</a>';
+    (isAndroid
+      ? '<a class="dl-bar-btn plausible-event-name=Google+Play+Click" data-placement="sticky-bar" href="' + PLAY_URL + '">Get it on Google Play</a>'
+      : '<a class="dl-bar-btn plausible-event-name=App+Store+Click" data-placement="sticky-bar" href="' + APP_URL + '">Get on the App Store</a>');
   document.body.appendChild(bar);
 })();
 
 // Visitors from the Meta ad land with ?utm_source=meta. Tag their App Store
-// links ct=meta-ads (instead of ct=website) so App Store Connect can tell the
-// two apart. Remembered for the visit so it survives clicking to other pages.
+// links ct=meta-ads (instead of ct=website) and their Google Play links
+// referrer=utm_source%3Dmeta-ads (instead of ...%3Dwebsite) so each store's
+// console can tell the two apart. Remembered for the visit so it survives clicking to other pages.
 (function () {
   try {
     if (new URLSearchParams(location.search).get('utm_source') === 'meta') {
@@ -58,5 +73,8 @@
   } catch (e) { return; }
   document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (a) {
     a.href = a.href.replace('ct=website', 'ct=meta-ads');
+  });
+  document.querySelectorAll('a[href*="play.google.com"]').forEach(function (a) {
+    a.href = a.href.replace('utm_source%3Dwebsite', 'utm_source%3Dmeta-ads');
   });
 })();
