@@ -44,7 +44,7 @@
 
 <header class="page-hero">
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Updated: October 19, 2026</p>
+  <p class="meta">Effective Date: June 21, 2026 &nbsp;|&nbsp; Last Updated: November 10, 2026</p>
 </header>
 
 <div class="content-wrap" id="main">
@@ -530,8 +530,8 @@
 
     <h3>6.7 Website Providers</h3>
     <p>
-      Our website is hosted on GitHub Pages, and the waitlist form uses Cloudflare Turnstile to
-      block spam. See Section 10.5.
+      Our website is hosted on GitHub Pages, Cloudflare Web Analytics counts visits to it, and
+      the waitlist form uses Cloudflare Turnstile to block spam. See Section 10.5.
     </p>
   </section>
 
@@ -814,10 +814,20 @@
 
     <h3>10.5 Our Website</h3>
     <p>
-      shieldnav.com sets no cookies and runs no analytics, advertising pixels, or tracking
-      scripts. Its fonts and images are served from the site itself.
+      shieldnav.com sets no cookies and runs no advertising pixels. It uses Cloudflare Web
+      Analytics, a cookie-free counter, to count page visits. Its fonts and images are served
+      from the site itself.
     </p>
     <ul>
+      <li>
+        <strong>Visit counts:</strong> When you load a page, Cloudflare Web Analytics records the
+        page you viewed, the site that referred you, how long the page took to load, and your
+        browser, operating system, device type, and country (worked out from your IP address).
+        Cloudflare states that it does not set cookies, use local storage, or fingerprint
+        visitors. We only look at the totals, to see how many people visit and where they come
+        from (see
+        <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's privacy policy</a>).
+      </li>
       <li>
         <strong>Hosting:</strong> The site is hosted on GitHub Pages. GitHub receives your IP
         address and browser details when you load a page and may keep them in its logs (see
@@ -960,9 +970,11 @@
           <td>Internet / electronic network activity</td>
           <td>Product analytics events; search text passed to HERE (not stored by us); monthly and
               daily counts of requests made for your account; drive-session check-ins;
-              access-denial records</td>
+              access-denial records; website visit counts (page viewed, referrer, browser and
+              device type, country)</td>
           <td>Yes</td>
-          <td>Google (Firebase and Google Cloud); HERE (search text)</td>
+          <td>Google (Firebase and Google Cloud); HERE (search text); Cloudflare (website visit
+              counts)</td>
         </tr>
         <tr>
           <td>Inferences drawn from personal information</td>
@@ -1285,5 +1297,7 @@
   </footer>
 
 <script src="/assets/js/nav.js" defer></script>
+  <!-- Cloudflare Web Analytics: cookie-free visit counts (Privacy Policy 10.5) -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a5c2850441aa4bb6b1b0225f6e36e26d"}'></script>
 </body>
 </html>
