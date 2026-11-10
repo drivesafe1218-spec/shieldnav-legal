@@ -1,0 +1,221 @@
+/* ─── Homepage: scroll-through-the-app tour (loaded by index.html only) ───
+   Dark sections (hero, statement, tour, stats) on #0E1116 with brand-blue
+   accents; the info sections below keep the light theme from brand.css.
+   The sticky download bar and the desktop Download button live in brand.css. */
+
+.home {
+  --dark: #0E1116;
+  --dark-2: #161B23;
+  --on-dark: #FFFFFF;
+  --on-dark-2: rgba(255,255,255,0.78);
+  --on-dark-3: rgba(255,255,255,0.66);
+  --blue-on-dark: #5BB4F0;
+  --phone-ratio: 0.4602;          /* screen width / height of the recordings (590x1282) */
+  background: var(--dark);
+}
+/* brand.css styles every bare <section>; the homepage sections style themselves. */
+.home section { margin-bottom: 0; scroll-margin-top: 0; }
+.home section h2, .home section h3 { border: 0; padding: 0; }
+.home a:focus-visible, .home summary:focus-visible { outline-color: var(--blue-on-dark); }
+
+/* ── Nav on the dark page ── */
+.home .site-nav.full { background: rgba(14,17,22,0.92); border-bottom: 1px solid rgba(255,255,255,0.1); }
+.home .site-nav .nav-brand { color: #fff; }
+.home .site-nav .nav-links a { color: var(--on-dark-2); }
+.home .site-nav .nav-links a:hover { color: #fff; }
+.home .site-nav .nav-toggle { color: #fff; border-color: rgba(255,255,255,0.3); }
+.home .site-nav .nav-links a.nav-dl,
+.home .site-nav .nav-links a.nav-dl:hover { color: #fff; }
+
+/* ── Phone frame (CSS only) ── */
+.phone {
+  background: #1B2029;
+  border-radius: 38px;
+  padding: 8px;
+  box-shadow: 0 0 0 2px #2D343F, 0 28px 80px rgba(11,117,194,0.28);
+  width: fit-content;
+}
+.phone-screen {
+  --sw: 220px;
+  width: var(--sw);
+  aspect-ratio: 590 / 1282;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  background: #0B0E13;
+}
+.phone-screen img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* ── Hero ── */
+.home-hero { background: var(--dark); color: var(--on-dark); padding: 24px 20px 48px; overflow: hidden;
+  background-image: radial-gradient(600px 420px at 80% 30%, rgba(11,117,194,0.28), transparent 70%); }
+.home-hero-inner { max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 32px; text-align: center; }
+.home-hero h1 {
+  font-family: 'Sora', sans-serif; font-weight: 800;
+  font-size: clamp(1.95rem, 8vw, 3.6rem); line-height: 1.1; letter-spacing: -0.03em;
+  margin-bottom: 12px; text-wrap: balance;
+  background: linear-gradient(180deg, #fff 30%, #9FD2F5 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+}
+.home-hero-sub { font-size: 1rem; line-height: 1.5; color: var(--on-dark-2); max-width: 34ch; margin: 0 auto 16px; }
+.home-hero-actions { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.home .store-badge { display: inline-flex; }
+.home .store-badge img { display: block; height: 50px; width: auto; }
+.home-hero-status { font-size: 0.85rem; color: var(--on-dark-3); margin: 0; }
+.home-hero-phone { --sw: min(250px, 58vw); }
+
+@media (min-width: 821px) {
+  .home-hero { padding: 72px 32px 88px; }
+  .home-hero-inner { flex-direction: row; justify-content: space-between; text-align: left; gap: 48px; }
+  .home-hero-copy { flex: 1; }
+  .home-hero-sub { margin-left: 0; font-size: 1.2rem; max-width: 36ch; margin-bottom: 28px; }
+  .home-hero-actions { align-items: flex-start; }
+  .home-hero-phone { --sw: 300px; flex: none; }
+}
+
+/* ── Statement beat ── */
+.statement { background: var(--dark); padding: 72px 22px 56px; text-align: center; }
+.statement-line {
+  max-width: 18em; margin: 0 auto;
+  font-family: 'Sora', sans-serif; font-weight: 800;
+  font-size: clamp(1.7rem, 6.2vw, 3.5rem); line-height: 1.18; letter-spacing: -0.03em;
+  text-wrap: balance;
+  background: linear-gradient(100deg, #fff 20%, #7CC4F5 60%, #0B75C2 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+}
+
+/* ── Tour: default (no JS / reduced motion) = a simple list with posters ── */
+.tour { background: var(--dark); color: var(--on-dark); }
+.tour-counter, .tour-stage { display: none; }
+.tour-steps { list-style: none; max-width: 640px; margin: 0 auto; padding: 8px 22px 40px; }
+.tour-step { display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 36px 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; }
+.tour-step .phone-screen { --sw: min(220px, 56vw); }
+.step-num { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.14em; color: var(--blue-on-dark); margin-bottom: 8px; }
+.tour-step h3 { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 10px; color: #fff; text-wrap: pretty; }
+.tour-step p { color: var(--on-dark-2); margin: 0 0 10px; line-height: 1.55; }
+.tour-step .step-num { margin-bottom: 8px; }
+.step-note { font-size: 0.8rem; color: var(--on-dark-3); }
+.tour-step a { color: var(--blue-on-dark); }
+.step-cta { margin-top: 14px; }
+.tour-fine { max-width: 640px; margin: 0 auto; padding: 8px 22px 48px; font-size: 0.78rem; line-height: 1.55; color: var(--on-dark-3); text-align: center; }
+.tour-fine a { color: var(--blue-on-dark); }
+.step-cta .store-badge img { height: 44px; }
+.credit { font-size: 0.72rem; letter-spacing: 0.02em; color: var(--on-dark-3); text-align: center; margin: 0; }
+
+/* ── Tour: pinned (class added by assets/js/tour.js) ── */
+.tour.is-pinned .tour-counter, .tour.is-pinned .tour-stage { display: flex; }
+.tour.is-pinned .tour-steps { max-width: none; padding: 0; }
+.tour.is-pinned .tour-step { display: block; border: 0; padding: 0; text-align: left; }
+.tour.is-pinned .tour-step .step-cta { display: none; }
+.tour.is-pinned .tour-step .phone-sm,
+.tour.is-pinned .tour-step .step-num { display: none; }
+
+.tour-shot { position: absolute; inset: 0; opacity: 0; transition: opacity 0.45s ease; }
+.tour-shot.is-active { opacity: 1; }
+.tour-shot video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s ease; background: #0B0E13; }
+.tour-shot.is-playing video { opacity: 1; }
+
+/* Phones: the phone is pinned in the top ~58% of the screen, step text scrolls
+   underneath it. 100svh keeps it right inside in-app browsers with toolbars. */
+.tour.is-pinned .tour-inner { --stage-h: 58vh; --stage-h: 58svh; }
+.tour.is-pinned .tour-stage {
+  position: sticky; top: 0; z-index: 2;
+  height: var(--stage-h);
+  flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  background: var(--dark);
+  box-shadow: 0 18px 24px -6px var(--dark);
+}
+.tour.is-pinned .tour-stage .phone { --sh: calc(var(--stage-h) - 52px); border-radius: 26px; padding: 6px; }
+.tour.is-pinned .tour-stage .phone-screen { --sw: calc(var(--sh) * var(--phone-ratio)); border-radius: 20px; }
+.tour.is-pinned .tour-counter {
+  position: absolute; z-index: 3; left: 6px; top: 0; bottom: 0;
+  flex-direction: column; justify-content: center; align-items: center; gap: 2px;
+  font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.62rem; letter-spacing: 0.06em; line-height: 1.5;
+  pointer-events: none;
+}
+.tour-counter span { color: rgba(255,255,255,0.4); transition: color 0.3s, transform 0.3s; }
+.tour-counter span.on { color: var(--blue-on-dark); transform: scale(1.25); }
+.tour-counter b { color: rgba(255,255,255,0.4); font-weight: 400; }
+.tour.is-pinned .tour-inner { position: relative; }
+.tour.is-pinned .tour-step { min-height: 46vh; min-height: 46svh; padding: 18px 24px 0; }
+.tour.is-pinned .tour-step:last-child { min-height: 58vh; min-height: 58svh; }
+.tour.is-pinned .tour-step h3 { font-size: 1.35rem; }
+.tour.is-pinned .tour-step p { font-size: 0.95rem; margin-bottom: 8px; }
+.tour.is-pinned .tour-step .step-card { opacity: 0.35; transition: opacity 0.35s; }
+.tour.is-pinned .tour-step.is-active .step-card { opacity: 1; }
+
+/* Desktop: phone pinned on the right, text on the left, counter at the far left. */
+@media (min-width: 821px) {
+  .tour.is-pinned .tour-inner {
+    display: grid; grid-template-columns: 96px minmax(0, 1fr) minmax(0, 1fr);
+    max-width: 1200px; margin: 0 auto; padding: 0 24px;
+    --nav-h: 61px;
+  }
+  .tour.is-pinned .tour-counter {
+    position: sticky; top: var(--nav-h); grid-column: 1; grid-row: 1; align-self: start;
+    height: calc(100vh - var(--nav-h)); height: calc(100svh - var(--nav-h));
+    font-size: 0.8rem; gap: 6px; left: auto; bottom: auto;
+  }
+  .tour.is-pinned .tour-stage {
+    grid-column: 3; grid-row: 1; align-self: start;
+    top: var(--nav-h); height: calc(100vh - var(--nav-h)); height: calc(100svh - var(--nav-h));
+    box-shadow: none; background: transparent;
+  }
+  .tour.is-pinned .tour-stage .phone { --sh: min(calc(100vh - var(--nav-h) - 96px), 720px); --sh: min(calc(100svh - var(--nav-h) - 96px), 720px); border-radius: 40px; padding: 9px; }
+  .tour.is-pinned .tour-stage .phone-screen { border-radius: 32px; }
+  .tour.is-pinned .tour-steps { grid-column: 2; grid-row: 1; }
+  .tour.is-pinned .tour-step { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 0 24px 0 8px; }
+  .tour.is-pinned .tour-step:last-child { min-height: 100vh; min-height: 100svh; }
+  .tour.is-pinned .tour-step h3 { font-size: clamp(1.9rem, 3vw, 2.7rem); margin-bottom: 14px; }
+  .tour.is-pinned .tour-step p { font-size: 1.1rem; }
+  .tour.is-pinned .tour-step .step-num { display: block; }
+  .tour.is-pinned .tour-step .step-cta { display: block; }
+  .tour.is-pinned .tour-step .step-card { max-width: 30em; }
+  .tour-step .step-cta .store-badge img { height: 50px; }
+}
+
+/* ── Stat row ── */
+.stats { background: var(--dark); padding: 64px 22px 72px; border-top: 1px solid rgba(255,255,255,0.08); }
+.stats-row { list-style: none; max-width: 1080px; margin: 0 auto; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 28px 18px; }
+.stats-row li { display: flex; flex-direction: column; gap: 4px; }
+.stat-big {
+  font-family: 'Sora', sans-serif; font-weight: 800; font-size: clamp(2.2rem, 9vw, 4rem); line-height: 1; letter-spacing: -0.03em;
+  background: linear-gradient(180deg, #fff, #7CC4F5);
+  -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+}
+.stat-label { font-weight: 600; color: #fff; font-size: 1rem; }
+.stat-sub { font-size: 0.85rem; color: var(--on-dark-3); line-height: 1.45; }
+@media (min-width: 821px) {
+  .stats { padding: 96px 32px 104px; }
+  .stats-row { grid-template-columns: repeat(4, 1fr); gap: 32px; }
+  .stats-row li { padding-left: 20px; border-left: 1px solid rgba(255,255,255,0.14); }
+}
+
+/* ── Light info sections ── */
+.home .band { padding: 56px 22px; background: var(--bg); }
+.home .band.alt { background: var(--surface); border-top: 0; }
+.home .data-band .prose { max-width: 68ch; }
+.home-faq { max-width: 760px; border-top: 1px solid var(--border); }
+.home-faq details { border-bottom: 1px solid var(--border); padding: 4px 0; }
+.home-faq summary { cursor: pointer; font-weight: 600; padding: 14px 0; list-style: none; display: flex; justify-content: space-between; gap: 12px; align-items: center; min-height: 44px; }
+.home-faq summary::-webkit-details-marker { display: none; }
+.home-faq summary::after { content: "+"; color: var(--blue); font-size: 1.4rem; line-height: 1; }
+.home-faq details[open] summary::after { content: "\2212"; }
+.home-faq details p { color: var(--text-2); padding: 0 0 14px; max-width: 62ch; }
+.home-faq-more { margin-top: 16px; font-weight: 600; }
+
+/* ── Final CTA ── */
+.final-cta { background: var(--blue); color: #fff; text-align: center; padding: 56px 22px 60px; }
+.final-cta h2 { font-family: 'Sora', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 5vw, 2.3rem); letter-spacing: -0.02em; line-height: 1.2; margin: 0 auto 10px; max-width: 18em; text-wrap: balance; border: 0; padding: 0; }
+.final-cta p { color: rgba(255,255,255,0.92); margin: 0 auto 22px; }
+.final-cta .store-badge { margin: 0 auto; }
+.final-cta a:focus-visible { outline-color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .tour-shot, .tour-shot video, .tour-counter span { transition: none; }
+}
+
+/* Step posters carry data-src until tour.js (or the <noscript> copy) supplies
+   a src; keep the alt text of an unloaded one from showing. */
+.step-img:not([src]) { display: none; }
