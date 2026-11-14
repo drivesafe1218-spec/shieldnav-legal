@@ -62,15 +62,11 @@
 .home .store-badge { display: inline-flex; }
 .home .store-badge img { display: block; height: 50px; width: auto; }
 .home-hero-status { font-size: 0.85rem; color: var(--on-dark-3); margin: 0; }
-.home-hero-phone { --sw: min(250px, 58vw); }
 
 @media (min-width: 821px) {
   .home-hero { padding: 72px 32px 88px; }
-  .home-hero-inner { flex-direction: row; justify-content: space-between; text-align: left; gap: 48px; }
-  .home-hero-copy { flex: 1; }
-  .home-hero-sub { margin-left: 0; font-size: 1.2rem; max-width: 36ch; margin-bottom: 28px; }
-  .home-hero-actions { align-items: flex-start; }
-  .home-hero-phone { --sw: 300px; flex: none; }
+  /* No hero phone (Nov 14): copy is centered and the scroll tour carries the screenshots. */
+  .home-hero-sub { font-size: 1.2rem; max-width: 36ch; margin-bottom: 28px; }
 }
 
 /* ── Statement beat ── */
@@ -228,14 +224,7 @@
 .final-cta .store-badges .store-badge { margin: 0; }
 
 /* ── Problem + Parking Safety bands ── */
-.home .problem-band { padding: 48px 22px 44px; }
-.home .problem-band .band-title,
-.home .parking-band .band-title { font-size: clamp(1.45rem, 4.6vw, 2rem); line-height: 1.2; }
-.home .problem-band .band-lede,
-.home .parking-band .band-lede { font-size: 1.05rem; line-height: 1.6; margin-bottom: 0; }
 .band-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin: 0 0 8px; }
 @media (min-width: 821px) {
-  .home .problem-band, .home .parking-band { padding: 72px 32px; }
-  .home .problem-band .band-lede, .home .parking-band .band-lede { font-size: 1.15rem; }
 }
 .nowrap { white-space: nowrap; }
