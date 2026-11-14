@@ -226,3 +226,16 @@
 .store-badges { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; }
 .step-cta .store-badges { justify-content: flex-start; }
 .final-cta .store-badges .store-badge { margin: 0; }
+
+/* ── Problem + Parking Safety bands ── */
+.home .problem-band { padding: 48px 22px 44px; }
+.home .problem-band .band-title,
+.home .parking-band .band-title { font-size: clamp(1.45rem, 4.6vw, 2rem); line-height: 1.2; }
+.home .problem-band .band-lede,
+.home .parking-band .band-lede { font-size: 1.05rem; line-height: 1.6; margin-bottom: 0; }
+.band-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin: 0 0 8px; }
+@media (min-width: 821px) {
+  .home .problem-band, .home .parking-band { padding: 72px 32px; }
+  .home .problem-band .band-lede, .home .parking-band .band-lede { font-size: 1.15rem; }
+}
+.nowrap { white-space: nowrap; }
