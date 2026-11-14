@@ -53,7 +53,7 @@
 
     <section>
       <h2>Navigation</h2>
-      <p>ShieldNav is a complete turn-by-turn navigation app, not a crime map with directions attached. Routing, guidance, and search are powered by the HERE Maps SDK, a mapping platform used widely in built-in automotive navigation systems.</p>
+      <p>ShieldNav is a complete turn-by-turn navigation app with a crime map built in. Routing, guidance, and search are powered by the HERE Maps SDK, a mapping platform used widely in built-in automotive navigation systems.</p>
       <ul>
         <li><strong>Spoken turn-by-turn guidance</strong> with automatic rerouting when you leave the planned route.</li>
         <li><strong>Route planning</strong> between any origin and destination, with the crime layer visible on the same map.</li>
@@ -100,7 +100,7 @@
         <li>Reported incidents marked along your route</li>
         <li>Crime radar &mdash; incident type, date, and block-level location</li>
         <li>Real-time speed limit display</li>
-        <li>Toll information and cost estimates</li>
+        <li>Shows whether a route has tolls</li>
         <li>Saved places and scheduled drives</li>
       </ul>
       <div class="callout">
@@ -126,7 +126,7 @@
       <h2>Technology and data sources</h2>
       <p>We name our providers rather than describing them vaguely, because you should be able to check what your data touches.</p>
       <ul class="fact-list">
-        <li><span class="k">Mapping and routing</span><span class="v">HERE Maps SDK &mdash; navigation, places search, speed limits, toll estimates</span></li>
+        <li><span class="k">Mapping and routing</span><span class="v">HERE Maps SDK &mdash; navigation, places search, speed limits</span></li>
         <li><span class="k">Crime records</span><span class="v">CrimeoMeter &mdash; incident reports published by police departments and city open-data portals</span></li>
         <li><span class="k">Accounts and storage</span><span class="v">Firebase (Google&nbsp;LLC) &mdash; authentication, account data, product analytics (you can turn analytics off)</span></li>
         <li><span class="k">Subscriptions</span><span class="v">RevenueCat &mdash; subscription status; Apple processes payment</span></li>
@@ -142,7 +142,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="/assets/images/shieldnav_logo-176.webp" alt="ShieldNav" class="footer-logo" width="36" height="36" loading="lazy" />
-          <p>Crime-aware GPS navigation for iPhone and Android. Built and operated by ShieldNav&nbsp;LLC, an independent software company in the Chicagoland area.</p>
+          <p>The crime map that&rsquo;s also your navigation, for iPhone and Android. Built and operated by ShieldNav&nbsp;LLC, an independent software company in the Chicagoland area.</p>
         </div>
         <div class="footer-col">
           <h2>Product</h2>
@@ -178,6 +178,7 @@
   </footer>
 
 <script src="/assets/js/nav.js" defer></script>
+  <script src="/assets/js/events.js" defer></script>
   <!-- Cloudflare Web Analytics: cookie-free visit counts (Privacy Policy 10.5) -->
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a5c2850441aa4bb6b1b0225f6e36e26d"}'></script>
 </body>
