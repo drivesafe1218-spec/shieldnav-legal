@@ -26,6 +26,26 @@
       'ad-005': {
         h1: 'A full nav app that shows more.',
         sub: 'Voice directions, rerouting and speed limits, plus the crime reported along every route option.'
+      },
+      'ad-006': {
+        h1: 'Don’t be Clyde. Check your parking spot.',
+        sub: 'ShieldNav checks reported crime around your drop-off before you arrive.'
+      },
+      'ad-007': {
+        h1: 'Where is this thing taking me?',
+        sub: 'See the crime reported along each route before you leave, and pick the one you feel good about.'
+      },
+      'ad-009': {
+        h1: 'Some problems you can’t navigate.',
+        sub: 'Your drive home isn’t one of them. See the crime reported along your route before you leave.'
+      },
+      'ad-010': {
+        h1: 'Is the crime data real?',
+        sub: 'ShieldNav uses police reports. Tap any incident on your route to see what was reported, when, and how close it was.'
+      },
+      'ad-011': {
+        h1: 'How to read your three routes.',
+        sub: 'Safest, Fastest or an Alternative, each with the crime incidents recently reported along it, plus Parking Safety for your drop-off.'
       }
     };
     var id = new URLSearchParams(window.location.search).get('utm_content');
