@@ -32,8 +32,12 @@
         sub: 'ShieldNav checks reported crime around your drop-off before you arrive.'
       },
       'ad-007': {
+        h1: 'Safest route. No guessing.',
+        sub: 'Heading home after a long day, and every block looks unfamiliar?'
+      },
+      'ad-008': {
         h1: 'Where is this thing taking me?',
-        sub: 'See the crime reported along each route before you leave, and pick the one you feel good about.'
+        sub: 'Heading home after a long day, and every block looks unfamiliar?'
       },
       'ad-009': {
         h1: 'Some problems you can’t navigate.',
