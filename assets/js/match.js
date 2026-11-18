@@ -40,8 +40,8 @@
         sub: 'Heading home after a long day, and every block looks unfamiliar?'
       },
       'ad-009': {
-        h1: 'Some problems you can’t navigate.',
-        sub: 'Your drive home isn’t one of them. See the crime reported along your route before you leave.'
+        h1: 'Some problems you can navigate.',
+        sub: 'Your drive home is one of them. See the crime reported along your route before you leave.'
       },
       'ad-010': {
         h1: 'Is the crime data real?',
