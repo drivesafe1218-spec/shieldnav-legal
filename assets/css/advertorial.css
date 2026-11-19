@@ -18,7 +18,6 @@
 .adv-byline img { border-radius: 7px; }
 .adv-jump { margin: 0 0 26px; }
 .adv-jump a { display: inline-block; font-weight: 600; font-size: 0.95rem; color: var(--blue-on-dark); padding: 6px 0; }
-.adv-intro { font-size: 1.08rem; line-height: 1.7; color: #fff; margin: 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.14); }
 @media (min-width: 821px) {
   .adv-top { padding: 64px 0 48px; }
   .adv-deck { font-size: 1.25rem; }
@@ -82,3 +81,16 @@
 /* Hide the crime-data credit while the privacy cards (steps 5-6) are on the phone. */
 .tour:has(.tour-step[data-step="5"].is-active) .credit,
 .tour:has(.tour-step[data-step="6"].is-active) .credit { visibility: hidden; }
+
+/* Above the fold: show at least the top of the phone on first load (Zack, 2026-11-19). */
+.adv-top { padding: 22px 0 4px; }
+.adv-label { margin-bottom: 12px; }
+.adv-top h1 { margin-bottom: 10px; }
+.adv-deck { font-size: 1rem; line-height: 1.5; margin-bottom: 12px; }
+.adv-byline { margin-bottom: 4px; }
+.adv-jump { margin: 0; }
+.advertorial .tour { padding-top: 8px; }
+@media (min-width: 821px) {
+  .adv-top { padding: 40px 0 8px; }
+  .adv-deck { font-size: 1.15rem; }
+}
