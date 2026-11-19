@@ -50,6 +50,26 @@
       'ad-011': {
         h1: 'How to read your three routes.',
         sub: 'Safest, Fastest or an Alternative, each with the crime incidents recently reported along it, plus Parking Safety for your drop-off.'
+      },
+      'ad-012': {
+        h1: 'Your map app is free. Why pay for another one?',
+        sub: 'ShieldNav is full turn-by-turn navigation, plus the crime reported along each route option.'
+      },
+      'ad-013': {
+        h1: 'Don’t read this if fastest is all you need.',
+        sub: 'Most nav apps show you the fastest route and stop there. ShieldNav also shows the crime reported along each route.'
+      },
+      'ad-014': {
+        h1: 'Same drive home. Pick a line.',
+        sub: 'Each line is a route. See the crime reported along each one before you pick.'
+      },
+      'ad-015': {
+        h1: 'Heading out tonight?',
+        sub: 'You’ve planned the route. Parking Safety checks reported incidents around your drop-off before you arrive.'
+      },
+      'ad-016': {
+        h1: 'Check your parking spot before you arrive.',
+        sub: 'Before you park, check the crime reported around your spot. Know before you go.'
       }
     };
     var id = new URLSearchParams(window.location.search).get('utm_content');
