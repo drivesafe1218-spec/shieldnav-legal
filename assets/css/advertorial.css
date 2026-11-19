@@ -1,0 +1,84 @@
+/* ─── /6-things/ advertorial (loaded after brand.css + home.css) ───
+   Reuses the homepage's pinned-phone tour as-is; this file only adds the
+   article header, the HTML privacy cards that stand in for screenshots on
+   steps 5 and 6, and the closing CTA block. */
+
+.advertorial { --col: 40rem; }
+.adv-col { max-width: var(--col); margin: 0 auto; padding: 0 22px; }
+
+/* ── Article header ── */
+.adv-top { background: var(--dark); color: var(--on-dark); padding: 36px 0 32px;
+  background-image: radial-gradient(520px 360px at 85% 0%, rgba(11,117,194,0.28), transparent 70%); }
+.adv-label { display: inline-block; margin: 0 0 18px; padding: 5px 12px; border: 1px solid rgba(255,255,255,0.22); border-radius: 999px;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--on-dark-2); }
+.adv-top h1 { font-family: 'Sora', sans-serif; font-weight: 800; font-size: clamp(1.85rem, 7.4vw, 3rem); line-height: 1.12; letter-spacing: -0.03em;
+  margin: 0 0 16px; text-wrap: balance; color: #fff; }
+.adv-deck { font-size: 1.1rem; line-height: 1.55; color: var(--on-dark-2); margin: 0 0 20px; }
+.adv-byline { display: flex; align-items: center; gap: 10px; margin: 0 0 14px; font-size: 0.88rem; color: var(--on-dark-3); }
+.adv-byline img { border-radius: 7px; }
+.adv-jump { margin: 0 0 26px; }
+.adv-jump a { display: inline-block; font-weight: 600; font-size: 0.95rem; color: var(--blue-on-dark); padding: 6px 0; }
+.adv-intro { font-size: 1.08rem; line-height: 1.7; color: #fff; margin: 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.14); }
+@media (min-width: 821px) {
+  .adv-top { padding: 64px 0 48px; }
+  .adv-deck { font-size: 1.25rem; }
+  .adv-intro { font-size: 1.2rem; }
+}
+
+/* ── Tour tweaks ── */
+.advertorial .tour.is-pinned .tour-step .step-num { display: block; margin-bottom: 4px; }
+.advertorial .tour-step h3 { text-wrap: balance; }
+.advertorial .tour.is-pinned .tour-step p { font-size: 0.92rem; line-height: 1.5; }
+@media (min-width: 821px) {
+  .advertorial .tour.is-pinned .tour-step p { font-size: 1.1rem; line-height: 1.55; }
+  .advertorial .tour.is-pinned .tour-step h3 { font-size: clamp(1.7rem, 2.6vw, 2.3rem); }
+}
+
+/* Phones: a slightly shorter pinned stage leaves room for the longer step text,
+   and steps are only as tall as their text so each one reads before the next. */
+@media (max-width: 820px) {
+  .advertorial .tour.is-pinned .tour-inner { --stage-h: 50vh; --stage-h: 50svh; }
+  .advertorial .tour.is-pinned .tour-step { min-height: 34vh; min-height: 34svh; }
+  .advertorial .tour.is-pinned .tour-step:last-child { min-height: 50vh; min-height: 50svh; }
+  .advertorial .tour.is-pinned .tour-step p { font-size: 0.9rem; margin-bottom: 6px; }
+  .advertorial .tour.is-pinned .tour-step h3 { font-size: 1.25rem; margin-bottom: 8px; }
+}
+
+/* ── Privacy cards (steps 5 and 6): sized with container units so they scale with the phone ── */
+.step-img.card-screen, .step-img.card-screen:not([src]) {
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+  width: 100%; height: 100%; box-sizing: border-box; padding: 0 9cqw;
+  background: radial-gradient(120% 70% at 100% 0%, rgba(11,117,194,0.55), transparent 60%), linear-gradient(180deg, #0F1722 0%, #0B0E13 100%);
+  color: #fff; text-align: left;
+}
+.card-screen > * { max-width: 100%; }
+.advertorial .phone-screen { container-type: inline-size; }
+.phone-screen img.card-logo { width: 22cqw; height: 22cqw; border-radius: 5cqw; margin: 0 0 9cqw; object-fit: contain; background: #fff; }
+.card-title { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 13cqw; line-height: 1.08; letter-spacing: -0.03em; margin: 0 0 8cqw; color: #fff; }
+.card-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5cqw; }
+.card-list li { position: relative; padding-left: 9cqw; font-size: 6.4cqw; line-height: 1.3; font-weight: 600; color: rgba(255,255,255,0.88); }
+.card-list li::before { content: "\2713"; position: absolute; left: 0; top: 0.1em; width: 6.2cqw; height: 6.2cqw; border-radius: 50%;
+  background: var(--blue); color: #fff; font-size: 4.2cqw; line-height: 6.2cqw; text-align: center; font-weight: 800; }
+.card-brand { position: absolute; left: 0; right: 0; bottom: 7cqw; margin: 0; text-align: center; font-family: 'Sora', sans-serif; font-weight: 700;
+  font-size: 4.2cqw; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+.card-screen { position: relative; }
+
+/* ── Closing CTA ── */
+.adv-close { background: var(--dark); color: var(--on-dark); padding: 56px 0 0; scroll-margin-top: 72px; }
+.adv-close h2 { font-family: 'Sora', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 5.4vw, 2.2rem); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 14px; color: #fff; text-wrap: balance; }
+.adv-close p { color: var(--on-dark-2); font-size: 1.05rem; line-height: 1.65; margin: 0 0 16px; }
+.adv-cta { background: var(--blue); text-align: center; padding: 44px 22px 48px; margin-top: 36px; }
+.adv-close .adv-cta h2 { color: #fff; margin: 0 auto 10px; max-width: 18em; }
+.adv-close .adv-cta p { color: rgba(255,255,255,0.94); max-width: 34em; margin: 0 auto 22px; }
+.adv-cta a:focus-visible { outline-color: #fff; }
+.adv-end { padding-top: 36px; padding-bottom: 56px; }
+.adv-close .adv-fine { font-size: 0.78rem; line-height: 1.55; color: var(--on-dark-3); text-align: left; padding: 0; margin: 0 0 12px; max-width: none; }
+.adv-fine a { color: var(--blue-on-dark); }
+.adv-close .adv-ps { margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.14); color: #fff; }
+.adv-tagline { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1.25rem; letter-spacing: -0.02em; margin: 24px 0 0;
+  background: linear-gradient(100deg, #fff 20%, #7CC4F5 60%, #0B75C2 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+@media (min-width: 821px) { .adv-close { padding-top: 88px; } .adv-cta { padding: 64px 32px 68px; margin-top: 48px; } }
+
+/* Hide the crime-data credit while the privacy cards (steps 5-6) are on the phone. */
+.tour:has(.tour-step[data-step="5"].is-active) .credit,
+.tour:has(.tour-step[data-step="6"].is-active) .credit { visibility: hidden; }
