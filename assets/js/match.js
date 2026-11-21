@@ -72,7 +72,10 @@
         sub: 'Before you park, check the crime reported around your spot. Know before you go.'
       }
     };
-    var id = new URLSearchParams(window.location.search).get('utm_content');
+    // Paid clicks on ads built from existing posts carry the post's organic tag and the ad's
+    // ad-### tag; use the ad-### one when present (same rule as events.js).
+    var ids = new URLSearchParams(window.location.search).getAll('utm_content'), id = '';
+    for (var i = ids.length - 1; i >= 0; i--) { if (/^ad-\d+$/.test(ids[i])) { id = ids[i]; break; } }
     if (!id || !Object.prototype.hasOwnProperty.call(COPY, id)) return;
     var h1 = document.getElementById('hero-title');
     var sub = document.getElementById('hero-sub');
