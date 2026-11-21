@@ -8,9 +8,17 @@
   var ad = '', src = '';
   try {
     var qs = new URLSearchParams(location.search);
-    if (qs.get('utm_content') || qs.get('utm_source')) {
-      sessionStorage.setItem('sn_ad', qs.get('utm_content') || '');
-      sessionStorage.setItem('sn_src', qs.get('utm_source') || '');
+    // A paid click on an ad built from an existing Facebook post carries two sets of tags: the
+    // post's own organic ones (e.g. utm_source=facebook, utm_content=post-ad-011) and the ad's,
+    // which Meta adds from the ad's URL parameters (utm_source=meta, utm_content=ad-011). When an
+    // ad-### tag is present it wins, so paid and organic visits are counted apart.
+    var cs = qs.getAll('utm_content'), ss = qs.getAll('utm_source'), c = '', s = '';
+    for (var i = cs.length - 1; i >= 0; i--) { if (/^ad-\d+$/.test(cs[i])) { c = cs[i]; break; } }
+    if (!c) c = cs[0] || '';
+    s = (/^ad-\d+$/.test(c) && ss.indexOf('meta') > -1) ? 'meta' : (ss[0] || '');
+    if (c || s) {
+      sessionStorage.setItem('sn_ad', c);
+      sessionStorage.setItem('sn_src', s);
     }
     ad = sessionStorage.getItem('sn_ad') || '';
     src = sessionStorage.getItem('sn_src') || '';
