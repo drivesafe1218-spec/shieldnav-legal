@@ -1,5 +1,5 @@
 /* Ad message match (homepage only).
- * Each Meta ad's destination URL carries utm_content=ad-00N (IDs come from the
+ * Each Meta or NewsBreak ad's destination URL carries utm_content=ad-00N (IDs come from the
  * brain sheet's Ad Registry tab). When it matches an entry below, the hero
  * headline and sub text are swapped to mirror the ad. Unknown or missing values
  * leave the default hero untouched. New ads get new entries in COPY.
@@ -70,6 +70,15 @@
       'ad-016': {
         h1: 'Check your parking spot before you arrive.',
         sub: 'Before you park, check the crime reported around your spot. Know before you go.'
+      },
+      // NewsBreak ads (utm_source=newsbreak); same heroes as the Meta ads they came from.
+      'ad-027': {
+        h1: 'Where is this thing taking me?',
+        sub: 'Heading home after a long day, and every block looks unfamiliar?'
+      },
+      'ad-028': {
+        h1: 'Some problems you can navigate.',
+        sub: 'Your drive home is one of them. See the crime reported along your route before you leave.'
       }
     };
     // Paid clicks on ads built from existing posts carry the post's organic tag and the ad's

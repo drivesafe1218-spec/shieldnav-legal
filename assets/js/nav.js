@@ -60,22 +60,27 @@
   document.body.appendChild(bar);
 })();
 
-// Visitors from the Meta ad land with ?utm_source=meta. Tag their App Store
-// links ct=meta-ads (instead of ct=website, or ct=advertorial on /6-things/) and their Google Play links
-// referrer=utm_source%3Dmeta-ads%26utm_medium%3Dpaid (instead of website/web) so each store's
-// console can tell the two apart. Remembered for the visit so it survives clicking to other pages.
+// Visitors from paid ads land with ?utm_source=meta (Meta) or ?utm_source=newsbreak (NewsBreak).
+// Tag their App Store links ct=meta-ads / ct=newsbreak-ads (instead of ct=website, or ct=advertorial
+// on /6-things/) and their Google Play links referrer=utm_source%3D<tag>%26utm_medium%3Dpaid
+// (instead of website/web) so each store's console can tell the channels apart. Remembered for
+// the visit so it survives clicking to other pages.
 (function () {
+  var TAGS = { meta: 'meta-ads', newsbreak: 'newsbreak-ads' };
+  var tag = '';
   try {
-    if (new URLSearchParams(location.search).get('utm_source') === 'meta') {
-      sessionStorage.setItem('sn_ct', 'meta-ads');
+    var src = new URLSearchParams(location.search).get('utm_source');
+    if (src && Object.prototype.hasOwnProperty.call(TAGS, src)) {
+      sessionStorage.setItem('sn_ct', TAGS[src]);
     }
-    if (sessionStorage.getItem('sn_ct') !== 'meta-ads') return;
+    tag = sessionStorage.getItem('sn_ct') || '';
   } catch (e) { return; }
+  if (tag !== 'meta-ads' && tag !== 'newsbreak-ads') return;
   document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (a) {
-    a.href = a.href.replace('ct=website', 'ct=meta-ads').replace('ct=advertorial', 'ct=meta-ads');
+    a.href = a.href.replace('ct=website', 'ct=' + tag).replace('ct=advertorial', 'ct=' + tag);
   });
   document.querySelectorAll('a[href*="play.google.com"]').forEach(function (a) {
-    a.href = a.href.replace('utm_source%3Dwebsite%26utm_medium%3Dweb', 'utm_source%3Dmeta-ads%26utm_medium%3Dpaid')
-      .replace('utm_source%3Dadvertorial%26utm_medium%3Dweb', 'utm_source%3Dmeta-ads%26utm_medium%3Dpaid');
+    a.href = a.href.replace('utm_source%3Dwebsite%26utm_medium%3Dweb', 'utm_source%3D' + tag + '%26utm_medium%3Dpaid')
+      .replace('utm_source%3Dadvertorial%26utm_medium%3Dweb', 'utm_source%3D' + tag + '%26utm_medium%3Dpaid');
   });
 })();
