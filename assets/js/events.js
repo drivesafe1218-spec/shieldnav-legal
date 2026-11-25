@@ -7,6 +7,10 @@
 // keypress, or a scroll of 50px or more, or right before a tap); raw page loads are in Cloudflare
 // Web Analytics. Automated browsers (navigator.webdriver) send nothing, and synthetic or
 // duplicate taps (untrusted clicks, repeats within 1.5 seconds) are dropped.
+// Also since 2026-11-25: one "load" note per session when a page opens (to compare with engaged
+// visits per ad), and, after the engaged visit, how far down the page someone scrolled
+// ("scroll" with p = 25/50/75/100 %) and how long the page stayed visible ("time" with
+// p = 10/30/60 seconds). Each threshold is sent at most once per page view.
 (function () {
   var URL_ = 'https://sn-events.young-resonance-17ed.workers.dev/e';
   var ad = '', src = '';
@@ -58,6 +62,36 @@
   if (!visited) {
     for (var k = 0; k < evs.length; k++) window.addEventListener(evs[k], onFirst, { passive: true });
   }
+
+  // Raw page open, once per browser session (bots that run JS included; compare with "visit").
+  try {
+    if (!sessionStorage.getItem('sn_l')) { sessionStorage.setItem('sn_l', '1'); send({ e: 'load' }); }
+  } catch (e) {}
+
+  // Scroll depth: 25/50/75/100 % of the page, each once per page view, only after the engaged visit.
+  var depths = [25, 50, 75, 100], sentDepth = {};
+  function onDepth() {
+    if (!visited) return;
+    var el = document.documentElement;
+    var h = Math.max(el.scrollHeight, document.body ? document.body.scrollHeight : 0);
+    var seen = (window.pageYOffset || el.scrollTop || 0) + window.innerHeight;
+    var pct = h > 0 ? (seen / h) * 100 : 100;
+    for (var i = 0; i < depths.length; i++) {
+      var d = depths[i];
+      if (!sentDepth[d] && pct >= (d === 100 ? 98 : d)) { sentDepth[d] = true; send({ e: 'scroll', p: String(d) }); }
+    }
+    if (sentDepth[100]) window.removeEventListener('scroll', onDepth, { passive: true });
+  }
+  window.addEventListener('scroll', onDepth, { passive: true });
+
+  // Time on page: seconds the page was visible, notes at 10/30/60 s, only after the engaged visit.
+  var marks = [10, 30, 60], mi = 0, secs = 0;
+  var timer = setInterval(function () {
+    if (document.visibilityState !== 'visible') return;
+    secs++;
+    if (visited && mi < marks.length && secs >= marks[mi]) { send({ e: 'time', p: String(marks[mi]) }); mi++; }
+    if (mi >= marks.length) clearInterval(timer);
+  }, 1000);
 
   var lastTap = 0;
   document.addEventListener('click', function (ev) {
