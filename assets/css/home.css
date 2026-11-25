@@ -228,3 +228,11 @@
 @media (min-width: 821px) {
 }
 .nowrap { white-space: nowrap; }
+
+/* ── Desktop QR: "On a computer?" hand-off to the phone. Shown only above the phone breakpoint. ── */
+.qr-block { display: none; }
+@media (min-width: 821px) {
+  .qr-block { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 16px; text-align: left; }
+  .qr-block img { width: 132px; height: 132px; flex: none; border-radius: 8px; background: #fff; }
+  .qr-block p, .adv-close .adv-cta .qr-block p { margin: 0; max-width: 220px; font-size: 0.9rem; line-height: 1.4; color: var(--on-dark-2, rgba(255,255,255,0.9)); }
+}

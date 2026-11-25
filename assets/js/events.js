@@ -3,6 +3,10 @@
 // data-placement, the page path, and the ad tag (utm_content) / source (utm_source) the visit
 // came from. No cookies, no IP or device ID. Goes to ShieldNav's own Cloudflare Worker
 // "sn-events" (D1 database "shieldnav-events"); per-ad results feed the weekly Meta review.
+// Since 2026-11-25 visits are counted only after a real interaction (first trusted touch, click,
+// keypress, or a scroll of 50px or more, or right before a tap); raw page loads are in Cloudflare
+// Web Analytics. Automated browsers (navigator.webdriver) send nothing, and synthetic or
+// duplicate taps (untrusted clicks, repeats within 1.5 seconds) are dropped.
 (function () {
   var URL_ = 'https://sn-events.young-resonance-17ed.workers.dev/e';
   var ad = '', src = '';
@@ -32,13 +36,38 @@
     } catch (e) {}
   }
 
-  try {
-    if (!sessionStorage.getItem('sn_v')) { sessionStorage.setItem('sn_v', '1'); send({ e: 'visit' }); }
-  } catch (e) {}
+  // Automated browsers (ad-review bots, crawlers that run JS) send nothing at all.
+  if (navigator.webdriver === true) return;
 
+  // One engaged "visit" per browser session, sent on the first real interaction.
+  var visited = false;
+  try { visited = !!sessionStorage.getItem('sn_v'); } catch (e) {}
+  var evs = ['touchstart', 'pointerdown', 'keydown', 'scroll'];
+  function visit() {
+    if (visited) return;
+    visited = true;
+    try { sessionStorage.setItem('sn_v', '1'); } catch (e) {}
+    for (var i = 0; i < evs.length; i++) window.removeEventListener(evs[i], onFirst, { passive: true });
+    send({ e: 'visit' });
+  }
+  function onFirst(ev) {
+    if (!ev.isTrusted) return;
+    if (ev.type === 'scroll' && (window.pageYOffset || document.documentElement.scrollTop || 0) < 50) return;
+    visit();
+  }
+  if (!visited) {
+    for (var k = 0; k < evs.length; k++) window.addEventListener(evs[k], onFirst, { passive: true });
+  }
+
+  var lastTap = 0;
   document.addEventListener('click', function (ev) {
+    if (!ev.isTrusted) return;
     var a = ev.target && ev.target.closest && ev.target.closest('a[href*="apps.apple.com"], a[href*="play.google.com"]');
     if (!a) return;
+    var now = Date.now();
+    if (lastTap && now - lastTap < 1500) return;
+    lastTap = now;
+    visit();
     send({ e: 'tap', s: a.href.indexOf('apps.apple.com') > -1 ? 'appstore' : 'googleplay',
       p: a.getAttribute('data-placement') || 'other' });
   }, true);

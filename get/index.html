@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Get ShieldNav</title>
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/css/fonts.css" />
+  <link rel="stylesheet" href="/assets/css/brand.css" />
+  <link rel="stylesheet" href="/assets/css/home.css" />
+  <style>
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+    main.get { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 72px 24px; gap: 18px; }
+    main.get img.get-logo { width: 72px; height: 72px; border-radius: 16px; }
+    main.get h1 { margin: 0; font-size: 1.6rem; }
+    main.get p { margin: 0; }
+  </style>
+</head>
+<body>
+  <main id="main" class="get">
+    <img class="get-logo" src="/assets/images/apple-touch-icon.png" width="72" height="72" alt="" />
+    <h1>Get ShieldNav</h1>
+    <p>Open this page on your phone to download ShieldNav.</p>
+    <div class="store-badges"><a class="store-badge" href="https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&amp;ct=website-qr&amp;mt=8" data-placement="get"><img src="/assets/images/app-store-badge.svg" alt="Download on the App Store" width="150" height="50" /></a> <a class="store-badge play-badge" href="https://play.google.com/store/apps/details?id=com.shieldnavllc.shieldnav&amp;referrer=utm_source%3Dwebsite-qr%26utm_medium%3Dweb" data-placement="get"><img src="/assets/images/google-play-badge.png" alt="Get it on Google Play" width="168" height="50" /></a></div>
+  </main>
+  <script>
+    (function () {
+      var ua = navigator.userAgent || '', src = 'website-qr';
+      try {
+        var v = new URLSearchParams(location.search).get('utm_source');
+        if (v && /^[A-Za-z0-9_-]{1,40}$/.test(v)) src = v;
+      } catch (e) {}
+      var android = /Android/i.test(ua);
+      var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+      var go = null;
+      if (android) go = 'https://play.google.com/store/apps/details?id=com.shieldnavllc.shieldnav&referrer=utm_source%3D' + encodeURIComponent(src) + '%26utm_medium%3Dweb';
+      else if (ios) go = 'https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&ct=' + encodeURIComponent(src) + '&mt=8';
+      if (go) { location.replace(go); return; }
+      // Desktop: keep the same source on the badge links shown below.
+      var links = document.querySelectorAll('.store-badge');
+      for (var i = 0; i < links.length; i++) {
+        links[i].href = links[i].href.replace('website-qr', encodeURIComponent(src));
+      }
+    })();
+  </script>
+  <script src="/assets/js/events.js" defer></script>
+  <!-- Cloudflare Web Analytics: cookie-free visit counts (Privacy Policy 10.5) -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a5c2850441aa4bb6b1b0225f6e36e26d"}'></script>
+</body>
+</html>
