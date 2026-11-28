@@ -37,7 +37,26 @@
       var go = null;
       if (android) go = 'https://play.google.com/store/apps/details?id=com.shieldnavllc.shieldnav&referrer=utm_source%3D' + encodeURIComponent(src) + '%26utm_medium%3Dweb';
       else if (ios) go = 'https://apps.apple.com/app/apple-store/id6809643112?pt=129410605&ct=' + encodeURIComponent(src) + '&mt=8';
-      if (go) { location.replace(go); return; }
+      if (go) {
+        // Count the redirect in the store-tap counter (same Worker and fields as assets/js/events.js:
+        // no cookies, no IP or device ID). events.js never runs here because the phone leaves first.
+        if (navigator.webdriver !== true) {
+          var ad = '';
+          try { ad = new URLSearchParams(location.search).get('utm_content') || ''; } catch (e) {}
+          var base = { a: ad, src: src, pg: location.pathname };
+          var post = function (o) {
+            for (var k in base) o[k] = base[k];
+            try {
+              fetch('https://sn-events.young-resonance-17ed.workers.dev/e', { method: 'POST', body: JSON.stringify(o),
+                keepalive: true, mode: 'no-cors', headers: { 'Content-Type': 'text/plain' } });
+            } catch (e) {}
+          };
+          post({ e: 'visit' });
+          post({ e: 'tap', s: android ? 'googleplay' : 'appstore', p: 'get-redirect' });
+        }
+        setTimeout(function () { location.replace(go); }, 150);
+        return;
+      }
       // Desktop: keep the same source on the badge links shown below.
       var links = document.querySelectorAll('.store-badge');
       for (var i = 0; i < links.length; i++) {
